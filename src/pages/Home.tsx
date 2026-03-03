@@ -1,8 +1,6 @@
-import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import MovieGallery from '@/components/MovieGallery';
-
+import { motion } from 'framer-motion';
 
 
 const Home = () => {
@@ -176,73 +174,41 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* GLIMPSES SECTION */}
-            <MovieGallery />
-
-
-            {/* GLIMPSES SECTION */}
-            {/* <section id="glimpses" className="glimpses-section" style={{ padding: '100px 0' }}>
-                <div className="section-header">
+            {/* GLIMPSES SECTION: INFINITE DRIFT */}
+            <section id="glimpses" className="glimpses-section-new">
+                <div className="container" style={{ marginBottom: '4rem' }}>
                     <h2 className="section-title center">PAST GLIMPSES</h2>
                 </div>
 
-                <div className="glimpses-ticker">
-                    <div className="ticker-track ltr">
-                        {[
-                            '1.JPG', '2.webp', '3.JPG', '4.webp', '5.JPG', '6.webp', '7.JPG', '8.png', '9.png', '10.png', '11.png'
-                        ].map((img, i) => (
-                            <div key={i} className="glimpse-card">
-                                <img src={`/assets/glimpses/${img}`} alt="Highways Moment" />
-                            </div>
-                        ))}
-                        {[
-                            '1.JPG', '2.webp', '3.JPG', '4.webp', '5.JPG', '6.webp', '7.JPG', '8.png', '9.png', '10.png', '11.png'
-                        ].map((img, i) => (
-                            <div key={`dup1-${i}`} className="glimpse-card">
-                                <img src={`/assets/glimpses/${img}`} alt="Highways Moment" />
+                <div className="glimpses-track-container">
+                    {/* Track 1: Slow */}
+                    <div className="drift-track slow">
+                        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((n, i) => (
+                            <div key={`t1-${i}`} className="glimpse-frame">
+                                <img src={`/assets/glimpses/${n}.${n === 8 || n === 9 || n === 10 || n === 11 ? 'png' : (n === 2 || n === 4 || n === 6 ? 'webp' : 'JPG')}`} alt="Highways" />
                             </div>
                         ))}
                     </div>
-                </div>
 
-                <div className="glimpses-ticker" style={{ marginTop: '20px' }}>
-                    <div className="ticker-track rtl">
-                        {[
-                            '12.png', '13.png', '14.png', '15.png', '16.png', '17.png', '18.png', '19.png', '20.png', '21.png', '22.png'
-                        ].map((img, i) => (
-                            <div key={i} className="glimpse-card">
-                                <img src={`/assets/glimpses/${img}`} alt="Highways Moment" />
-                            </div>
-                        ))}
-                        {[
-                            '12.png', '13.png', '14.png', '15.png', '16.png', '17.png', '18.png', '19.png', '20.png', '21.png', '22.png'
-                        ].map((img, i) => (
-                            <div key={`dup2-${i}`} className="glimpse-card">
-                                <img src={`/assets/glimpses/${img}`} alt="Highways Moment" />
+                    {/* Track 2: Medium (Opposite) */}
+                    <div className="drift-track med">
+                        {[12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22].map((n, i) => (
+                            <div key={`t2-${i}`} className="glimpse-frame">
+                                <img src={`/assets/glimpses/${n}.png`} alt="Highways" />
                             </div>
                         ))}
                     </div>
-                </div>
 
-                <div className="glimpses-ticker" style={{ marginTop: '20px' }}>
-                    <div className="ticker-track ltr">
-                        {[
-                            '23.png', '24.png', '25.png', '26.png', '27.png', '28.png', '29.png', '30.png', '31.png', '32.png', '33.png'
-                        ].map((img, i) => (
-                            <div key={i} className="glimpse-card">
-                                <img src={`/assets/glimpses/${img}`} alt="Highways Moment" />
-                            </div>
-                        ))}
-                        {[
-                            '23.png', '24.png', '25.png', '26.png', '27.png', '28.png', '29.png', '30.png', '31.png', '32.png', '33.png'
-                        ].map((img, i) => (
-                            <div key={`dup3-${i}`} className="glimpse-card">
-                                <img src={`/assets/glimpses/${img}`} alt="Highways Moment" />
+                    {/* Track 3: Fast */}
+                    <div className="drift-track fast">
+                        {[23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33].map((n, i) => (
+                            <div key={`t3-${i}`} className="glimpse-frame">
+                                <img src={`/assets/glimpses/${n}.png`} alt="Highways" />
                             </div>
                         ))}
                     </div>
                 </div>
-            </section> */}
+            </section>
 
 
         </div>
