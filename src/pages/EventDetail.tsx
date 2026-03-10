@@ -51,7 +51,7 @@ const EventDetail = () => {
                                     <i className="fas fa-calendar-day"></i>
                                     <div>
                                         <strong>Date</strong>
-                                        <p>TBD</p>
+                                        <p>APRIL 09 - 11, 2026</p>
                                     </div>
                                 </div>
                                 <div className="info-item">

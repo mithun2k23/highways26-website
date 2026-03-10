@@ -25,7 +25,7 @@ const dayThemes: DayTheme[] = [
     {
         id: 1,
         name: "IGNITION",
-        label: "THE SPARK",
+        label: "APRIL 09",
         color: "#ffb7c5",
         secondary: "#ffffff",
         kanji: "始",
@@ -36,7 +36,7 @@ const dayThemes: DayTheme[] = [
     {
         id: 2,
         name: "OVERDRIVE",
-        label: "THE VELOCITY",
+        label: "APRIL 10",
         color: "#00d2ff",
         secondary: "#000000",
         kanji: "速",
@@ -47,7 +47,7 @@ const dayThemes: DayTheme[] = [
     {
         id: 3,
         name: "DESTINY",
-        label: "THE LEGEND",
+        label: "APRIL 11",
         color: "#ff0000",
         secondary: "#ffffff",
         kanji: "終",

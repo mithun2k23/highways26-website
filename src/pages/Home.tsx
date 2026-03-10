@@ -7,7 +7,7 @@ const Home = () => {
     const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
     useEffect(() => {
-        const targetDate = new Date('2026-03-15T00:00:00');
+        const targetDate = new Date('2026-04-09T00:00:00');
 
         const updateTimer = () => {
             const now = new Date().getTime();
@@ -67,24 +67,27 @@ const Home = () => {
                         }}>HIGHWAYS'26</h1>
                     </div>
                     <div className="hero-info">
-                        <div className="timer-grid minimalist-timer">
+                        <div className="premium-countdown">
                             {[
-                                { value: timeLeft.days, unit: 'D' },
-                                { value: timeLeft.hours, unit: 'H' },
-                                { value: timeLeft.minutes, unit: 'M' },
-                                { value: timeLeft.seconds, unit: 'S' }
-                            ].map(({ value, unit }) => (
-                                <div key={unit} className="timer-segment">
-                                    <span className="timer-value">
-                                        {value.toString().padStart(2, '0')}
-                                    </span>
-                                    <span className="timer-unit">
-                                        {unit}
-                                    </span>
+                                { value: timeLeft.days, label: 'DAYS' },
+                                { value: timeLeft.hours, label: 'HOURS' },
+                                { value: timeLeft.minutes, label: 'MINUTES' },
+                                { value: timeLeft.seconds, label: 'SECONDS' }
+                            ].map(({ value, label }) => (
+                                <div key={label} className="countdown-card">
+                                    <div className="card-top">
+                                        <span className="countdown-number">
+                                            {value.toString().padStart(2, '0')}
+                                        </span>
+                                    </div>
+                                    <div className="card-bottom">
+                                        <span className="countdown-label">{label}</span>
+                                    </div>
+                                    <div className="glow-bar"></div>
                                 </div>
                             ))}
                         </div>
-                        <div className="date-badge">TBD</div>
+                        <div className="date-badge">APRIL 09 - 11</div>
                         <p className="hero-tagline">WHERE TRADITION MEETS THE FUTURE</p>
                     </div>
                     <div className="hero-btns">
