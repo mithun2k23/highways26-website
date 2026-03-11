@@ -139,6 +139,7 @@ const BackgroundElements = ({ theme }: { theme: DayTheme }) => {
 };
 
 const Schedule = () => {
+    const isLocked = true;
     const [activeDay, setActiveDay] = useState(1);
     const springX = useSpring(0, { stiffness: 100, damping: 30 });
     const springY = useSpring(0, { stiffness: 100, damping: 30 });
@@ -192,7 +193,7 @@ const Schedule = () => {
                 </motion.div>
 
                 {/* Day Controls */}
-                <div className="day-navigator-schedule" style={{ display: 'flex', justifyContent: 'center', gap: '2rem', marginBottom: '12rem' }}>
+                <div className="day-navigator-schedule" style={{ display: 'flex', justifyContent: 'center', gap: '2rem', marginBottom: '12rem', position: 'relative', zIndex: 20 }}>
                     {dayThemes.map((day) => (
                         <motion.button
                             key={day.id}
@@ -221,79 +222,108 @@ const Schedule = () => {
                     ))}
                 </div>
 
-                {/* Interactive Timeline */}
-                <div className="timeline-orchestra" style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative' }}>
-                    {/* Central Line */}
-                    <div style={{ position: 'absolute', left: '50%', top: 0, bottom: 0, width: '2px', background: `linear-gradient(to bottom, transparent, ${activeTheme.color}33, transparent)`, transform: 'translateX(-50%)' }} />
+                {/* Interactive Timeline Wrapper with Lock */}
+                <div style={{ position: 'relative' }}>
+                    {isLocked && (
+                        <div style={{
+                            position: 'absolute',
+                            inset: 0,
+                            zIndex: 1000,
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            background: 'rgba(3,3,3,0.5)',
+                            backdropFilter: 'blur(30px)',
+                            textAlign: 'center',
+                            padding: '4rem',
+                            borderRadius: '50px',
+                            minHeight: '600px'
+                        }}>
+                            <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }}>
+                                <i className="fas fa-lock" style={{ fontSize: '4rem', color: activeTheme.color, marginBottom: '2rem', display: 'block', opacity: 0.5 }}></i>
+                                <h2 style={{ fontSize: 'clamp(2.5rem, 8vw, 5rem)', fontWeight: 950, color: 'white', letterSpacing: '-2px', textTransform: 'uppercase', marginBottom: '1rem' }}>CHRONIC PAUSED</h2>
+                                <p style={{ fontSize: '1.2rem', color: 'rgba(255,255,255,0.5)', fontWeight: 700, letterSpacing: '3px', textTransform: 'uppercase' }}>The pages will be released soon</p>
+                                <div style={{ marginTop: '3rem', height: '2px', width: '200px', background: `linear-gradient(to right, transparent, ${activeTheme.color}, transparent)`, margin: '3rem auto' }}></div>
+                            </motion.div>
+                        </div>
+                    )}
 
-                    <AnimatePresence mode="wait">
-                        <motion.div
-                            key={activeDay}
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            transition={{ duration: 1 }}
-                        >
-                            {events.map((event, index) => (
+                    <div style={{ opacity: isLocked ? 0 : 1, pointerEvents: isLocked ? 'none' : 'auto', visibility: isLocked ? 'hidden' : 'visible', height: isLocked ? '600px' : 'auto', overflow: 'hidden' }}>
+                        <div className="timeline-orchestra" style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative' }}>
+                            {/* Central Line */}
+                            <div style={{ position: 'absolute', left: '50%', top: 0, bottom: 0, width: '2px', background: `linear-gradient(to bottom, transparent, ${activeTheme.color}33, transparent)`, transform: 'translateX(-50%)' }} />
+
+                            <AnimatePresence mode="wait">
                                 <motion.div
-                                    key={index}
-                                    initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
-                                    viewport={{ once: true, margin: "-100px" }}
-                                    transition={{ duration: 1, delay: index * 0.1, ease: [0.19, 1, 0.22, 1] }}
-                                    style={{
-                                        display: 'flex',
-                                        justifyContent: index % 2 === 0 ? 'flex-end' : 'flex-start',
-                                        paddingRight: index % 2 === 0 ? '50%' : '0',
-                                        paddingLeft: index % 2 !== 0 ? '50%' : '0',
-                                        marginBottom: '10rem',
-                                        position: 'relative'
-                                    }}
+                                    key={activeDay}
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    exit={{ opacity: 0 }}
+                                    transition={{ duration: 1 }}
                                 >
-                                    {/* Time Marker */}
-                                    <div style={{
-                                        position: 'absolute',
-                                        left: '50%',
-                                        top: '40px',
-                                        transform: 'translateX(-50%)',
-                                        zIndex: 10
-                                    }}>
-                                        <div style={{ width: '120px', textAlign: 'center' }}>
-                                            <span style={{ color: activeTheme.color, fontWeight: 950, fontSize: '0.8rem', letterSpacing: '2px', background: '#030303', padding: '5px 15px', borderRadius: '100px', border: `1px solid ${activeTheme.color}44` }}>
-                                                {event.time}
-                                            </span>
-                                        </div>
-                                    </div>
+                                    {events.map((event, index) => (
+                                        <motion.div
+                                            key={index}
+                                            initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
+                                            whileInView={{ opacity: 1, x: 0 }}
+                                            viewport={{ once: true, margin: "-100px" }}
+                                            transition={{ duration: 1, delay: index * 0.1, ease: [0.19, 1, 0.22, 1] }}
+                                            style={{
+                                                display: 'flex',
+                                                justifyContent: index % 2 === 0 ? 'flex-end' : 'flex-start',
+                                                paddingRight: index % 2 === 0 ? '50%' : '0',
+                                                paddingLeft: index % 2 !== 0 ? '50%' : '0',
+                                                marginBottom: '10rem',
+                                                position: 'relative'
+                                            }}
+                                        >
+                                            {/* Time Marker */}
+                                            <div style={{
+                                                position: 'absolute',
+                                                left: '50%',
+                                                top: '40px',
+                                                transform: 'translateX(-50%)',
+                                                zIndex: 10
+                                            }}>
+                                                <div style={{ width: '120px', textAlign: 'center' }}>
+                                                    <span style={{ color: activeTheme.color, fontWeight: 950, fontSize: '0.8rem', letterSpacing: '2px', background: '#030303', padding: '5px 15px', borderRadius: '100px', border: `1px solid ${activeTheme.color}44` }}>
+                                                        {event.time}
+                                                    </span>
+                                                </div>
+                                            </div>
 
-                                    {/* Event Card */}
-                                    <motion.div
-                                        whileHover={{ y: -10, scale: 1.02 }}
-                                        style={{
-                                            width: '90%',
-                                            maxWidth: '450px',
-                                            background: 'rgba(255,255,255,0.01)',
-                                            borderRadius: '40px',
-                                            overflow: 'hidden',
-                                            border: '1px solid rgba(255,255,255,0.04)',
-                                            backdropFilter: 'blur(20px)',
-                                            padding: '2rem'
-                                        }}
-                                    >
-                                        <div style={{ height: '300px', borderRadius: '30px', overflow: 'hidden', marginBottom: '2rem' }}>
-                                            <img src={event.image} alt={event.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                                        </div>
-                                        <div>
-                                            <span style={{ color: activeTheme.color, fontSize: '0.7rem', fontWeight: 900, letterSpacing: '4px', textTransform: 'uppercase' }}>{event.category}</span>
-                                            <h3 style={{ fontSize: '2rem', fontWeight: 950, color: 'white', margin: '0.8rem 0', lineHeight: 1.1 }}>{event.title}</h3>
-                                            <p style={{ color: 'rgba(255,255,255,0.4)', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-                                                <i className="fas fa-map-marker-alt" style={{ color: activeTheme.color }}></i> {event.location}
-                                            </p>
-                                        </div>
-                                    </motion.div>
+                                            {/* Event Card */}
+                                            <motion.div
+                                                whileHover={{ y: -10, scale: 1.02 }}
+                                                style={{
+                                                    width: '90%',
+                                                    maxWidth: '450px',
+                                                    background: 'rgba(255,255,255,0.01)',
+                                                    borderRadius: '40px',
+                                                    overflow: 'hidden',
+                                                    border: '1px solid rgba(255,255,255,0.04)',
+                                                    backdropFilter: 'blur(20px)',
+                                                    padding: '2rem'
+                                                }}
+                                            >
+                                                <div style={{ height: '300px', borderRadius: '30px', overflow: 'hidden', marginBottom: '2rem' }}>
+                                                    <img src={event.image} alt={event.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                                </div>
+                                                <div>
+                                                    <span style={{ color: activeTheme.color, fontSize: '0.7rem', fontWeight: 900, letterSpacing: '4px', textTransform: 'uppercase' }}>{event.category}</span>
+                                                    <h3 style={{ fontSize: '2rem', fontWeight: 950, color: 'white', margin: '0.8rem 0', lineHeight: 1.1 }}>{event.title}</h3>
+                                                    <p style={{ color: 'rgba(255,255,255,0.4)', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+                                                        <i className="fas fa-map-marker-alt" style={{ color: activeTheme.color }}></i> {event.location}
+                                                    </p>
+                                                </div>
+                                            </motion.div>
+                                        </motion.div>
+                                    ))}
                                 </motion.div>
-                            ))}
-                        </motion.div>
-                    </AnimatePresence>
+                            </AnimatePresence>
+                        </div>
+                    </div>
                 </div>
             </div>
 

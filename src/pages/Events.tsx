@@ -932,16 +932,6 @@ const allEvents: EventDetail[] = [
 const categoriesList = ["All", "Music", "Dance", "Drama", "Tech", "Art", "Speech", "Media", "Business", "Social", "Cultural"];
 const dayThemes = [
     {
-        id: 0,
-        name: "FULL SAGA",
-        label: "THE ROAD",
-        color: "#ffffff",
-        kanji: "路",
-        bgImage: "https://images.unsplash.com/photo-1534149764508-857d40fec6ed?q=80&w=2000&auto=format&fit=crop",
-        tagline: "THE COMPLETE JOURNEY",
-        style: "geometric"
-    },
-    {
         id: 1,
         name: "IGNITION",
         label: "THE SPARK",
@@ -1186,7 +1176,8 @@ const BackgroundElements = ({ themeColor, activeKanji, dayId }: { themeColor: st
 };
 
 const Events = () => {
-    const [filter, setFilter] = useState({ category: "All", day: 0 });
+    const isLocked = true;
+    const [filter, setFilter] = useState({ category: "All", day: 1 });
     const { scrollY } = useScroll();
     const yHero = useTransform(scrollY, [0, 500], [0, -120]);
     const opacityHero = useTransform(scrollY, [0, 300], [1, 0]);
@@ -1231,7 +1222,6 @@ const Events = () => {
             background: filter.day === 3 ? '#080000' : (filter.day === 2 ? '#000810' : '#030303'),
             position: 'relative',
             overflow: 'hidden',
-            transition: 'background 1.5s ease-in-out'
         }}>
             <BackgroundElements themeColor={activeTheme.color} activeKanji={activeTheme.kanji} dayId={filter.day} />
 
@@ -1266,7 +1256,7 @@ const Events = () => {
                         <motion.button key={day.id} onClick={() => setFilter(prev => ({ ...prev, day: day.id }))} whileHover={{ scale: 1.05, y: -5 }} whileTap={{ scale: 0.95 }}
                             style={{
                                 background: filter.day === day.id ? day.color : 'rgba(255,255,255,0.02)',
-                                color: filter.day === day.id ? (day.id === 0 || day.id === 2 ? '#000000' : '#ffffff') : 'rgba(255,255,255,0.4)',
+                                color: filter.day === day.id ? (day.id === 2 ? '#000000' : '#ffffff') : 'rgba(255,255,255,0.4)',
                                 border: `1px solid ${filter.day === day.id ? day.color : 'rgba(255,255,255,0.05)'}`,
                                 padding: '1.5rem 2.5rem', borderRadius: '24px', display: 'flex', flexDirection: 'column', alignItems: 'center', minWidth: '220px', cursor: 'pointer', transition: 'all 0.5s cubic-bezier(0.19, 1, 0.22, 1)', backdropFilter: 'blur(20px)', boxShadow: filter.day === day.id ? `0 20px 40px ${day.color}44` : 'none'
                             }}>
@@ -1275,6 +1265,34 @@ const Events = () => {
                         </motion.button>
                     ))}
                 </div>
+
+                <div style={{ position: 'relative' }}>
+                    {isLocked && (
+                        <div style={{
+                            position: 'absolute',
+                            inset: 0,
+                            zIndex: 1000,
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            background: 'rgba(3,3,3,0.5)',
+                            backdropFilter: 'blur(20px)',
+                            textAlign: 'center',
+                            padding: '4rem',
+                            borderRadius: '40px',
+                            minHeight: '400px'
+                        }}>
+                            <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }}>
+                                <i className="fas fa-lock" style={{ fontSize: '3rem', color: activeTheme.color, marginBottom: '1.5rem', display: 'block', opacity: 0.5 }}></i>
+                                <h2 style={{ fontSize: 'clamp(2rem, 6vw, 4rem)', fontWeight: 950, color: 'white', letterSpacing: '-1px', textTransform: 'uppercase', marginBottom: '0.5rem' }}>EPISODE LOCKED</h2>
+                                <p style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.5)', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase' }}>The pages will be released soon</p>
+                                <div style={{ marginTop: '2rem', height: '2px', width: '150px', background: `linear-gradient(to right, transparent, ${activeTheme.color}, transparent)`, margin: '2rem auto' }}></div>
+                            </motion.div>
+                        </div>
+                    )}
+
+                    <div style={{ opacity: isLocked ? 0 : 1, pointerEvents: isLocked ? 'none' : 'auto', visibility: isLocked ? 'hidden' : 'visible', height: isLocked ? '400px' : 'auto', overflow: 'hidden' }}>
 
                 <div className="classification-carousel" style={{ marginBottom: '8rem', overflowX: 'auto', paddingBottom: '1.5rem', scrollbarWidth: 'none' }}>
                     <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', minWidth: 'max-content', padding: '0 2rem' }}>
@@ -1314,7 +1332,7 @@ const Events = () => {
                                             <span><i className="fas fa-map-marker-alt" style={{ color: event.color }}></i> {event.location}</span>
                                         </div>
                                     </div>
-                                    <motion.button onClick={() => handleOpenModal(event)} whileHover={{ scale: 1.02, backgroundColor: event.color, color: (event.day === 2 || event.day === 0) ? 'black' : 'white' }} whileTap={{ scale: 0.98 }}
+                                    <motion.button onClick={() => handleOpenModal(event)} whileHover={{ scale: 1.02, backgroundColor: event.color, color: (event.day === 2) ? 'black' : 'white' }} whileTap={{ scale: 0.98 }}
                                         style={{ background: 'rgba(255,255,255,0.03)', color: 'white', border: `1px solid ${event.color}44`, padding: '1rem', borderRadius: '15px', fontWeight: 950, fontSize: '0.75rem', marginTop: '1.5rem', cursor: 'pointer', transition: 'all 0.3s ease', letterSpacing: '2px', textTransform: 'uppercase' }}>
                                         VIEW DETAILS
                                     </motion.button>
@@ -1323,6 +1341,8 @@ const Events = () => {
                         ))}
                     </AnimatePresence>
                 </motion.div>
+                    </div>
+                </div>
             </div>
 
             <EventModal event={selectedEvent} isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
