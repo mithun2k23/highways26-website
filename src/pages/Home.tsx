@@ -61,11 +61,11 @@ const Home = () => {
                 backgroundPosition: 'center'
             }}>
                 <div className="hero-content animate-fade">
-                    <div className="flex justify-center mb-12">
+                    <div className="flex justify-center mb-8 md:mb-12">
                         <img
                             src={HighwaysLogo}
                             alt="Highways Logo"
-                            className="w-[95%] h-auto mx-auto"
+                            className="w-[95%] md:w-[85%] h-auto mx-auto"
                         />
                     </div>
                     <div className="hero-info">
@@ -73,8 +73,8 @@ const Home = () => {
                             {[
                                 { value: timeLeft.days, label: 'DAYS' },
                                 { value: timeLeft.hours, label: 'HOURS' },
-                                { value: timeLeft.minutes, label: 'MINUTES' },
-                                { value: timeLeft.seconds, label: 'SECONDS' }
+                                { value: timeLeft.minutes, label: 'MINS' },
+                                { value: timeLeft.seconds, label: 'SECS' }
                             ].map(({ value, label }) => (
                                 <div key={label} className="countdown-card">
                                     <div className="card-top">
@@ -275,6 +275,17 @@ const Home = () => {
                     }
                     
                     @media (max-width: 768px) {
+                        .premium-countdown { gap: 10px !important; }
+                        .countdown-card { width: 70px !important; height: 90px !important; }
+                        .countdown-number { font-size: 2rem !important; }
+                        .countdown-label { font-size: 0.5rem !important; }
+                        .hero-tagline { font-size: 0.8rem !important; letter-spacing: 4px !important; }
+                        .hero-content { padding: 40px 15px !important; }
+                        .about-flex { flex-direction: column !important; text-align: center; }
+                        .about-text { margin-bottom: 3rem !important; }
+                        .section-title.left { text-align: center !important; }
+                        .section-title.left::after { left: 50% !important; transform: translateX(-50%) !important; }
+
                         .glimpses-track-container {
                             gap: 120px !important;
                         }
@@ -288,7 +299,8 @@ const Home = () => {
                         .floating-year-label div { display: none; }
                         .year-watermark { display: none; }
                         .glimpse-frame {
-                            height: 300px !important;
+                            height: 250px !important;
+                            width: 180px !important;
                             transform: none !important;
                         }
                     }

@@ -226,26 +226,111 @@ const Schedule = () => {
                 <div style={{ position: 'relative' }}>
                     {isLocked && (
                         <div style={{
-                            position: 'absolute',
-                            inset: 0,
+                            position: 'relative',
                             zIndex: 1000,
                             display: 'flex',
                             flexDirection: 'column',
                             alignItems: 'center',
                             justifyContent: 'center',
-                            background: 'rgba(3,3,3,0.5)',
-                            backdropFilter: 'blur(30px)',
+                            background: 'rgba(0,0,0,0.5)',
+                            backdropFilter: 'blur(70px) contrast(1.2)',
                             textAlign: 'center',
-                            padding: '4rem',
-                            borderRadius: '50px',
-                            minHeight: '600px'
+                            padding: '10rem 2rem',
+                            borderRadius: '80px',
+                            minHeight: '800px',
+                            border: '1px solid rgba(255,255,255,0.02)',
+                            overflow: 'hidden',
+                            boxShadow: `0 0 120px ${activeTheme.color}08`
                         }}>
-                            <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }}>
-                                <i className="fas fa-lock" style={{ fontSize: '4rem', color: activeTheme.color, marginBottom: '2rem', display: 'block', opacity: 0.5 }}></i>
-                                <h2 style={{ fontSize: 'clamp(2.5rem, 8vw, 5rem)', fontWeight: 950, color: 'white', letterSpacing: '-2px', textTransform: 'uppercase', marginBottom: '1rem' }}>CHRONIC PAUSED</h2>
-                                <p style={{ fontSize: '1.2rem', color: 'rgba(255,255,255,0.5)', fontWeight: 700, letterSpacing: '3px', textTransform: 'uppercase' }}>The pages will be released soon</p>
-                                <div style={{ marginTop: '3rem', height: '2px', width: '200px', background: `linear-gradient(to right, transparent, ${activeTheme.color}, transparent)`, margin: '3rem auto' }}></div>
-                            </motion.div>
+                             {/* Temporal Distortion Visuals */}
+                             <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none' }}>
+                                <motion.div 
+                                    animate={{ 
+                                        opacity: [0.05, 0.15, 0.05],
+                                        scale: [1, 1.1, 1]
+                                    }}
+                                    transition={{ duration: 8, repeat: Infinity }}
+                                    style={{ position: 'absolute', inset: 0, background: `radial-gradient(circle, ${activeTheme.color}22 0%, transparent 70%)` }}
+                                />
+                                <div style={{ 
+                                    position: 'absolute', 
+                                    inset: 0, 
+                                    background: 'url("https://www.transparenttextures.com/patterns/carbon-fibre.png")', 
+                                    opacity: 0.1,
+                                    mixBlendMode: 'overlay'
+                                }} />
+                             </div>
+
+                             {/* Symbolic Temporal Lock */}
+                             <div style={{ position: 'relative', width: '320px', height: '320px' }}>
+                                 {/* Circular Time Fractal Ring */}
+                                 <motion.div
+                                     animate={{ rotate: 360 }}
+                                     transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+                                     style={{ position: 'absolute', inset: 0, border: `1px solid ${activeTheme.color}33`, borderRadius: '50%' }}
+                                 >
+                                     {[...Array(12)].map((_, i) => (
+                                         <div key={i} style={{ 
+                                             position: 'absolute', 
+                                             top: '10px', 
+                                             left: '50%', 
+                                             height: '15px', 
+                                             width: '2px', 
+                                             background: activeTheme.color, 
+                                             opacity: 0.4,
+                                             transformOrigin: '0 150px',
+                                             transform: `translateX(-50%) rotate(${i * 30}deg)`
+                                         }} />
+                                     ))}
+                                 </motion.div>
+
+                                 {/* Pulsing Hourglass Core */}
+                                 <motion.div
+                                     animate={{ 
+                                         scale: [0.95, 1.05, 0.95],
+                                         rotate: [0, 5, -5, 0]
+                                     }}
+                                     transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                                     style={{ position: 'absolute', inset: '80px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+                                 >
+                                     <svg width="100" height="150" viewBox="0 0 50 80" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ filter: `drop-shadow(0 0 25px ${activeTheme.color})` }}>
+                                         <motion.path 
+                                            animate={{ fill: activeTheme.color }}
+                                            d="M5 5H45L25 40L5 5Z" opacity="0.3"
+                                         />
+                                         <motion.path 
+                                            animate={{ fill: activeTheme.color }}
+                                            d="M5 75H45L25 40L5 75Z" opacity="0.1"
+                                         />
+                                         <path d="M5 5V75" stroke={activeTheme.color} strokeWidth="2" opacity="0.5"/>
+                                         <path d="M45 5V75" stroke={activeTheme.color} strokeWidth="2" opacity="0.5"/>
+                                     </svg>
+                                 </motion.div>
+
+                                 {/* Chromatic Aberration Orbitals */}
+                                 <motion.div
+                                     animate={{ rotate: -360 }}
+                                     transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+                                     style={{ position: 'absolute', inset: '40px', border: `1px dashed rgba(255,255,255,0.1)`, borderRadius: '50%' }}
+                                 />
+                             </div>
+
+                             {/* Abstract Status Indicators */}
+                             <div style={{ marginTop: '5rem', display: 'flex', gap: '4rem', opacity: 0.2 }}>
+                                 <div style={{ width: '40px', height: '2px', background: activeTheme.color }}></div>
+                                 <div style={{ width: '40px', height: '2px', background: 'white' }}></div>
+                                 <div style={{ width: '40px', height: '2px', background: activeTheme.color }}></div>
+                             </div>
+
+                             {/* Distortion Overlay */}
+                             <motion.div
+                                 animate={{ 
+                                     opacity: [1, 0.8, 1, 0.6, 1],
+                                     scale: [1, 1.02, 1]
+                                 }}
+                                 transition={{ duration: 0.2, repeat: Infinity, repeatDelay: 3 }}
+                                 style={{ position: 'absolute', inset: 0, background: `linear-gradient(45deg, ${activeTheme.color}05, transparent)`, pointerEvents: 'none' }}
+                             />
                         </div>
                     )}
 
@@ -366,30 +451,45 @@ const Schedule = () => {
                 }
 
                 @media (max-width: 768px) {
-                    .schedule-premium-page { padding-top: 100px !important; }
-                    .schedule-premium-page h1 { font-size: 3.5rem !important; letter-spacing: 2px !important; }
-                    .schedule-premium-page h2 { font-size: 1.2rem !important; letter-spacing: 5px !important; }
+                    .schedule-premium-page { padding-top: 100px !important; padding-bottom: 80px !important; }
+                    .schedule-premium-page h1 { font-size: 3rem !important; letter-spacing: 0 !important; margin-bottom: 0.5rem !important; }
+                    .schedule-premium-page h2 { font-size: 0.8rem !important; letter-spacing: 4px !important; }
                     
-                    .timeline-orchestra { padding: 0 1.5rem !important; }
-                    .timeline-orchestra > div > div { margin-left: 30px !important; margin-bottom: 6rem !important; }
+                    .day-navigator-schedule { 
+                        justify-content: flex-start !important; 
+                        overflow-x: auto !important; 
+                        padding: 0 1.5rem 1.5rem !important;
+                        gap: 1rem !important;
+                    }
+                    .day-navigator-schedule button { min-width: 150px !important; padding: 1rem !important; border-radius: 12px !important; }
+                    .day-navigator-schedule button span:last-child { font-size: 1.2rem !important; }
+                    
+                    .timeline-orchestra { padding: 0 1rem !important; }
+                    .timeline-orchestra > div > div { margin-left: 20px !important; margin-bottom: 4rem !important; width: 100% !important; padding: 0 !important; }
+                    .timeline-orchestra div[style*="left: 50%"] { left: 5px !important; }
                     
                     .timeline-orchestra div[style*="left: 50%"][style*="zIndex: 10"] {
-                        left: -15px !important;
-                        top: 20px !important;
+                        left: -5px !important;
+                        top: 15px !important;
                     }
-                    .timeline-orchestra div[style*="width: 120px"] span {
-                        font-size: 0.6rem !important;
-                        padding: 4px 10px !important;
-                    }
-
+                    
                     .timeline-orchestra div[style*="borderRadius: 40px"] {
-                        border-radius: 24px !important;
+                        border-radius: 20px !important;
                         padding: 1.5rem !important;
+                        width: calc(100% - 20px) !important;
+                        max-width: none !important;
                     }
                     .timeline-orchestra div[style*="height: 300px"] {
-                        height: 200px !important;
-                        border-radius: 20px !important;
+                        height: 180px !important;
+                        border-radius: 15px !important;
                     }
+                    .timeline-orchestra h3 { font-size: 1.4rem !important; }
+                    
+                    /* Lock UI Mobile */
+                    div[style*="minHeight: '800px'"] { min-height: 600px !important; }
+                    div[style*="width: '320px'"] { width: 220px !important; height: 220px !important; }
+                    div[style*="inset: '80px'"] { inset: 50px !important; }
+                    svg[width="100"] { width: 60px !important; height: 90px !important; }
                 }
 
                 @keyframes scanline { 0% { top: -100%; } 100% { top: 100%; } }

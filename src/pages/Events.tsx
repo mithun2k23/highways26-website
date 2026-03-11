@@ -1118,6 +1118,8 @@ const EventModal = ({ event, isOpen, onClose }: { event: EventDetail | null, isO
 };
 
 const BackgroundElements = ({ themeColor, activeKanji, dayId }: { themeColor: string, activeKanji: string, dayId: number }) => {
+    const activeDayTheme = dayThemes.find(t => t.id === dayId) || dayThemes[0];
+
     return (
         <div className="background-decorations" style={{ position: 'fixed', inset: 0, zIndex: -1, pointerEvents: 'none', overflow: 'hidden' }}>
             <AnimatePresence mode="wait">
@@ -1130,7 +1132,7 @@ const BackgroundElements = ({ themeColor, activeKanji, dayId }: { themeColor: st
                     style={{
                         position: 'absolute',
                         inset: 0,
-                        backgroundImage: `url(${dayThemes[dayId].bgImage})`,
+                        backgroundImage: `url(${activeDayTheme.bgImage})`,
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                         filter: 'grayscale(1) brightness(0.08) contrast(1.1)',
@@ -1269,26 +1271,105 @@ const Events = () => {
                 <div style={{ position: 'relative' }}>
                     {isLocked && (
                         <div style={{
-                            position: 'absolute',
-                            inset: 0,
+                            position: 'relative',
                             zIndex: 500,
                             display: 'flex',
                             flexDirection: 'column',
                             alignItems: 'center',
                             justifyContent: 'center',
-                            background: 'rgba(3,3,3,0.5)',
-                            backdropFilter: 'blur(30px)',
+                            background: 'rgba(0,0,0,0.4)',
+                            backdropFilter: 'blur(60px) saturate(1.5)',
                             textAlign: 'center',
-                            padding: '4rem',
-                            borderRadius: '50px',
-                            minHeight: '600px'
+                            padding: '10rem 2.5rem',
+                            borderRadius: '80px',
+                            minHeight: '800px',
+                            border: '1px solid rgba(255,255,255,0.03)',
+                            overflow: 'hidden',
+                            boxShadow: `0 0 100px ${activeTheme.color}11`
                         }}>
-                            <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }}>
-                                <i className="fas fa-lock" style={{ fontSize: '4rem', color: activeTheme.color, marginBottom: '2rem', display: 'block', opacity: 0.5 }}></i>
-                                <h2 style={{ fontSize: 'clamp(2.5rem, 8vw, 5rem)', fontWeight: 950, color: 'white', letterSpacing: '-2px', textTransform: 'uppercase', marginBottom: '1rem' }}>EPISODE LOCKED</h2>
-                                <p style={{ fontSize: '1.2rem', color: 'rgba(255,255,255,0.5)', fontWeight: 700, letterSpacing: '3px', textTransform: 'uppercase' }}>The pages will be released soon</p>
-                                <div style={{ marginTop: '3rem', height: '2px', width: '200px', background: `linear-gradient(to right, transparent, ${activeTheme.color}, transparent)`, margin: '3rem auto' }}></div>
-                            </motion.div>
+                            {/* Dramatic Symbolic Lock - No Text UI */}
+                            <div style={{ position: 'relative', width: '300px', height: '300px', perspective: '1000px' }}>
+                                {/* Outer Rotating Rings */}
+                                <motion.div animate={{ rotate: 360 }} transition={{ duration: 15, repeat: Infinity, ease: "linear" }} style={{ position: 'absolute', inset: 0, border: `2px solid ${activeTheme.color}22`, borderRadius: '50%', borderTopColor: activeTheme.color, filter: 'blur(1px)' }} />
+                                <motion.div animate={{ rotate: -360 }} transition={{ duration: 25, repeat: Infinity, ease: "linear" }} style={{ position: 'absolute', inset: '20px', border: `1px dashed ${activeTheme.color}33`, borderRadius: '50%', filter: 'blur(2px)' }} />
+                                
+                                {/* Inner Orbitals */}
+                                {[...Array(3)].map((_, i) => (
+                                    <motion.div
+                                        key={i}
+                                        animate={{ 
+                                            rotateX: [0, 360],
+                                            rotateY: [0, 360],
+                                            scale: [1, 1.2, 1]
+                                        }}
+                                        transition={{ 
+                                            duration: 10 + i * 5, 
+                                            repeat: Infinity, 
+                                            ease: "easeInOut" 
+                                        }}
+                                        style={{
+                                            position: 'absolute',
+                                            inset: '60px',
+                                            border: `1px solid ${activeTheme.color}44`,
+                                            borderRadius: '50%',
+                                            opacity: 0.3
+                                        }}
+                                    />
+                                ))}
+
+                                {/* The Core Singularity */}
+                                <div style={{ position: 'absolute', inset: '100px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                    <motion.div
+                                        animate={{
+                                            scale: [1, 1.4, 1],
+                                            opacity: [0.4, 0.8, 0.4],
+                                            filter: [`blur(10px) drop-shadow(0 0 20px ${activeTheme.color})`, `blur(15px) drop-shadow(0 0 50px ${activeTheme.color})`, `blur(10px) drop-shadow(0 0 20px ${activeTheme.color})`]
+                                        }}
+                                        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                                        style={{
+                                            width: '60px',
+                                            height: '60px',
+                                            background: activeTheme.color,
+                                            borderRadius: '50%',
+                                            zIndex: 2
+                                        }}
+                                    />
+                                    {/* Glitch Overlay Over Core */}
+                                    <motion.div
+                                        animate={{ 
+                                            opacity: [0, 0.2, 0, 0.4, 0],
+                                            x: [-5, 5, -5, 10, -10, 0],
+                                            scaleX: [1, 2, 0.5, 1.5, 1]
+                                        }}
+                                        transition={{ duration: 0.3, repeat: Infinity, repeatDelay: 2 }}
+                                        style={{ position: 'absolute', width: '150px', height: '2px', background: 'white', filter: 'blur(10px)', zIndex: 3 }}
+                                    />
+                                </div>
+                            </div>
+
+                            {/* Minimal Symbolic Footer */}
+                            <div style={{ marginTop: '5rem', display: 'flex', gap: '3rem', opacity: 0.3 }}>
+                                <i className="fas fa-barcode" style={{ fontSize: '2rem', color: activeTheme.color }}></i>
+                                <div style={{ height: '40px', width: '1px', background: 'rgba(255,255,255,0.2)' }}></div>
+                                <i className="fas fa-microchip" style={{ fontSize: '2rem', color: activeTheme.color }}></i>
+                                <div style={{ height: '40px', width: '1px', background: 'rgba(255,255,255,0.2)' }}></div>
+                                <i className="fas fa-fingerprint" style={{ fontSize: '2rem', color: activeTheme.color }}></i>
+                            </div>
+
+                            {/* Scanning Glitch Effect */}
+                            <motion.div 
+                                animate={{ top: ['-10%', '110%'] }}
+                                transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
+                                style={{
+                                    position: 'absolute',
+                                    left: 0,
+                                    right: 0,
+                                    height: '300px',
+                                    background: `linear-gradient(transparent, ${activeTheme.color}05, transparent)`,
+                                    pointerEvents: 'none',
+                                    zIndex: 1
+                                }}
+                            />
                         </div>
                     )}
 
@@ -1366,45 +1447,38 @@ const Events = () => {
                 @media (max-width: 768px) {
                     .events-cinematic-page { padding-top: 100px !important; padding-bottom: 80px !important; }
                     .events-header-premium { margin-bottom: 4rem !important; }
-                    .events-header-premium h1 { font-size: 3.5rem !important; letter-spacing: 2px !important; }
-                    .events-header-premium span { font-size: 0.7rem !important; letter-spacing: 4px !important; }
+                    .events-header-premium h1 { font-size: 3rem !important; letter-spacing: 0 !important; }
+                    .events-header-premium span { font-size: 0.6rem !important; letter-spacing: 4px !important; }
                     
                     .day-navigator { 
                         justify-content: flex-start !important; 
                         overflow-x: auto !important; 
                         padding: 0 1.5rem 1rem !important; 
                         gap: 1rem !important;
-                        -webkit-overflow-scrolling: touch;
                     }
-                    .day-navigator button { min-width: 200px !important; padding: 1.2rem !important; }
+                    .day-navigator button { min-width: 160px !important; padding: 1rem !important; border-radius: 12px !important; }
+                    .day-navigator button span:last-child { font-size: 1.1rem !important; }
                     
-                    .classification-carousel { margin-bottom: 4rem !important; }
-                    .classification-carousel > div { justify-content: flex-start !important; padding: 0 1.5rem !important; }
+                    .classification-carousel { margin-bottom: 3rem !important; }
+                    .classification-carousel > div { justify-content: flex-start !important; padding: 0 1rem !important; gap: 0.6rem !important; }
+                    .classification-carousel button { padding: 0.6rem 1.5rem !important; font-size: 0.7rem !important; }
 
                     .events-grid-system { 
-                        grid-template-columns: repeat(2, 1fr) !important; 
-                        gap: 1rem !important; 
-                        padding: 0 1rem !important;
+                        grid-template-columns: 1fr !important; 
+                        gap: 1.5rem !important; 
+                        padding: 0 1.5rem !important;
                     }
-                    .event-premium-card { height: 400px !important; border-radius: 18px !important; }
-                    .card-content-body { padding: 1rem !important; }
-                    .card-content-body h3 { font-size: 1.1rem !important; line-height: 1.2 !important; margin: 0.5rem 0 !important; }
-                    .card-content-body span { font-size: 0.6rem !important; letter-spacing: 2px !important; }
-                    .card-content-body div[style*="fontSize: '0.8rem'"] { font-size: 0.65rem !important; }
-                    .event-premium-card button { padding: 0.6rem !important; font-size: 0.6rem !important; margin-top: 1rem !important; }
-
-                    /* Modal Mobile Polish */
-                    .modal-overlay { padding: 0 !important; }
-                    .modal-overlay > div:last-child { 
-                        flex-direction: column !important; 
-                        height: 100vh !important; 
-                        max-height: 100vh !important;
-                        border-radius: 0 !important;
-                        border: none !important;
-                    }
-                    .modal-overlay > div:last-child > div:first-child { width: 100% !important; height: 35vh !important; min-height: 35vh !important; }
-                    .modal-overlay > div:last-child > div:last-child { width: 100% !important; padding: 2rem !important; }
-                    .modal-overlay h2 { font-size: 2.5rem !important; }
+                    .event-premium-card { height: auto !important; min-height: 450px !important; border-radius: 20px !important; }
+                    .card-visual-header { height: 250px !important; }
+                    .card-content-body { padding: 1.5rem !important; }
+                    .card-content-body h3 { font-size: 1.4rem !important; line-height: 1.2 !important; margin: 0.5rem 0 !important; }
+                    .card-content-body span { font-size: 0.65rem !important; letter-spacing: 3px !important; }
+                    
+                    /* Lock Screen Mobile Adjustments */
+                    div[style*="minHeight: '800px'"] { min-height: 600px !important; padding: 4rem 1.5rem !important; }
+                    div[style*="width: '300px'"] { width: 200px !important; height: 200px !important; }
+                    div[style*="inset: '100px'"] { inset: 60px !important; }
+                    div[style*="marginTop: '5rem'"] { gap: 1.5rem !important; margin-top: 3rem !important; }
                 }
             `}</style>
         </section>
