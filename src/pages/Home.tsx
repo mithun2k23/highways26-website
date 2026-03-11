@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
+import HighwaysLogo from "../assets/highways-logo.png";
 
 const Home = () => {
     const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
@@ -60,11 +61,12 @@ const Home = () => {
                 backgroundPosition: 'center'
             }}>
                 <div className="hero-content animate-fade">
-                    <div className="hero-main-branding" style={{ marginBottom: '2rem' }}>
-                        <h1 className="highways-26-text" data-text="HIGHWAYS'26" style={{
-                            margin: '0',
-                            padding: '0',
-                        }}>HIGHWAYS'26</h1>
+                    <div className="flex justify-center mb-12">
+                        <img
+                            src={HighwaysLogo}
+                            alt="Highways Logo"
+                            className="w-[95%] h-auto mx-auto"
+                        />
                     </div>
                     <div className="hero-info">
                         <div className="premium-countdown">
@@ -87,7 +89,7 @@ const Home = () => {
                                 </div>
                             ))}
                         </div>
-                        <div className="date-badge">APRIL 09 - 11</div>
+                        <div className="date-badge">APRIL 09, 10, 11</div>
                         <p className="hero-tagline">WHERE TRADITION MEETS THE FUTURE</p>
                     </div>
                     <div className="hero-btns">

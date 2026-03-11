@@ -1,3 +1,5 @@
+import HighwaysLogo from "../assets/highways-logo.png";
+
 const Footer = () => {
   return (
     <>
@@ -7,81 +9,55 @@ const Footer = () => {
             0% { transform: translateY(20px); opacity: 0; }
             100% { transform: translateY(0); opacity: 1; }
           }
-          
-          .short-footer-text {
-            font-size: clamp(2rem, 10vw, 7rem); 
-            font-family: 'Outfit', sans-serif;
-            font-weight: 950;
-            text-align: center;
-            line-height: 1;
-            letter-spacing: -3px;
-            margin: 0 auto;
-            text-transform: uppercase;
-            background: linear-gradient(180deg, #ff9d00 0%, #ff4d00 45%, #e11d1d 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 
-              -1px -1px 0px #ffd700, 
-              1px 1px 0px #000, 
-              2px 2px 0px #7b0000, 
-              3px 3px 0px #6b0000, 
-              4px 4px 15px rgba(0,0,0,0.5);
-            opacity: 1;
-          }
-
-          .footer-copyright {
-            opacity: 0.3;
-            font-size: 10px;
-            font-weight: 800;
-            letter-spacing: 3px;
-            margin-top: 2rem;
-            text-transform: uppercase;
-          }
-
-          .footer-minimal-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 2rem;
-          }
-
-          .minimal-link {
-            color: rgba(255, 255, 255, 0.5);
-            text-decoration: none;
-            font-size: 0.7rem;
-            font-weight: 800;
-            letter-spacing: 2px;
-            transition: color 0.3s ease;
-          }
-
-          .minimal-link:hover {
-            color: #ff0000;
-          }
         `}
       </style>
 
-      <footer
-        style={{
-          background: '#000000',
-          color: '#ffffff',
-          padding: '60px 6% 40px',
-          position: 'relative',
-          zIndex: 2,
-          textAlign: 'center',
-          borderTop: 'none'
-        }}
-      >
-        <div className="footer-minimal-links">
-          <a href="https://www.instagram.com/svce_highways" target="_blank" rel="noopener noreferrer" className="minimal-link">INSTAGRAM</a>
-          <a href="mailto:highways@svce.ac.in" className="minimal-link">CONTACT</a>
+      <footer className="bg-black text-white pt-20 pb-10 px-[6%] text-center">
+
+        {/* Big Logo */}
+        <div className="flex justify-center mb-12">
+          <img
+            src={HighwaysLogo}
+            alt="Highways Logo"
+            className="w-[95%] h-auto mx-auto"
+          />
         </div>
 
-        <h1 className="short-footer-text">HIGHWAYS'26</h1>
-
-        <div className="footer-copyright">
-          © 2026 HIGHWAYS
+        {/* Navigation */}
+        <div className="flex flex-wrap justify-center gap-6 text-sm font-semibold tracking-wide mb-10">
+          <a href="/" className="text-white/60 hover:text-red-500 transition">Home</a>
+          <a href="/events" className="text-white/60 hover:text-red-500 transition">Events</a>
+          <a href="/schedule" className="text-white/60 hover:text-red-500 transition">Schedule</a>
+          <a href="/passes" className="text-white/60 hover:text-red-500 transition">Get Passes</a>
+          <a href="/sponsors" className="text-white/60 hover:text-red-500 transition">Sponsors</a>
+          <a href="/team" className="text-white/60 hover:text-red-500 transition">Team</a>
+          <a href="/faq" className="text-white/60 hover:text-red-500 transition">FAQ</a>
         </div>
+
+        {/* Social + Contact */}
+        <div className="flex justify-center gap-8 mb-10 text-xs font-bold tracking-[2px] uppercase">
+          <a
+            href="https://www.instagram.com/svce_highways"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white/50 hover:text-red-500 transition"
+          >
+            Instagram
+          </a>
+
+          <a
+            href="mailto:highways@svce.ac.in"
+            className="text-white/50 hover:text-red-500 transition"
+          >
+            Contact
+          </a>
+        </div>
+
+        {/* Copyright */}
+        <div className="text-[11px] tracking-[3px] opacity-30 font-bold uppercase">
+          © 2026 Highways 
+        </div>
+
       </footer>
     </>
   );
