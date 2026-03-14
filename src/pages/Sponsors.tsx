@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion';
 
 const sponsorsData = [
-    { name: "Tech Giant", tier: "Title Sponsor", logo: "https://api.dicebear.com/7.x/initials/svg?seed=TG", desc: "Redefining the digital landscape." },
-    { name: "Future Vision", tier: "Gold Partner", logo: "https://api.dicebear.com/7.x/initials/svg?seed=FV", desc: "Fueling innovation for the next generation." },
-    { name: "Zenith Media", tier: "Media Partner", logo: "https://api.dicebear.com/7.x/initials/svg?seed=ZM", desc: "Amplifying voices across the horizon." },
-    { name: "Urban Pulse", tier: "Lifestyle Partner", logo: "https://api.dicebear.com/7.x/initials/svg?seed=UP", desc: "Bringing the beat of the city to Highways." }
+    { name: "Greenstar", tier: "Special Sponsor", logo: "https://api.dicebear.com/7.x/initials/svg?seed=GS", desc: "Official Special Sponsor." },
+    { name: "Gamistry", tier: "Event Sponsor", logo: "https://api.dicebear.com/7.x/initials/svg?seed=GM", desc: "Powering the events." },
+    { name: "Zebronics", tier: "Event Sponsor", logo: "https://api.dicebear.com/7.x/initials/svg?seed=ZB", desc: "Elevating the experience." },
+    { name: "Xmold Polymers", tier: "Sponsor", logo: "https://api.dicebear.com/7.x/initials/svg?seed=XP", desc: "Proud sponsor of Highways'26." }
 ];
 
 const Sponsors = () => {

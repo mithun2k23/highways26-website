@@ -99,7 +99,7 @@ const Home = () => {
                             ))}
                         </div>
                         <div className="date-badge">APRIL 09, 10, 11</div>
-                        <p className="hero-tagline text-center">WHERE TRADITION MEETS THE FUTURE</p>
+                        <p className="hero-tagline text-center">Bigger. Better. Bolder</p>
                     </div>
                     <div className="hero-btns flex justify-center mt-8">
                         <Link to="/events" className="btn-matsuri">Explore More</Link>
@@ -113,8 +113,7 @@ const Home = () => {
                     <div className="about-flex">
                         <div className="about-text">
                             <h2 className="section-title left">THE SAGA BEGINS</h2>
-                            <p>Highways is the annual intercollegiate cultural festival of Sri Venkateswara College of Engineering (SVCE). Known for its vibrant atmosphere and creative energy, Highways brings together students from across the states to celebrate art, talent, and expression.</p>
-                            <p>This year, for <strong>Highways '26</strong>, we are pushing the boundaries of creativity. Experience a festival like never before, where every moment is a masterpiece and every event is a step into the extraordinary.</p>
+                            <p>Highways'26 is the annual flagship cultural festival of Sri Venkateswara College of Engineering, set to take place on April 9, 10 & 11. This 3-day extravaganza promises an unforgettable experience with over 50 events, featuring a diverse range of cultural, musical, and artistic performances. With participation from over 4000 students, Highways'26 is a melting pot of creativity and talent. Get ready to groove to the beats of pro shows and witness the vibrant energy of our students as they showcase their skills. Plus, catch exciting celebrity walk-ins!</p>
                         </div>
                         <div className="about-image-container">
                             <div className="image-frame" style={{ position: 'relative' }}>
