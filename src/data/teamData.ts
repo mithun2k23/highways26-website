@@ -124,7 +124,8 @@ export const teamData: TeamGroup[] = [
             { "name": "Meenatshi P", "role": "Member", "spirit": "The Flame", "image": "/members/Meenatshi_P-member_Operations - MEENATSHI P CSE.webp", "imagePosition": "center 10%" },
             { "name": "U S SANJEEVAN", "role": "Member", "spirit": "The Frost", "image": "/members/U S Sanjeevan-Member-Operations_Wing - U S SANJEEVAN EEE.webp", "imagePosition": "center 10%" },
             { "name": "Abdul Rahman N", "role": "Member", "spirit": "The Storm", "image": "/members/Abdul Rahman N-Member_Operations - ABDUL RAHMAN N AE.webp", "imagePosition": "center 10%" },
-            { "name": "Prithish A S", "role": "Member", "spirit": "The Support", "image": "/members/IMG_20260127_171552_673 - PRITHISH A S CSE.webp", "imagePosition": "center 15%" }
+            { "name": "Prithish A S", "role": "Member", "spirit": "The Support", "image": "/members/IMG_20260127_171552_673 - PRITHISH A S CSE.webp", "imagePosition": "center 15%" },
+            { "name": "Ajay M", "role": "Member", "spirit": "The Catalyst", "image": "/members/AJAY_OPERATIOR_WING - AJAY M CSE.jpg", "imagePosition": "center 10%" }
         ]
     },
     {
@@ -142,7 +143,7 @@ export const teamData: TeamGroup[] = [
             { "name": "MUTHUVEERAN D", "role": "Sub lead", "spirit": "The Captain", "image": "/members/IMG20250513171011 - MUTHUVEERAN D CSE.jpg", "imagePosition": "center 10%" },
             { "name": "Saranraj S", "role": "Member", "spirit": "The Sentinel", "image": "/members/IMG-20260304-WA0101 - SARANRAJ S EEE.jpg", "imagePosition": "center 10%" },
             { "name": "Thannigaipriya P S", "role": "Member", "spirit": "The Watcher", "image": "/members/Thannigaipriya P S _Member_Vigilance wing - THANNIGAIPRIYA PS EEE.jpg", "imagePosition": "center 10%" },
-            { "name": "A.Bharath Rajh", "role": "Member", "spirit": "The Defender", "image": "/members/Bharath Rajh_Member_Vigilance Wing - 011_A.BHARATH RAJH _MECH", "imagePosition": "center 15%" },
+            { "name": "A.Bharath Rajh", "role": "Member", "spirit": "THE APEX TITAN", "image": "/members/Bharath Rajh_Member_Vigilance Wing - 011_A.BHARATH RAJH _MECH", "imagePosition": "center 15%" },
             { "name": "Sridharshini M", "role": "Member", "spirit": "The Shield", "image": "/members/IMG_20260312_094606 - SRIDHARSHINI M EEE.jpg", "imagePosition": "center 20%" },
             { "name": "Sumithra S", "role": "Member", "spirit": "The Protector", "image": "/members/Sumithra S_Member_Vigilance - SUMITHRA S CSE.jpg", "imagePosition": "center 15%" },
             { "name": "BALAJI S", "role": "Member", "spirit": "The Vigilant", "image": "/members/IMG-20250922-WA0018~3 - BALAJI S EEE.jpg", "imagePosition": "center 10%" },
@@ -152,7 +153,10 @@ export const teamData: TeamGroup[] = [
             { "name": "Thirumurugan S", "role": "Member", "spirit": "The Ranger", "image": "/members/Photo from Thirumurugan - THIRUMURUGAN S CSE.S", "imagePosition": "center 15%" },
             { "name": "Adhitya R", "role": "Member", "spirit": "The Scout", "image": "/members/Adhitya-Member_Vigilance  - ADHITYA R EEE.jpg", "imagePosition": "center 10%" },
             { "name": "Rohith kumaar P R", "role": "Member", "spirit": "The Observer", "image": "/members/IMG_20260312_170600 - ROHITH KUMAAR P R ECE.jpg", "imagePosition": "center 10%" },
-            { "name": "PEYAL NEERAN TS", "role": "Member", "spirit": "The Monitor", "image": "/members/Peyal Neeran TS member at vigilance wing  - PEYAL NEERAN T S CIVIL.jpg", "imagePosition": "center 15%" }
+            { "name": "PEYAL NEERAN TS", "role": "Member", "spirit": "The Monitor", "image": "/members/Peyal Neeran TS member at vigilance wing  - PEYAL NEERAN T S CIVIL.jpg", "imagePosition": "center 15%" },
+            { "name": "Vineeth I", "role": "Member", "spirit": "The Shield", "image": "/members/IMG_4028 - VINEETH I CSE.jpeg", "imagePosition": "center 10%" },
+            { "name": "K K MUKESH RAM", "role": "Member", "spirit": "The Guardian", "image": "/members/_MG_0679 - K K MUKESH RAM ECE.JPG", "imagePosition": "center 10%" },
+            { "name": "Meyyalagan T", "role": "Member", "spirit": "The Sentinel", "image": "/members/file_0000000019d0720b96c609f5a8889ecc - MEYYALAGAN T EEE.png", "imagePosition": "center 10%" }
         ]
     },
     {
@@ -160,6 +164,27 @@ export const teamData: TeamGroup[] = [
         "name": "PRODUCTION",
         "members": [
             { "name": "MUTHUVEERAN D", "role": "Sub lead", "spirit": "The Director", "image": "/members/IMG20250513171011 - MUTHUVEERAN D CSE.jpg", "imagePosition": "center 10%" }
+        ]
+    },
+    {
+        "id": "hospitality",
+        "name": "HOSPITALITY",
+        "members": [
+            { "name": "Anjana Suresh", "role": "Lead", "spirit": "The Welcomer", "image": "/members/IMG_8082 - ANJANA SURESH ECE.jpeg", "imagePosition": "center 10%" },
+            { "name": "SANYU.J", "role": "Sub lead", "spirit": "The Host", "image": "/members/Sanyu_hospitality. - SANYU J ECE.jpg", "imagePosition": "center 10%" },
+            { "name": "Rogini D", "role": "Member", "spirit": "The Guide", "image": "/members/Rogini_Member_Hospitality wing - ROGINI D EEE.jpg", "imagePosition": "center 10%" },
+            { "name": "PRINCY NIKITHA J", "role": "Member", "spirit": "The Host", "image": "/members/Copy of Princy Nikitha_hospitalitymember - Princy Nikitha J ECE.jpg", "imagePosition": "center 10%" },
+            { "name": "Rubasri R", "role": "Member", "spirit": "The Host", "image": "/members/IMG-20260101-WA0097 - RUBASRI R ME.jpg", "imagePosition": "center 10%" },
+            { "name": "CHARULATHAA SR", "role": "Member", "spirit": "The Guide", "image": "/members/CharulathaaSR_member_Hospitality - CHARULATHAA S R CSE.JPG", "imagePosition": "center 10%" },
+            { "name": "VASANTH K N", "role": "Member", "spirit": "The Host", "image": "/members/IMG_20260302_142427871 - VASANTH K N AI&DS.jpg", "imagePosition": "center 10%" },
+            { "name": "Kavin Aravinth R", "role": "Member", "spirit": "The Welcomer", "image": "/members/IMG_20260219_162036_150 - KAVIN ARAVINTH R CSE.webp", "imagePosition": "center 10%" },
+            { "name": "SHREE SUSHIL R K", "role": "Member", "spirit": "The Host", "image": "/members/IMG_20240922_153423~2 - SHREE SUSHIL R K Mech & Auto Engg.jpg", "imagePosition": "center 10%" },
+            { "name": "Vinodhini A", "role": "Member", "spirit": "The Guide", "image": "/members/IMG-20251224-WA0025 - VINODHINI A ECE.jpg", "imagePosition": "center 10%" },
+            { "name": "Thiyaneshwaran A", "role": "Member", "spirit": "The Host", "image": "/members/Thiyaneshwaran A-Member_hospitality - THIYANESHWARAN A ECE.jpg", "imagePosition": "center 10%" },
+            { "name": "G Preethi", "role": "Member", "spirit": "The Host", "image": "/members/G.Preethi Hospitality wing member_1 - G PREETHI ECE.jpg", "imagePosition": "center 10%" },
+            { "name": "ES Nishitha", "role": "Member", "spirit": "The Welcomer", "image": "/members/photo~2 - E S NISHITHA ECE.jpg", "imagePosition": "center 10%" },
+            { "name": "Srikrishnan", "role": "Member", "spirit": "The Guide", "image": "/members/Srikrishnan-member-hospitality  - SRIKRISHNAN S CHE.heic", "imagePosition": "center 10%" },
+            { "name": "Kavya K P", "role": "Member", "spirit": "The Host", "image": "/members/kavya - member_hospitality - KAVYA KAMACHETLU PRAVEEN KUMAR AI&DS.jpg", "imagePosition": "center 10%" }
         ]
     }
 ];

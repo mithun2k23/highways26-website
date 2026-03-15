@@ -982,6 +982,7 @@ const EventModal = ({ event, isOpen, onClose }: { event: EventDetail | null, isO
                         animate={{ opacity: 1, scale: 1, y: 0 }}
                         exit={{ opacity: 0, scale: 0.9, y: 50 }}
                         transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+                        className="event-modal-container"
                         style={{
                             position: 'relative',
                             width: '100%',
@@ -996,44 +997,44 @@ const EventModal = ({ event, isOpen, onClose }: { event: EventDetail | null, isO
                             boxShadow: `0 30px 100px -20px rgba(0,0,0,1), 0 0 50px ${event.color}11`
                         }}
                     >
+                        {/* Premium Close Button */}
+                        <motion.button
+                            onClick={onClose}
+                            whileHover={{ scale: 1.1, backgroundColor: 'rgba(255,255,255,0.1)' }}
+                            whileTap={{ scale: 0.9 }}
+                            style={{
+                                position: 'absolute',
+                                top: '25px',
+                                right: '25px',
+                                background: 'rgba(5,5,5,0.8)',
+                                border: '1px solid rgba(255,255,255,0.2)',
+                                color: 'white',
+                                width: '50px',
+                                height: '50px',
+                                borderRadius: '50%',
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                cursor: 'pointer',
+                                zIndex: 10000,
+                                backdropFilter: 'blur(10px)',
+                                boxShadow: '0 10px 20px rgba(0,0,0,0.5)'
+                            }}
+                        >
+                            <i className="fas fa-times" style={{ fontSize: '1.2rem' }}></i>
+                        </motion.button>
+
                         {/* Left Side: Image */}
-                        <div style={{ width: '40%', position: 'relative', overflow: 'hidden' }}>
+                        <div className="event-modal-image-panel" style={{ width: '40%', position: 'relative', overflow: 'hidden' }}>
                             <img src={event.image} alt={event.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                            <div style={{ position: 'absolute', inset: 0, background: `linear-gradient(to right, transparent, #0a0a0a)` }} />
-                            <div style={{ position: 'absolute', top: '30px', left: '30px' }}>
+                            <div className="modal-gradient-overlay" style={{ position: 'absolute', inset: 0, background: `linear-gradient(to right, transparent, #0a0a0a)` }} />
+                            <div style={{ position: 'absolute', top: '30px', left: '30px', zIndex: 10 }}>
                                 <span style={{ background: 'rgba(0,0,0,0.8)', padding: '8px 20px', borderRadius: '100px', fontSize: '0.7rem', fontWeight: 900, color: event.color }}>CHAPTER 0{event.day}</span>
                             </div>
                         </div>
 
                         {/* Right Side: Details */}
-                        <div className="modal-scroll-area" style={{ width: '60%', padding: '4rem', overflowY: 'auto', position: 'relative' }}>
-                            {/* Premium Close Button */}
-                            <motion.button
-                                onClick={onClose}
-                                whileHover={{ scale: 1.1, backgroundColor: 'rgba(255,255,255,0.1)' }}
-                                whileTap={{ scale: 0.9 }}
-                                style={{
-                                    position: 'absolute',
-                                    top: '25px',
-                                    right: '25px',
-                                    background: 'rgba(255,255,255,0.05)',
-                                    border: '1px solid rgba(255,255,255,0.1)',
-                                    color: 'white',
-                                    width: '50px',
-                                    height: '50px',
-                                    borderRadius: '50%',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    cursor: 'pointer',
-                                    zIndex: 100,
-                                    backdropFilter: 'blur(10px)',
-                                    boxShadow: '0 10px 20px rgba(0,0,0,0.3)'
-                                }}
-                            >
-                                <i className="fas fa-times" style={{ fontSize: '1.2rem' }}></i>
-                            </motion.button>
-
+                        <div className="event-modal-content-panel modal-scroll-area" style={{ width: '60%', padding: '4rem', overflowY: 'auto', position: 'relative' }}>
                             <span style={{ color: event.color, fontSize: '0.8rem', fontWeight: 900, letterSpacing: '5px', textTransform: 'uppercase' }}>{event.category}</span>
                             <h2 style={{ fontSize: '3.5rem', fontWeight: 950, margin: '1rem 0', color: 'white', lineHeight: 0.9 }}>{event.title}</h2>
 
@@ -1479,6 +1480,26 @@ const Events = () => {
                     div[style*="width: '300px'"] { width: 200px !important; height: 200px !important; }
                     div[style*="inset: '100px'"] { inset: 60px !important; }
                     div[style*="marginTop: '5rem'"] { gap: 1.5rem !important; margin-top: 3rem !important; }
+                }
+
+                @media (max-width: 900px) {
+                    .event-modal-container {
+                        flex-direction: column !important;
+                        overflow-y: auto !important;
+                    }
+                    .event-modal-image-panel {
+                        width: 100% !important;
+                        height: 250px !important;
+                        flex-shrink: 0 !important;
+                    }
+                    .modal-gradient-overlay {
+                        background: linear-gradient(to bottom, transparent, #0a0a0a) !important;
+                    }
+                    .event-modal-content-panel {
+                        width: 100% !important;
+                        padding: 2rem !important;
+                        overflow-y: visible !important;
+                    }
                 }
             `}</style>
         </section>

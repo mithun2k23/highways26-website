@@ -32,8 +32,8 @@ const Glimpses = () => {
                             {/* Duplicate images multiple times for seamless infinity */}
                             {[...rowImages, ...rowImages, ...rowImages, ...rowImages].map((img, i) => (
                                 <div key={i} className="glimpse-card" style={{ 
-                                    width: '300px', 
-                                    height: '300px', 
+                                    width: '400px', 
+                                    height: '266px', 
                                     borderRadius: '0', 
                                     overflow: 'hidden',
                                     flexShrink: 0,
@@ -43,7 +43,7 @@ const Glimpses = () => {
                                     cursor: 'pointer',
                                     background: '#080808'
                                 }}>
-                                    <img src={`/assets/glimpses/${img}`} alt="Highways Moment" loading="eager" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                                    <img src={`/assets/glimpses/${img}`} alt="Highways Moment" loading="eager" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                                     <div style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.1)' }}></div>
                                 </div>
                             ))}

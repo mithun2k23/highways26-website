@@ -2556,6 +2556,7 @@ section.reveal-active::after {
   /* Mobile Menu - High-End Aesthetic */
   .mobile-toggle {
     display: flex;
+    position: relative;
     z-index: 1100;
   }
 
