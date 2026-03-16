@@ -38,11 +38,18 @@ const LoadingScreen: React.FC = () => {
           // @ts-ignore - fetchPriority is supported in modern browsers
           img.fetchPriority = 'high';
           img.src = src;
+          // Ignore ts issues with image onload
           img.onload = () => { updateProgress(); resolve(null); };
           img.onerror = () => { updateProgress(); resolve(null); }; 
         });
       });
       await Promise.all(promises);
+      
+      // Wait until all images are successfully loaded, then transition
+      setIsLoading(false);
+      setTimeout(() => {
+        setShouldRender(false);
+      }, 1000);
     };
 
     preloadImages();
@@ -63,19 +70,9 @@ const LoadingScreen: React.FC = () => {
     window.addEventListener('mousemove', handleMouseMove);
     window.addEventListener('click', handleClick);
 
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 4500); 
-
-    const removeTimer = setTimeout(() => {
-      setShouldRender(false);
-    }, 5500);
-
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('click', handleClick);
-      clearTimeout(timer);
-      clearTimeout(removeTimer);
     };
   }, []);
 
