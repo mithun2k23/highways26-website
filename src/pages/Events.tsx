@@ -1139,7 +1139,10 @@ const dayThemes = [
         kanji: "始",
         bgImage: "https://images.unsplash.com/photo-1522383225053-ed111181a951?q=80&w=2000&auto=format&fit=crop",
         tagline: "WHERE THE ROAD BEGINS",
-        style: "organic"
+    style: "organic",
+    displayFont: '"Sawarabi Mincho", serif',
+    bodyFont: '"Nunito Sans", "Segoe UI", sans-serif',
+    buttonText: "#1c0f14"
     },
     {
         id: 2,
@@ -1149,7 +1152,10 @@ const dayThemes = [
         kanji: "速",
         bgImage: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2000&auto=format&fit=crop",
         tagline: "RIDING THE LIGHTNING",
-        style: "cybernetic"
+    style: "cybernetic",
+    displayFont: '"Orbitron", "Segoe UI", sans-serif',
+    bodyFont: '"Rajdhani", "Segoe UI", sans-serif',
+    buttonText: "#03141a"
     },
     {
         id: 3,
@@ -1159,11 +1165,14 @@ const dayThemes = [
         kanji: "終",
         bgImage: "https://images.unsplash.com/photo-1516280440623-df9cb83e4776?q=80&w=2000&auto=format&fit=crop",
         tagline: "BEYOND THE HORIZON",
-        style: "chaotic"
+    style: "chaotic",
+    displayFont: '"Bebas Neue", "Impact", "Arial Narrow Bold", sans-serif',
+    bodyFont: '"Barlow Condensed", "Segoe UI", sans-serif',
+    buttonText: "#ffffff"
     }
 ];
 
-const EventModal = ({ event, isOpen, onClose }: { event: EventDetail | null, isOpen: boolean, onClose: () => void }) => {
+const EventModal = ({ event, isOpen, onClose, activeTheme }: { event: EventDetail | null, isOpen: boolean, onClose: () => void, activeTheme: (typeof dayThemes)[number] }) => {
     if (!event) return null;
 
     return (
@@ -1193,22 +1202,24 @@ const EventModal = ({ event, isOpen, onClose }: { event: EventDetail | null, isO
                             overflow: 'hidden',
                             display: 'flex',
                             flexDirection: 'row',
-                            border: `1px solid ${event.color}33`,
-                            boxShadow: `0 30px 100px -20px rgba(0,0,0,1), 0 0 50px ${event.color}11`
+                            border: `1px solid ${activeTheme.color}33`,
+                            boxShadow: `0 30px 100px -20px rgba(0,0,0,1), 0 0 50px ${activeTheme.color}11`,
+                            fontFamily: activeTheme.bodyFont
                         }}
                     >
                         {/* Premium Close Button */}
                         <motion.button
                             onClick={onClose}
-                            whileHover={{ scale: 1.1, backgroundColor: 'rgba(255,255,255,0.1)' }}
+                          whileHover={{ scale: 1.08, backgroundColor: activeTheme.color, color: activeTheme.buttonText }}
                             whileTap={{ scale: 0.9 }}
+                          aria-label="Close event details"
                             style={{
                                 position: 'absolute',
                                 top: '25px',
                                 right: '25px',
-                                background: 'rgba(5,5,5,0.8)',
-                                border: '1px solid rgba(255,255,255,0.2)',
-                                color: 'white',
+                            background: 'rgba(0,0,0,0.72)',
+                            border: `1px solid ${activeTheme.color}66`,
+                            color: activeTheme.color,
                                 width: '50px',
                                 height: '50px',
                                 borderRadius: '50%',
@@ -1218,10 +1229,15 @@ const EventModal = ({ event, isOpen, onClose }: { event: EventDetail | null, isO
                                 cursor: 'pointer',
                                 zIndex: 10000,
                                 backdropFilter: 'blur(10px)',
-                                boxShadow: '0 10px 20px rgba(0,0,0,0.5)'
+                            boxShadow: `0 10px 20px rgba(0,0,0,0.5), 0 0 16px ${activeTheme.color}33`,
+                            fontSize: '2rem',
+                            fontWeight: 800,
+                            lineHeight: 1,
+                            fontFamily: activeTheme.displayFont,
+                            textShadow: '0 1px 2px rgba(0,0,0,0.6)'
                             }}
                         >
-                            <i className="fas fa-times" style={{ fontSize: '1.2rem' }}></i>
+                          <span aria-hidden="true">×</span>
                         </motion.button>
 
                         {/* Left Side: Image */}
@@ -1229,14 +1245,14 @@ const EventModal = ({ event, isOpen, onClose }: { event: EventDetail | null, isO
                             <img src={event.image} alt={event.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                             <div className="modal-gradient-overlay" style={{ position: 'absolute', inset: 0, background: `linear-gradient(to right, transparent, #0a0a0a)` }} />
                             <div style={{ position: 'absolute', top: '30px', left: '30px', zIndex: 10 }}>
-                                <span style={{ background: 'rgba(0,0,0,0.8)', padding: '8px 20px', borderRadius: '100px', fontSize: '0.7rem', fontWeight: 900, color: event.color }}>CHAPTER 0{event.day}</span>
+                                <span style={{ background: 'rgba(0,0,0,0.8)', padding: '8px 20px', borderRadius: '100px', fontSize: '0.7rem', fontWeight: 900, color: activeTheme.color }}>CHAPTER 0{event.day}</span>
                             </div>
                         </div>
 
                         {/* Right Side: Details */}
                         <div className="event-modal-content-panel modal-scroll-area" style={{ width: '60%', padding: '4rem', overflowY: 'auto', position: 'relative' }}>
-                            <span style={{ color: event.color, fontSize: '0.8rem', fontWeight: 900, letterSpacing: '5px', textTransform: 'uppercase' }}>{event.category}</span>
-                            <h2 style={{ fontSize: '3.5rem', fontWeight: 950, margin: '1rem 0', color: 'white', lineHeight: 0.9 }}>{event.title}</h2>
+                            <span style={{ color: activeTheme.color, fontSize: '0.8rem', fontWeight: 900, letterSpacing: '5px', textTransform: 'uppercase', fontFamily: activeTheme.displayFont }}>{event.category}</span>
+                            <h2 style={{ fontSize: '3.5rem', fontWeight: 950, margin: '1rem 0', color: 'white', lineHeight: 0.9, fontFamily: activeTheme.displayFont }}>{event.title}</h2>
 
                             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem', margin: '2rem 0', background: 'rgba(255,255,255,0.02)', padding: '2rem', borderRadius: '24px', border: '1px solid rgba(255,255,255,0.05)' }}>
                                 <div>
@@ -1249,7 +1265,7 @@ const EventModal = ({ event, isOpen, onClose }: { event: EventDetail | null, isO
                                 </div>
                                 <div>
                                     <p style={{ fontSize: '0.6rem', color: 'rgba(255,255,255,0.4)', fontWeight: 900, letterSpacing: '2px', textTransform: 'uppercase', marginBottom: '0.5rem' }}>Registration</p>
-                                    <p style={{ color: event.regType === 'Free' ? '#4ade80' : event.color, fontWeight: 700 }}>{event.regType} {event.regFee && `(${event.regFee})`}</p>
+                                    <p style={{ color: event.regType === 'Free' ? '#4ade80' : activeTheme.color, fontWeight: 700 }}>{event.regType} {event.regFee && `(${event.regFee})`}</p>
                                 </div>
                                 <div>
                                     <p style={{ fontSize: '0.6rem', color: 'rgba(255,255,255,0.4)', fontWeight: 900, letterSpacing: '2px', textTransform: 'uppercase', marginBottom: '0.5rem' }}>Team Format</p>
@@ -1258,30 +1274,30 @@ const EventModal = ({ event, isOpen, onClose }: { event: EventDetail | null, isO
                             </div>
 
                             <div style={{ marginBottom: '3rem' }}>
-                                <h4 style={{ color: event.color, fontSize: '0.8rem', fontWeight: 900, letterSpacing: '2px', marginBottom: '1rem' }}>DESCRIPTION</h4>
+                                <h4 style={{ color: activeTheme.color, fontSize: '0.8rem', fontWeight: 900, letterSpacing: '2px', marginBottom: '1rem', fontFamily: activeTheme.displayFont }}>DESCRIPTION</h4>
                                 <p style={{ color: 'rgba(255,255,255,0.7)', lineHeight: 1.6 }}>{event.description}</p>
                             </div>
 
                             <div style={{ marginBottom: '3rem' }}>
-                                <h4 style={{ color: event.color, fontSize: '0.8rem', fontWeight: 900, letterSpacing: '2px', marginBottom: '1rem' }}>RULES & GUIDELINES</h4>
+                                <h4 style={{ color: activeTheme.color, fontSize: '0.8rem', fontWeight: 900, letterSpacing: '2px', marginBottom: '1rem', fontFamily: activeTheme.displayFont }}>RULES & GUIDELINES</h4>
                                 <ul style={{ listStyle: 'none', padding: 0 }}>
                                     {event.rules.map((rule, i) => (
                                         <li key={i} style={{ display: 'flex', gap: '1rem', color: 'rgba(255,255,255,0.6)', marginBottom: '0.8rem', fontSize: '0.9rem' }}>
-                                            <span style={{ color: event.color }}>0{i + 1}</span> {rule}
+                                            <span style={{ color: activeTheme.color }}>0{i + 1}</span> {rule}
                                         </li>
                                     ))}
                                 </ul>
                             </div>
 
                             {event.regType !== 'Free' && (
-                                <div style={{ marginBottom: '3rem', background: `linear-gradient(45deg, ${event.color}22, transparent)`, padding: '2rem', borderRadius: '24px', borderLeft: `4px solid ${event.color}` }}>
+                                <div style={{ marginBottom: '3rem', background: `linear-gradient(45deg, ${activeTheme.color}22, transparent)`, padding: '2rem', borderRadius: '24px', borderLeft: `4px solid ${activeTheme.color}` }}>
                                     <h4 style={{ color: 'white', fontSize: '0.8rem', fontWeight: 900, letterSpacing: '2px', marginBottom: '0.5rem' }}>TOTAL PRIZE POOL</h4>
                                     <p style={{ fontSize: '2.5rem', fontWeight: 950, color: 'white' }}>{event.prizePool}</p>
                                 </div>
                             )}
 
                             <div style={{ marginBottom: '3rem' }}>
-                                <h4 style={{ color: event.color, fontSize: '0.8rem', fontWeight: 900, letterSpacing: '2px', marginBottom: '1rem' }}>CONTACT ORGANIZERS</h4>
+                                <h4 style={{ color: activeTheme.color, fontSize: '0.8rem', fontWeight: 900, letterSpacing: '2px', marginBottom: '1rem', fontFamily: activeTheme.displayFont }}>CONTACT ORGANIZERS</h4>
                                 <div style={{ display: 'flex', gap: '3rem' }}>
                                     {event.pocs.map((poc, i) => (
                                         <div key={i}>
@@ -1293,12 +1309,12 @@ const EventModal = ({ event, isOpen, onClose }: { event: EventDetail | null, isO
                             </div>
 
                             <motion.button
-                                whileHover={{ scale: 1.02, backgroundColor: event.color, color: (event.day === 2 || event.day === 0) ? 'black' : 'white' }}
+                                whileHover={{ scale: 1.02, backgroundColor: activeTheme.color, color: activeTheme.buttonText }}
                                 whileTap={{ scale: 0.98 }}
                                 style={{
                                     width: '100%',
-                                    background: event.color,
-                                    color: (event.day === 2 || event.day === 0) ? 'black' : 'white',
+                                    background: activeTheme.color,
+                                    color: activeTheme.buttonText,
                                     border: 'none',
                                     padding: '1.5rem',
                                     borderRadius: '20px',
@@ -1307,7 +1323,8 @@ const EventModal = ({ event, isOpen, onClose }: { event: EventDetail | null, isO
                                     cursor: 'pointer',
                                     transition: 'all 0.3s ease',
                                     letterSpacing: '4px',
-                                    textTransform: 'uppercase'
+                                  textTransform: 'uppercase',
+                                  fontFamily: activeTheme.displayFont
                                 }}
                             >
                                 PROCEED TO REGISTER
@@ -1427,6 +1444,7 @@ const Events = () => {
             background: filter.day === 3 ? '#080000' : (filter.day === 2 ? '#000810' : '#030303'),
             position: 'relative',
             overflow: 'hidden',
+        fontFamily: activeTheme.bodyFont,
         }}>
             <BackgroundElements themeColor={activeTheme.color} activeKanji={activeTheme.kanji} dayId={filter.day} />
 
@@ -1443,7 +1461,8 @@ const Events = () => {
                                 textTransform: 'uppercase',
                                 letterSpacing: filter.day === 1 ? '10px' : (filter.day === 3 ? '-8px' : '-4px'),
                                 lineHeight: 0.8,
-                                transition: 'all 1s ease'
+                              transition: 'all 1s ease',
+                              fontFamily: activeTheme.displayFont
                             }}>
                                 EVENT <span style={{ color: activeTheme.color, transition: 'all 1s ease' }}>SAGA</span>
                             </h1>
@@ -1461,9 +1480,9 @@ const Events = () => {
                         <motion.button key={day.id} onClick={() => setFilter(prev => ({ ...prev, day: day.id }))} whileHover={{ scale: 1.05, y: -5 }} whileTap={{ scale: 0.95 }}
                             style={{
                                 background: filter.day === day.id ? day.color : 'rgba(255,255,255,0.02)',
-                                color: filter.day === day.id ? (day.id === 2 ? '#000000' : '#ffffff') : 'rgba(255,255,255,0.4)',
+                              color: filter.day === day.id ? day.buttonText : 'rgba(255,255,255,0.55)',
                                 border: `1px solid ${filter.day === day.id ? day.color : 'rgba(255,255,255,0.05)'}`,
-                                padding: '1.5rem 2.5rem', borderRadius: '24px', display: 'flex', flexDirection: 'column', alignItems: 'center', minWidth: '220px', cursor: 'pointer', transition: 'all 0.5s cubic-bezier(0.19, 1, 0.22, 1)', backdropFilter: 'blur(20px)', boxShadow: filter.day === day.id ? `0 20px 40px ${day.color}44` : 'none'
+                              padding: '1.5rem 2.5rem', borderRadius: '24px', display: 'flex', flexDirection: 'column', alignItems: 'center', minWidth: '220px', cursor: 'pointer', transition: 'all 0.5s cubic-bezier(0.19, 1, 0.22, 1)', backdropFilter: 'blur(20px)', boxShadow: filter.day === day.id ? `0 20px 40px ${day.color}44` : 'none', fontFamily: day.displayFont
                             }}>
                             <span style={{ fontSize: '0.65rem', fontWeight: 900, letterSpacing: '3px', opacity: 0.6, marginBottom: '0.4rem' }}>{day.label}</span>
                             <span style={{ fontSize: '1.4rem', fontWeight: 950 }}>{day.name}</span>
@@ -1583,10 +1602,10 @@ const Events = () => {
                         {categoriesList.map(c => (
                             <motion.button key={c} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={() => setFilter(prev => ({ ...prev, category: c }))}
                                 style={{
-                                    background: filter.category === c ? 'white' : 'rgba(255,255,255,0.03)',
-                                    color: filter.category === c ? 'black' : 'rgba(255,255,255,0.6)',
-                                    border: '1px solid rgba(255,255,255,0.1)',
-                                    padding: '0.8rem 2.5rem', borderRadius: '100px', fontSize: '0.8rem', fontWeight: 900, cursor: 'pointer', transition: 'all 0.4s ease', letterSpacing: '1px', textTransform: 'uppercase'
+                                  background: filter.category === c ? `${activeTheme.color}` : 'rgba(255,255,255,0.03)',
+                                  color: filter.category === c ? activeTheme.buttonText : 'rgba(255,255,255,0.72)',
+                                  border: `1px solid ${filter.category === c ? activeTheme.color : 'rgba(255,255,255,0.1)'}`,
+                                  padding: '0.8rem 2.5rem', borderRadius: '100px', fontSize: '0.8rem', fontWeight: 900, cursor: 'pointer', transition: 'all 0.4s ease', letterSpacing: '1px', textTransform: 'uppercase', fontFamily: activeTheme.displayFont
                                 }}>{c}</motion.button>
                         ))}
                     </div>
@@ -1596,28 +1615,28 @@ const Events = () => {
                     <AnimatePresence mode="popLayout">
                         {filteredEvents.map((event, index) => (
                             <motion.div layout key={event.id} initial={{ opacity: 0, y: 40, scale: 0.95 }} whileInView={{ opacity: 1, y: 0, scale: 1 }} viewport={{ once: false, margin: "-20px" }} transition={{ duration: 0.6, delay: (index % 4) * 0.1 }} className="event-premium-card"
-                                style={{ background: 'rgba(255,255,255,0.02)', borderRadius: '30px', overflow: 'hidden', position: 'relative', height: '480px', display: 'flex', flexDirection: 'column', border: '1px solid rgba(255,255,255,0.05)', backdropFilter: 'blur(20px)' }}>
+                                style={{ background: 'rgba(255,255,255,0.02)', borderRadius: '30px', overflow: 'hidden', position: 'relative', height: '480px', display: 'flex', flexDirection: 'column', border: `1px solid ${activeTheme.color}2f`, backdropFilter: 'blur(20px)' }}>
                                 <div className="card-visual-header" style={{ height: '55%', position: 'relative', overflow: 'hidden' }}>
                                     <motion.img whileHover={{ scale: 1.15 }} transition={{ duration: 0.8 }} src={event.image} alt={event.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                                     <div style={{ position: 'absolute', top: '20px', left: '20px' }}>
-                                        <div style={{ background: 'rgba(0,0,0,0.7)', backdropFilter: 'blur(10px)', padding: '5px 15px', borderRadius: '100px', fontSize: '0.6rem', fontWeight: 950, color: 'white' }}>CH 0{event.day}</div>
+                                        <div style={{ background: 'rgba(0,0,0,0.7)', backdropFilter: 'blur(10px)', padding: '5px 15px', borderRadius: '100px', fontSize: '0.6rem', fontWeight: 950, color: activeTheme.color, border: `1px solid ${activeTheme.color}44` }}>CH 0{event.day}</div>
                                     </div>
                                     <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '40%', background: 'linear-gradient(to top, rgba(0,0,0,0.8) 10%, transparent 100%)' }} />
                                 </div>
                                 <div className="card-content-body" style={{ padding: '2rem', flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                                     <div>
                                         <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', marginBottom: '0.4rem' }}>
-                                            <span style={{ color: event.color, fontSize: '0.65rem', fontWeight: 950, letterSpacing: '4px', textTransform: 'uppercase' }}>{event.category}</span>
-                                            <div style={{ flex: 1, height: '1px', background: `linear-gradient(to right, ${event.color}44, transparent)` }} />
+                                            <span style={{ color: activeTheme.color, fontSize: '0.65rem', fontWeight: 950, letterSpacing: '4px', textTransform: 'uppercase', fontFamily: activeTheme.displayFont }}>{event.category}</span>
+                                            <div style={{ flex: 1, height: '1px', background: `linear-gradient(to right, ${activeTheme.color}55, transparent)` }} />
                                         </div>
-                                        <h3 style={{ fontSize: '1.6rem', fontWeight: 950, margin: '0.3rem 0 1rem', color: 'white', lineHeight: 1.1 }}>{event.title}</h3>
-                                        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', color: 'rgba(255,255,255,0.5)', fontSize: '0.8rem', fontWeight: 700 }}>
-                                            <span><i className="far fa-clock" style={{ color: event.color }}></i> {event.time}</span>
-                                            <span><i className="fas fa-map-marker-alt" style={{ color: event.color }}></i> {event.location}</span>
+                                          <h3 style={{ fontSize: '1.6rem', fontWeight: 950, margin: '0.3rem 0 1rem', color: 'white', lineHeight: 1.1, fontFamily: activeTheme.displayFont }}>{event.title}</h3>
+                                          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', color: 'rgba(255,255,255,0.78)', fontSize: '0.8rem', fontWeight: 700 }}>
+                                            <span><i className="far fa-clock" style={{ color: activeTheme.color }}></i> {event.time}</span>
+                                            <span><i className="fas fa-map-marker-alt" style={{ color: activeTheme.color }}></i> {event.location}</span>
                                         </div>
                                     </div>
-                                    <motion.button onClick={() => handleOpenModal(event)} whileHover={{ scale: 1.02, backgroundColor: event.color, color: (event.day === 2) ? 'black' : 'white' }} whileTap={{ scale: 0.98 }}
-                                        style={{ background: 'rgba(255,255,255,0.03)', color: 'white', border: `1px solid ${event.color}44`, padding: '1rem', borderRadius: '15px', fontWeight: 950, fontSize: '0.75rem', marginTop: '1.5rem', cursor: 'pointer', transition: 'all 0.3s ease', letterSpacing: '2px', textTransform: 'uppercase' }}>
+                                        <motion.button onClick={() => handleOpenModal(event)} whileHover={{ scale: 1.02, backgroundColor: activeTheme.color, color: activeTheme.buttonText }} whileTap={{ scale: 0.98 }}
+                                          style={{ background: 'rgba(255,255,255,0.03)', color: 'white', border: `1px solid ${activeTheme.color}66`, padding: '1rem', borderRadius: '15px', fontWeight: 950, fontSize: '0.75rem', marginTop: '1.5rem', cursor: 'pointer', transition: 'all 0.3s ease', letterSpacing: '2px', textTransform: 'uppercase', fontFamily: activeTheme.displayFont }}>
                                         VIEW DETAILS
                                     </motion.button>
                                 </div>
@@ -1629,20 +1648,37 @@ const Events = () => {
                 </div>
             </div>
 
-            <EventModal event={selectedEvent} isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+            <EventModal event={selectedEvent} isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} activeTheme={activeTheme} />
 
             <style>{`
+              @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Bebas+Neue&family=Nunito+Sans:wght@400;700;900&family=Orbitron:wght@500;700;900&family=Rajdhani:wght@500;700&family=Sawarabi+Mincho&display=swap');
+
                 .container { max-width: 1700px !important; width: 95%; margin: 0 auto; }
                 .event-premium-card:hover { border-color: ${activeTheme.color}66 !important; box-shadow: 0 40px 80px -20px rgba(0,0,0,0.8), 0 0 40px ${activeTheme.color}15; transform: translateY(-8px) !important; }
+
+              .events-cinematic-page {
+                font-family: ${activeTheme.bodyFont};
+              }
+
+              .events-cinematic-page h1,
+              .events-cinematic-page h2,
+              .events-cinematic-page h3,
+              .events-cinematic-page h4,
+              .events-cinematic-page .day-navigator button,
+              .events-cinematic-page .classification-carousel button,
+              .events-cinematic-page .card-content-body button,
+              .events-cinematic-page .events-header-premium > div > span {
+                font-family: ${activeTheme.displayFont};
+              }
                 
                 /* Mobile Navigation Scrollbar Hiding */
                 .day-navigator::-webkit-scrollbar, .classification-carousel::-webkit-scrollbar { display: none; }
                 .day-navigator, .classification-carousel { -ms-overflow-style: none; scrollbar-width: none; }
 
                 /* Style-specific typography */
-                .style-organic h1 { font-family: 'Sawarabi Mincho', serif; font-weight: 400; letter-spacing: 12px; }
-                .style-cybernetic h1 { font-family: 'Outfit', sans-serif; font-weight: 900; skew: -5deg; text-shadow: 0 0 20px ${activeTheme.color}44; }
-                .style-chaotic h1 { font-weight: 950; letter-spacing: -10px; filter: contrast(1.5); }
+              .style-organic h1 { font-weight: 400; letter-spacing: 12px; }
+              .style-cybernetic h1 { font-weight: 900; skew: -5deg; text-shadow: 0 0 20px ${activeTheme.color}44; }
+              .style-chaotic h1 { font-weight: 950; letter-spacing: -10px; filter: contrast(1.5); }
 
                 @media (max-width: 1400px) { .events-grid-system { grid-template-columns: repeat(3, 1fr) !important; } }
                 @media (max-width: 1024px) { .events-grid-system { grid-template-columns: repeat(2, 1fr) !important; gap: 2rem !important; } }

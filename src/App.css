@@ -45,6 +45,9 @@
   transition: background-color 2s ease, color 2s ease;
   min-height: 100vh;
   position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 /* Base World Overlays */
@@ -261,24 +264,13 @@ html {
   font-size: 16px;
   background: var(--bg-main);
   overflow-x: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-::-webkit-scrollbar {
-  width: 12px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--bg-main);
-}
-
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(var(--primary), var(--kurenai));
-  border-radius: 10px;
-  border: 3px solid var(--bg-main);
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--secondary);
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
 }
 
 * {
@@ -826,6 +818,31 @@ body.menu-open {
   color: #ff2a2a;
 }
 
+.mobile-nav-close {
+  display: none;
+  position: absolute;
+  top: 1.1rem;
+  right: 1.1rem;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-main);
+  font-size: 2rem;
+  line-height: 1;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mobile-nav-close:hover {
+  border-color: var(--secondary);
+  color: var(--secondary);
+  background: rgba(255, 255, 255, 0.08);
+}
+
 .nav-cta {
   background: var(--primary);
   color: var(--text-main);
@@ -916,8 +933,8 @@ body.menu-open {
   min-height: 100vh;
   justify-content: center;
   box-sizing: border-box;
-  padding-top: 7.5rem;
-  padding-bottom: 4rem;
+  padding-top: 6.2rem;
+  padding-bottom: 2.6rem;
 }
 
 .hero-main-branding {
@@ -976,7 +993,7 @@ body.menu-open {
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
-  margin: 2rem 0;
+  margin: 1.1rem 0 0.8rem;
   flex-wrap: wrap;
 }
 
@@ -1167,7 +1184,7 @@ body.menu-open {
   font-size: 1.5rem;
   color: #ccc;
   font-style: italic;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .hero-btns {
@@ -1176,7 +1193,7 @@ body.menu-open {
   justify-content: center;
   position: relative;
   z-index: 50;
-  margin-top: 2rem;
+  margin-top: 1.2rem;
 }
 
 .btn-matsuri {
@@ -2317,6 +2334,26 @@ section.reveal-active::after {
   width: 100%;
 }
 
+/* Home page should not show in-page divider lines */
+.home-page section::after,
+.home-page section.reveal-active::after {
+  content: none !important;
+  width: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Remove divider lines in location/contact (PreFooter) and footer areas */
+.pre-footer-sections section::after,
+.pre-footer-sections section.reveal-active::after,
+footer::before,
+footer::after,
+.main-footer::after {
+  content: none !important;
+  width: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
 /* Sponsors Page Styles */
 .sponsors-section {
   min-height: 80vh;
@@ -2580,6 +2617,10 @@ section.reveal-active::after {
     padding: 40px;
   }
 
+  .mobile-nav-close {
+    display: inline-flex;
+  }
+
   .nav-links.mobile-active {
     right: 0;
   }
@@ -2617,6 +2658,40 @@ section.reveal-active::after {
     min-height: 100svh;
     padding-top: 6.5rem;
     padding-bottom: 3rem;
+  }
+
+  /* Home mobile spacing tune-up */
+  .home-page .home-hero-content {
+    min-height: calc(100svh - 8px);
+    padding-top: 5.2rem;
+    padding-bottom: 1.2rem;
+  }
+
+  .home-page .hero-info {
+    margin-top: 0.4rem;
+  }
+
+  .home-page .premium-countdown {
+    margin: 0.45rem 0 0 !important;
+    gap: 0.55rem !important;
+    transform: scale(0.9);
+    transform-origin: center top;
+  }
+
+  .home-page .date-badge {
+    margin: 0.35rem 0 0.2rem !important;
+    font-size: 0.95rem !important;
+    padding: 6px 14px !important;
+  }
+
+  .home-page .hero-tagline {
+    margin: 0.4rem auto 0.8rem !important;
+    font-size: 1rem !important;
+    line-height: 1.4 !important;
+  }
+
+  .home-page .hero-btns {
+    margin-top: 0.75rem !important;
   }
 
   .hero-title-main {
@@ -2785,6 +2860,10 @@ section.reveal-active::after {
     padding: 80px 0 !important;
   }
 
+  .home-page section {
+    padding: 56px 0 !important;
+  }
+
   .section-title {
     font-size: 2rem;
     letter-spacing: 4px;
@@ -2808,6 +2887,15 @@ section.reveal-active::after {
 
   .title-japan {
     font-size: 2.5rem;
+  }
+
+  .home-page .home-hero-content {
+    padding-top: 4.8rem;
+    padding-bottom: 1rem;
+  }
+
+  .home-page .premium-countdown {
+    transform: scale(0.85);
   }
 
 
@@ -3421,6 +3509,12 @@ section.reveal-active::after {
     z-index: 2000;
     box-shadow: -20px 0 60px rgba(0, 0, 0, 0.8);
     border-left: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .mobile-nav-close {
+    display: inline-flex;
+    top: 1.25rem;
+    right: 1.25rem;
   }
 
   .nav-links.mobile-active {

@@ -1,6 +1,17 @@
+import { Link, useLocation } from 'react-router-dom';
+
 const HighwaysLogo = "/assets/logos/highways-logo.webp";
 
 const Footer = () => {
+  const location = useLocation();
+
+  const handleNavNavigation = (targetPath: string) => (event: React.MouseEvent<HTMLAnchorElement>) => {
+    if (location.pathname === targetPath) {
+      event.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
   return (
     <>
       <style>
@@ -15,23 +26,23 @@ const Footer = () => {
       <footer className="bg-black text-white pt-20 pb-10 px-[6%] text-center">
 
         {/* Big Logo */}
-        <div className="flex justify-center mb-12">
-          <img
-            src={HighwaysLogo}
-            alt="Highways Logo"
-            className="w-[95%] h-auto mx-auto"
-          />
-        </div>
+       <div className="flex justify-center mb-8">
+  <img
+    src={HighwaysLogo}
+    alt="Highways Logo"
+    className="w-[75%] md:w-[60%] lg:w-[50%] h-auto mx-auto"
+  />
+</div>
 
         {/* Navigation */}
         <div className="flex flex-wrap justify-center gap-6 text-sm font-semibold tracking-wide mb-10">
-          <a href="/" className="text-white/60 hover:text-red-500 transition">Home</a>
-          <a href="/events" className="text-white/60 hover:text-red-500 transition">Events</a>
-          <a href="/schedule" className="text-white/60 hover:text-red-500 transition">Schedule</a>
-          <a href="/passes" className="text-white/60 hover:text-red-500 transition">Get Passes</a>
-          <a href="/sponsors" className="text-white/60 hover:text-red-500 transition">Sponsors</a>
-          <a href="/team" className="text-white/60 hover:text-red-500 transition">Team</a>
-          <a href="/faq" className="text-white/60 hover:text-red-500 transition">FAQ</a>
+          <Link to="/" onClick={handleNavNavigation('/')} className="text-white/60 hover:text-red-500 transition">Home</Link>
+          <Link to="/events" onClick={handleNavNavigation('/events')} className="text-white/60 hover:text-red-500 transition">Events</Link>
+          <Link to="/schedule" onClick={handleNavNavigation('/schedule')} className="text-white/60 hover:text-red-500 transition">Schedule</Link>
+          <Link to="/passes" onClick={handleNavNavigation('/passes')} className="text-white/60 hover:text-red-500 transition">Get Passes</Link>
+          <Link to="/sponsors" onClick={handleNavNavigation('/sponsors')} className="text-white/60 hover:text-red-500 transition">Sponsors</Link>
+          <Link to="/team" onClick={handleNavNavigation('/team')} className="text-white/60 hover:text-red-500 transition">Team</Link>
+          <Link to="/faq" onClick={handleNavNavigation('/faq')} className="text-white/60 hover:text-red-500 transition">FAQ</Link>
         </div>
 
         {/* Social + Contact */}

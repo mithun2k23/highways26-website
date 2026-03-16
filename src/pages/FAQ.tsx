@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import faqBackground from '../background.jpg';
 
 const FAQ = () => {
     const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -20,8 +21,35 @@ const FAQ = () => {
     ];
 
     return (
-        <section id="faq" className="faq-page-v3" style={{ paddingTop: '150px', minHeight: '100vh', paddingBottom: '100px' }}>
-            <div className="container">
+        <section
+            id="faq"
+            className="faq-page-v3"
+            style={{
+                paddingTop: '150px',
+                minHeight: '100vh',
+                paddingBottom: '100px',
+                width: '100%',
+                overflow: 'hidden',
+                position: 'relative',
+                backgroundImage: `url(${faqBackground})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center center',
+                backgroundRepeat: 'no-repeat',
+                backgroundAttachment: 'fixed'
+            }}
+        >
+            <div
+                aria-hidden="true"
+                style={{
+                    position: 'absolute',
+                    inset: 0,
+                    background: 'rgba(0,0,0,0.72)',
+                    pointerEvents: 'none',
+                    zIndex: 0
+                }}
+            />
+
+            <div className="container" style={{ position: 'relative', zIndex: 1 }}>
                 <div className="faq-header" style={{ textAlign: 'center', marginBottom: '4rem' }}>
                     <span style={{ color: '#ff4d4d', letterSpacing: '5px', fontWeight: 900, textTransform: 'uppercase', fontSize: '0.8rem' }}>INSIGHTS</span>
                     <h2 style={{ fontSize: '4rem', fontWeight: 950, marginTop: '1rem' }}>COMMON QUESTIONS</h2>

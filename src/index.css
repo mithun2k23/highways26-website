@@ -20,6 +20,18 @@
   --panel-dark: #161B22;
 }
 
+html,
+body,
+#root {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 body {
   margin: 0;
   font-family: 'Outfit', 'Noto Sans JP', sans-serif;
@@ -27,9 +39,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background:
     linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
-    url('./background.jpg') fixed bottom/cover,
-    linear-gradient(to bottom, #1a0f0f 0%, #000c1a 50%, #0d0000 100%) fixed;
-  background-attachment: fixed;
+    url('./background.jpg'),
+    linear-gradient(to bottom, #1a0f0f 0%, #000c1a 50%, #0d0000 100%);
+  background-attachment: fixed, fixed, fixed;
+  background-position: center center, center center, center center;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: cover, cover, cover;
   color: var(--text-light);
   overflow-x: hidden;
   cursor: auto;
@@ -40,19 +55,8 @@ code {
     monospace;
 }
 
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--bg-dark);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--primary);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--secondary);
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+#root::-webkit-scrollbar {
+  display: none;
 }

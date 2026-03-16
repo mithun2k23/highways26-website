@@ -63,59 +63,72 @@ const Home = () => {
                 minHeight: '100vh',
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: 'center'
+                justifyContent: 'center',
+                border: 'none' // Added override
             }}>
                 <div className="hero-content home-hero-content animate-fade w-full max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
                     
-                    {/* UPDATED LOGO CONTAINER */}
                     {/* FIXED LOGO CONTAINER */}
-                    <div className="flex justify-center w-full mb-8 md:mb-12">
-                        <img
-                            src={HighwaysLogo}
-                            alt="Highways Logo"
-                            className="w-auto h-auto max-w-[90%] md:max-w-[800px] max-h-[120px] md:max-h-[200px] lg:max-h-[250px] object-contain mx-auto drop-shadow-2xl"
-                        />
-                    </div>
+                    <div className="flex justify-center w-full mb-6 md:mb-8">
+    <img
+        src={HighwaysLogo}
+        alt="Highways Logo"
+        className="w-auto h-auto max-w-[100%] md:max-w-[1000px] max-h-[200px] md:max-h-[300px] lg:max-h-[380px] object-contain mx-auto drop-shadow-2xl"
+    />
+</div>
                     
                     <div className="hero-info flex flex-col items-center">
-                        <div className="premium-countdown flex flex-wrap justify-center gap-4 mb-6">
-                            {[
-                                { value: timeLeft.days, label: 'DAYS' },
-                                { value: timeLeft.hours, label: 'HOURS' },
-                                { value: timeLeft.minutes, label: 'MINS' },
-                                { value: timeLeft.seconds, label: 'SECS' }
-                            ].map(({ value, label }) => (
-                                <div key={label} className="countdown-card">
-                                    <div className="card-top">
-                                        <span className="countdown-number">
-                                            {value.toString().padStart(2, '0')}
-                                        </span>
-                                    </div>
-                                    <div className="card-bottom">
-                                        <span className="countdown-label">{label}</span>
-                                    </div>
-                                    <div className="glow-bar"></div>
-                                </div>
-                            ))}
-                        </div>
-                        <div className="date-badge">APRIL 09, 10, 11</div>
-                        <p className="hero-tagline text-center">Bigger. Better. Bolder</p>
-                    </div>
-                    <div className="hero-btns flex justify-center mt-8">
-                        <Link to="/events" className="btn-matsuri">Explore More</Link>
-                    </div>
+    
+    {/* Countdown - smaller */}
+    <div className="premium-countdown flex flex-wrap justify-center gap-2 mb-2 scale-75">
+        {[
+            { value: timeLeft.days, label: 'DAYS' },
+            { value: timeLeft.hours, label: 'HOURS' },
+            { value: timeLeft.minutes, label: 'MINS' },
+            { value: timeLeft.seconds, label: 'SECS' }
+        ].map(({ value, label }) => (
+            <div key={label} className="countdown-card">
+                <div className="card-top">
+                    <span className="countdown-number">
+                        {value.toString().padStart(2, '0')}
+                    </span>
+                </div>
+                <div className="card-bottom">
+                    <span className="countdown-label">{label}</span>
+                </div>
+                <div className="glow-bar"></div>
+            </div>
+        ))}
+    </div>
+
+    {/* Bigger date */}
+    <div className="date-badge text-lg md:text-xl lg:text-2xl mb-2">
+        APRIL 09, 10, 11
+    </div>
+
+    {/* Bigger tagline */}
+    <p className="hero-tagline text-center text-xl md:text-2xl lg:text-3xl font-semibold">
+        Bigger. Better. Bolder
+    </p>
+
+</div>
+
+<div className="hero-btns flex justify-center mt-4 md:mt-5">
+    <Link to="/events" className="btn-matsuri">Explore More</Link>
+</div>
                 </div>
             </section>
 
             {/* WRAPPER FOR ABOUT AND CELEBRITIES TO ADD A BRIGHTER BACKGROUND */}
             <div style={{
-                background: 'linear-gradient(to bottom, rgba(15,15,15,0.8), rgba(20,20,20,0.85)), url("https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=2000&auto=format&fit=crop")',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundAttachment: 'fixed'
-            }}>
+    background: 'linear-gradient(to bottom, rgba(15,15,15,0.8), rgba(20,20,20,0.85)), url("https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=2000&auto=format&fit=crop")',
+    backgroundSize: 'cover',
+    backgroundPosition: '90% 81%',
+    backgroundAttachment: 'fixed'
+}}>
                 {/* ABOUT SECTION */}
-                <section id="about" className="about-section world-white" style={{ padding: '100px 0' }}>
+                {/* Added border: 'none' to remove potential CSS border-bottom */}
+                <section id="about" className="about-section world-white" style={{ padding: '84px 0', border: 'none' }}>
                 <div className="container">
                     <div className="about-flex">
                         <div className="about-text">
@@ -132,10 +145,11 @@ const Home = () => {
             </section>
 
             {/* CELEBRITY GUESS SECTION */}
-            <section id="celebrities" className="celebrity-section" style={{ padding: '100px 0' }}>
+            {/* Added border: 'none' to remove potential CSS border-top */}
+            <section id="celebrities" className="celebrity-section" style={{ padding: '84px 0', border: 'none' }}>
                 <div className="container">
-                    <h2 className="section-title center">CELEBRITY GUESS</h2>
-                    <div className="celebrity-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '30px', marginTop: '50px' }}>
+                    <h2 className="section-title center">CELEBRITY GUESt</h2>
+                    <div className="celebrity-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '30px', marginTop: '36px' }}>
                         {[
                             { id: 1, type: "GUEST", hint: "" },
                             { id: 2, type: "GUEST", hint: "" },
@@ -147,14 +161,14 @@ const Home = () => {
                                 whileHover={{ scale: 1.05 }}
                                 className="celebrity-card-premium"
                                 style={{
-                                    background: 'rgba(255,255,255,0.05)',
+                                    background: 'transparent',
                                     borderRadius: '30px',
                                     padding: '40px 20px',
                                     textAlign: 'center',
-                                    border: '2px solid rgba(255, 77, 77, 0.4)',
-                                    boxShadow: '0 0 25px rgba(255, 77, 77, 0.3)',
+                                    border: 'none',
+                                    boxShadow: 'none',
                                     position: 'relative',
-                                    overflow: 'hidden',
+                                    overflow: 'visible',
                                     cursor: 'pointer'
                                 }}
                             >
