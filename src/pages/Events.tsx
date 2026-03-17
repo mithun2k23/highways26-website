@@ -31,25 +31,26 @@ const allEvents: EventDetail[] = [
     "title": "Shoot and Broadcast",
     "category": "Curtain Call",
     "day": 1,
-    "date": "April 9, 2026",
-    "time": "10:00 AM",
-    "location": "CB312",
+    "date": "April 09, 2026",
+    "time": "1:00 PM",
+    "location": "MPH",
     "color": "#ffb7c5",
-    "image": "https://images.unsplash.com/photo-1541179619977-1b0394018282?q=80&w=1000",
-    "description": "Focusing on Shoot and Broadcast, this Curtain Call event brings together the best minds for Highways'26.",
+    "image": "https://images.unsplash.com/photo-1514525253361-bee8d48700df?q=80&w=1000",
+    "description": "Showcase your stage presence and versatility in this live theater event. From expressive acting to powerful monologues, every performance counts.",
     "rules": [
-      "Mandatory registration via the Highways'26 app.",
-      "Please bring your college ID for entry.",
-      "Judges' decision is final.",
-      "Report 15 minutes before the start time."
+      "Registration is mandatory via the Highways'26 app.",
+      "Costumes and props must be arranged by the participants.",
+      "Obscene language or inappropriate attire will lead to disqualification.",
+      "Performances will be judged on stage presence, acting, and impact.",
+      "Team Format: Solo/Group."
     ],
     "prizePool": "TBA",
     "regType": "Free",
-    "teamSize": "Solo",
+    "teamSize": "Solo/Group",
     "pocs": [
       {
-        "name": "Akshaya",
-        "phone": "9042476961"
+        "name": "Siddarth",
+        "phone": "+91 63821 54728"
       }
     ]
   },
@@ -63,48 +64,49 @@ const allEvents: EventDetail[] = [
     "location": "MPH",
     "color": "#f8f8ff",
     "image": "https://images.unsplash.com/photo-1541179619977-1b0394018282?q=80&w=1000",
-    "description": "Focusing on Mime, this Curtain Call event brings together the best minds for Highways'26.",
+    "description": "Silent but powerful. Tell a compelling story without a single word. Focus on facial expressions, body language, and coordination with your team.",
     "rules": [
-      "Mandatory registration via the Highways'26 app.",
-      "Please bring your college ID for entry.",
-      "Judges' decision is final.",
-      "Report 15 minutes before the start time."
+      "Maximum of 10 people per team.",
+      "Duration: 5-8 minutes per performance.",
+      "Background music is allowed; live musicians are not.",
+      "No verbal sounds or use of props with writing allowed.",
+      "Costumes and face paint should be appropriate to the theme."
     ],
-    "prizePool": "₹4.5K",
-    "regType": "Premium",
-    "regFee": "₹400/Team",
+    "prizePool": "TBA",
+    "regType": "Free",
     "teamSize": "Group",
     "pocs": [
       {
-        "name": "Mahathi",
-        "phone": "9840988831"
+        "name": "Vaishnavi",
+        "phone": "+91 97914 90151"
       }
     ]
   },
   {
     "id": 3,
-    "title": "ADZAP",
+    "title": "AdZap",
     "category": "Curtain Call",
     "day": 3,
     "date": "April 11, 2026",
     "time": "10:00 AM",
-    "location": "CB301",
+    "location": "CB301 & CB302",
     "color": "#ffb7c5",
     "image": "https://images.unsplash.com/photo-1541179619977-1b0394018282?q=80&w=1000",
-    "description": "Focusing on Adzap, this Curtain Call event brings together the best minds for Highways'26.",
+    "description": "Think fast, act faster. Create a hilarious or hard-hitting advertisement for an unconventional product or scenario given on the spot.",
     "rules": [
-      "Mandatory registration via the Highways'26 app.",
-      "Please bring your college ID for entry.",
-      "Judges' decision is final.",
-      "Report 15 minutes before the start time."
+      "Team Format: 4-6 members.",
+      "Products/Scenarios will be assigned at the venue.",
+      "Judging will be based on humor, creativity, and punchlines.",
+      "Vulgarity will lead to immediate disqualification.",
+      "Preparation time: 5 minutes; Presentation: 3 minutes."
     ],
     "prizePool": "TBA",
     "regType": "Free",
-    "teamSize": "Solo",
+    "teamSize": "Group",
     "pocs": [
       {
-        "name": "Sreenidhi",
-        "phone": "6385568214"
+        "name": "Nidish",
+        "phone": "+91 91763 35831"
       }
     ]
   },
@@ -112,53 +114,56 @@ const allEvents: EventDetail[] = [
     "id": 4,
     "title": "Freeze Frame",
     "category": "Curtain Call",
-    "day": 3,
-    "date": "April 11, 2026",
-    "time": "02:00 PM",
-    "location": "Campus Venue",
+    "day": 1,
+    "date": "April 09, 2026",
+    "time": "10:00 AM",
+    "location": "Block 3 Fully (Ground Floor)",
     "color": "#ffb7c5",
     "image": "https://images.unsplash.com/photo-1541179619977-1b0394018282?q=80&w=1000",
-    "description": "Focusing on Freeze Frame, this Curtain Call event brings together the best minds for Highways'26.",
+    "description": "A live mannequin challenge where stillness tells the story. Capture a dramatic moment in time through unwavering poses and expressions.",
     "rules": [
-      "Mandatory registration via the Highways'26 app.",
-      "Please bring your college ID for entry.",
-      "Judges' decision is final.",
-      "Report 15 minutes before the start time."
+      "Team Format: 5 members.",
+      "Maintain a static pose for the specified time (up to 3 mins).",
+      "Judging based on expression, costume detail, and stillness.",
+      "Thematic setups are encouraged.",
+      "Any intentional movement leads to points deduction."
     ],
     "prizePool": "TBA",
     "regType": "Free",
-    "teamSize": "Solo",
+    "teamSize": "Group",
     "pocs": [
       {
-        "name": "Janani",
-        "phone": "9840988831"
+        "name": "Shyam Prasad",
+        "phone": "+91 80562 31227"
       }
     ]
   },
   {
     "id": 5,
-    "title": "IPL Auction",
+    "title": "Yonko's Treasure Market",
     "category": "Reading Club",
     "day": 1,
-    "date": "April 9, 2026",
-    "time": "10:00 AM",
-    "location": "Campus Venue",
+    "date": "April 09, 2026",
+    "time": "10:30 AM",
+    "location": "Block 5 (Ground Floor Area)",
     "color": "#ffb7c5",
-    "image": "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?q=80&w=1000",
-    "description": "Focusing on IPL Auction, this Reading Club event brings together the best minds for Highways'26.",
+    "image": "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?q=80&w=1000",
+    "description": "Embark on an epic quest in Yonko's Treasure Market! Solve intricate riddles and cryptic clues to find the hidden 'One Piece' treasure scattered across the venue.",
     "rules": [
-      "Mandatory registration via the Highways'26 app.",
-      "Please bring your college ID for entry.",
-      "Judges' decision is final.",
-      "Report 15 minutes before the start time."
+      "Must decode multiple riddle levels to progress.",
+      "Physical and mental challenges integrated at key points.",
+      "The first team to recover the final treasure wins.",
+      "Coordination and speed are crucial for victory.",
+      "Team Format: Solo/Group."
     ],
     "prizePool": "TBA",
-    "regType": "Free",
-    "teamSize": "Solo",
+    "regType": "Standard",
+    "regFee": "Rs. 30/-",
+    "teamSize": "Solo/Group",
     "pocs": [
       {
-        "name": "Buvanesh Raaj",
-        "phone": "9962371662"
+        "name": "Akshaya G",
+        "phone": "+91 80560 62650"
       }
     ]
   },
@@ -166,50 +171,52 @@ const allEvents: EventDetail[] = [
     "id": 6,
     "title": "Sorting Hat Conspiracy",
     "category": "Reading Club",
-    "day": 3,
-    "date": "April 11, 2026",
-    "time": "10:00 AM",
-    "location": "Block 5 (1st Floor)",
-    "color": "#ffb7c5",
-    "image": "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?q=80&w=1000",
-    "description": "Focusing on Sorting Hat Conspiracy, this Reading Club event brings together the best minds for Highways'26.",
+    "day": 2,
+    "date": "April 10, 2026",
+    "time": "1:00 PM",
+    "location": "CB301",
+    "color": "#f8f8ff",
+    "image": "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?q=80&w=1000",
+    "description": "Enter the wizarding world for a high-intensity trivia challenge. Test your knowledge of magical lore and literature to claim the top spot in your house.",
     "rules": [
-      "Mandatory registration via the Highways'26 app.",
-      "Please bring your college ID for entry.",
-      "Judges' decision is final.",
-      "Report 15 minutes before the start time."
+      "Multiple rounds of literature and movie trivia.",
+      "Higher stakes points for obscure lore questions.",
+      "Final showdown between the top house representatives.",
+      "No magical assistance allowed (electronic devices).",
+      "Team Format: Solo/Group."
     ],
     "prizePool": "TBA",
     "regType": "Free",
-    "teamSize": "Solo",
+    "teamSize": "Solo/Group",
     "pocs": [
       {
-        "name": "Hannah",
-        "phone": "7305066339"
+        "name": "Surya Prabha",
+        "phone": "+91 91507 97531"
       }
     ]
   },
   {
     "id": 7,
-    "title": "Reverse Pictionary",
+    "title": "Trust the Process",
     "category": "EWB",
     "day": 1,
-    "date": "April 9, 2026",
-    "time": "Full Day",
-    "location": "CB513",
+    "date": "April 09, 2026",
+    "time": "9:30 AM",
+    "location": "CB522",
     "color": "#ffb7c5",
     "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1000",
-    "description": "Focusing on Trust the Process, this EWB event brings together the best minds for Highways'26.",
+    "description": "A team-based technical challenge testing communication, interpretation, and execution. Roles include describing, identifying, and technically replicating mystery objects.",
     "rules": [
-      "Mandatory registration via the Highways'26 app.",
-      "Please bring your college ID for entry.",
-      "Judges' decision is final.",
-      "Report 15 minutes before the start time."
+      "Role 1: Describe a mystery object clearly without naming it.",
+      "Role 2: Interpret the description and identify the object.",
+      "Role 3: Replicate the object using CAD software or manual drawing.",
+      "Judge Criteria: Clarity, teamwork, creativity, technical accuracy, and time management.",
+      "Team Format: 2-3 members."
     ],
-    "prizePool": "₹1.5K",
+    "prizePool": "Rs. 1,500/-",
     "regType": "Standard",
-    "regFee": "₹50/Person",
-    "teamSize": "Solo",
+    "regFee": "Rs. 50/Person",
+    "teamSize": "Group",
     "pocs": [
       {
         "name": "Gayathri",
@@ -219,24 +226,25 @@ const allEvents: EventDetail[] = [
   },
   {
     "id": 8,
-    "title": "Jagdish On A Mission",
+    "title": "Chaos Director",
     "category": "EWB",
     "day": 2,
     "date": "April 10, 2026",
-    "time": "Full Day",
-    "location": "CB 304",
+    "time": "9:30 AM",
+    "location": "CB304 & CB324",
     "color": "#f8f8ff",
     "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1000",
-    "description": "Focusing on Chaos Director, this EWB event brings together the best minds for Highways'26.",
+    "description": "High-energy campus-wide visual storytelling. Crews race across checkpoints shooting scenes or performing tasks based on random movie genres assigned to them.",
     "rules": [
-      "Mandatory registration via the Highways'26 app.",
-      "Please bring your college ID for entry.",
-      "Judges' decision is final.",
-      "Report 15 minutes before the start time."
+      "4 Production Checkpoints sequencially spread across the venue.",
+      "Shoot scenes, perform tasks, or interact with strangers at each point.",
+      "Return to HQ with compiled footage or photo evidence.",
+      "Winners judged on completion time and creative execution.",
+      "Registration is first-come, first-served (10–12 teams allowed)."
     ],
     "prizePool": "TBA",
     "regType": "Free",
-    "teamSize": "Solo",
+    "teamSize": "Group",
     "pocs": [
       {
         "name": "Mariam",
@@ -246,78 +254,77 @@ const allEvents: EventDetail[] = [
   },
   {
     "id": 9,
-    "title": "Who's the sus",
+    "title": "Deii... Avan Sethutan da.. (Who's the Sus?)",
     "category": "ISTD",
     "day": 1,
-    "date": "April 9, 2026",
-    "time": "Full Day",
+    "date": "April 09, 2026",
+    "time": "9:00 AM",
     "location": "CB515 & CB516",
     "color": "#ffb7c5",
     "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1000",
-    "description": "Focusing on Who the sus, this ISTD event brings together the best minds for Highways'26.",
+    "description": "A crime has happened. Clues are scattered. Witnesses tell different stories. Will your team uncover the truth... or will the mystery remain unsolved? Step into this interactive crime investigation challenge.",
     "rules": [
-      "Mandatory registration via the Highways'26 app.",
-      "Please bring your college ID for entry.",
-      "Judges' decision is final.",
-      "Report 15 minutes before the start time."
+      "Team Format: 5 members.",
+      "Analyze scattered clues and witness testimonies.",
+      "Question the evidence and connect the dots before time runs out."
     ],
     "prizePool": "TBA",
     "regType": "Free",
-    "teamSize": "Solo",
+    "teamSize": "Group",
     "pocs": [
       {
-        "name": "Tamizh Selvan",
+        "name": "Thamizh",
         "phone": "93425 97576"
       }
     ]
   },
   {
     "id": 10,
-    "title": "Money moves in your hand",
+    "title": "Unaku Avlo Thaan Limit'uh (Money Moves)",
     "category": "ISTD",
     "day": 2,
     "date": "April 10, 2026",
-    "time": "Full Day",
+    "time": "9:00 AM",
     "location": "CB515 & CB516",
     "color": "#f8f8ff",
     "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1000",
-    "description": "Focusing on Money moves in your hand, this ISTD event brings together the best minds for Highways'26.",
+    "description": "You get a salary. You face rent, EMIs, and daily expenses. Can you survive the month without going broke? Join our interactive financial simulation and experience real-world money management.",
     "rules": [
-      "Mandatory registration via the Highways'26 app.",
-      "Please bring your college ID for entry.",
-      "Judges' decision is final.",
-      "Report 15 minutes before the start time."
+      "Team Format: 5 members.",
+      "Participate in an interactive financial simulation.",
+      "Manage real-world expenses and survive the month."
     ],
-    "prizePool": "TBA",
+    "prizePool": "Rs. 1,500/-",
     "regType": "Free",
-    "teamSize": "Solo",
+    "teamSize": "Group",
     "pocs": [
       {
-        "name": "Rasiga",
+        "name": "Rasiga P",
         "phone": "95002 40988"
       }
     ]
   },
   {
     "id": 11,
-    "title": "Treasure Hunt",
+    "title": "Scavenger Hunt",
     "category": "RRC",
     "day": 1,
-    "date": "April 9, 2026",
-    "time": "Full Day",
-    "location": "CB501, 507 & 508",
+    "date": "April 09, 2026",
+    "time": "10:00 AM",
+    "location": "CB501, CB507 & CB508",
     "color": "#ffb7c5",
     "image": "https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=1000",
-    "description": "Focusing on Scavenger Hunt, this RRC event brings together the best minds for Highways'26.",
+    "description": "A competitive event designed to test knowledge, teamwork, speed, and observation. Progresses from a fun quiz to a classroom hunt and an intense mystery-solving finale.",
     "rules": [
-      "Mandatory registration via the Highways'26 app.",
-      "Please bring your college ID for entry.",
-      "Judges' decision is final.",
-      "Report 15 minutes before the start time."
+      "Round 1: Fun Quiz – Interactive movie/song guessing and trivia.",
+      "Round 2: Color Chit Movie Hunt – Find real clues among 40 chits. Rule: Walk on benches only.",
+      "Round 3: Crime Scene Connection – Connect setup clues to identify a hidden object.",
+      "Touching the floor in Round 2 leads to disqualification.",
+      "Fastest teams to connect clues correctly win."
     ],
     "prizePool": "TBA",
     "regType": "Free",
-    "teamSize": "Solo",
+    "teamSize": "Group",
     "pocs": [
       {
         "name": "Jegatheesh",
@@ -327,25 +334,25 @@ const allEvents: EventDetail[] = [
   },
   {
     "id": 12,
-    "title": "Mystry Box challenge",
+    "title": "GEN-Z JUNK",
     "category": "RRC",
     "day": 2,
     "date": "April 10, 2026",
-    "time": "10:00 AM",
-    "location": "CB311 & CB314",
+    "time": "1:00 PM",
+    "location": "CB524 & CB525",
     "color": "#f8f8ff",
     "image": "https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=1000",
-    "description": "Focusing on Mystry Box challenge, this RRC event brings together the best minds for Highways'26.",
+    "description": "Turn emotional support junk into a masterpiece. From logic paradoxes to the ultimate scrap-build, it is time to turn 'delulu' into 'realulu'. Prove you have the creative vision.",
     "rules": [
-      "Mandatory registration via the Highways'26 app.",
-      "Please bring your college ID for entry.",
-      "Judges' decision is final.",
-      "Report 15 minutes before the start time."
+      "Round 1: The Unsolved Frame – Solve 5 logic paradoxes and guess 3 movie props.",
+      "Round 2: The Prop Hunter – List creative applications for random items every 60s.",
+      "Round 3: The Ultimate Mystery Build – Build the most useful/funnier invention from scrap.",
+      "Scoring: Round 3 judged on Stability (45%), Creativity (45%), and Presentation (10%).",
+      "No instructions, no gatekeeping—just pure ingenuity."
     ],
-    "prizePool": "TBA",
-    "regType": "Standard",
-    "regFee": "₹200",
-    "teamSize": "Solo",
+    "prizePool": "Rs. 3.000/-",
+    "regType": "Free",
+    "teamSize": "Group",
     "pocs": [
       {
         "name": "Oviya",
@@ -363,16 +370,18 @@ const allEvents: EventDetail[] = [
     "location": "CB501 & CB502",
     "color": "#ffb7c5",
     "image": "https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=1000",
-    "description": "Focusing on Human Knot, this RRC event brings together the best minds for Highways'26.",
+    "description": "A time-based team event designed to test precision, coordination, communication, and trust through unique physical and mental challenges.",
     "rules": [
-      "Mandatory registration via the Highways'26 app.",
-      "Please bring your college ID for entry.",
-      "Judges' decision is final.",
-      "Report 15 minutes before the start time."
+      "Round 1: Free the Teammate – Complete 3 tasks (Ping pong, Coin slide, Noise Cancel) to release a tied member.",
+      "Round 2: Trust Build – A blindfolded member builds a 3-tier cup pyramid guided by non-verbal taps.",
+      "The pyramid must stand independently for at least three seconds.",
+      "Teams that complete structures in the least time win.",
+      "Exactly 4 members required per team."
     ],
-    "prizePool": "TBA",
-    "regType": "Free",
-    "teamSize": "Solo",
+    "prizePool": "Rs. 3,500/-",
+    "regType": "Standard",
+    "regFee": "Rs. 200/-",
+    "teamSize": "Group",
     "pocs": [
       {
         "name": "Sakthi Purushuthaman",
@@ -385,21 +394,22 @@ const allEvents: EventDetail[] = [
     "title": "Channel Surfing",
     "category": "Speakers Forum",
     "day": 1,
-    "date": "April 9, 2026",
-    "time": "10:00 AM",
-    "location": "Campus Venue",
+    "date": "April 09, 2026",
+    "time": "1:00 PM",
+    "location": "CB321",
     "color": "#ffb7c5",
     "image": "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?q=80&w=1000",
-    "description": "Focusing on Channel Surfing, this Speakers Forum event brings together the best minds for Highways'26.",
+    "description": "Test your versatility and improvisational skills by playing different 'channels' in a live TV simulation. Each member must adapt to a variety of roles and scenarios on cue.",
     "rules": [
-      "Mandatory registration via the Highways'26 app.",
-      "Please bring your college ID for entry.",
-      "Judges' decision is final.",
-      "Report 15 minutes before the start time."
+      "Team Format: Exactly 4 members.",
+      "One member acts as the 'remote' to zap between channels.",
+      "Roles must be switched immediately upon changing the channel.",
+      "Judging based on creativity, humor, and adaptability.",
+      "Obscene language leads to disqualification."
     ],
     "prizePool": "TBA",
     "regType": "Free",
-    "teamSize": "Solo",
+    "teamSize": "Group",
     "pocs": [
       {
         "name": "Shawn Abraham",
@@ -409,25 +419,26 @@ const allEvents: EventDetail[] = [
   },
   {
     "id": 15,
-    "title": "Shipwreck",
+    "title": "Survival of the Fittest",
     "category": "Speakers Forum",
-    "day": 1,
-    "date": "April 9, 2026",
+    "day": 2,
+    "date": "April 10, 2026",
     "time": "10:00 AM",
     "location": "Library 3rd Hall",
     "color": "#ffb7c5",
     "image": "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?q=80&w=1000",
-    "description": "Focusing on Survival of the fittest, this Speakers Forum event brings together the best minds for Highways'26.",
+    "description": "The ultimate test of persuasion and quick thinking. In a high-stakes scenario, only the most convincing speaker will survive.",
     "rules": [
-      "Mandatory registration via the Highways'26 app.",
-      "Please bring your college ID for entry.",
-      "Judges' decision is final.",
-      "Report 15 minutes before the start time."
+      "Round 1: Shipwreck – Convince the captain why you deserve the only life jacket.",
+      "Round 2: Turncoat – Switch between 'for' and 'against' a topic on the judge's command.",
+      "Judging based on argument strength, presence, and fluency.",
+      "Exactly 4 members per team.",
+      "Solo/Group entry determined by the captain's choice."
     ],
-    "prizePool": "₹5K",
+    "prizePool": "Rs. 5,000/-",
     "regType": "Premium",
-    "regFee": "₹100/Person",
-    "teamSize": "Solo",
+    "regFee": "Rs. 100/-",
+    "teamSize": "Group",
     "pocs": [
       {
         "name": "Shawn Abraham",
@@ -439,86 +450,87 @@ const allEvents: EventDetail[] = [
     "id": 16,
     "title": "Movie Screening",
     "category": "Shortfilm",
-    "day": 3,
-    "date": "April 11, 2026",
-    "time": "10:00 AM",
+    "day": 1,
+    "date": "April 09, 2026", // Note: The description says Apr 09, 10, 11
+    "time": "9:00 AM",
     "location": "Library Seminar Hall",
     "color": "#ffb7c5",
     "image": "https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=1000",
-    "description": "Focusing on Movie Screening, this Shortfilm event brings together the best minds for Highways'26.",
+    "description": "Experience the magic of cinema on the big screen with a collection of captivating short films. Immerse yourself in powerful storytelling and creative visuals.",
     "rules": [
-      "Mandatory registration via the Highways'26 app.",
-      "Please bring your college ID for entry.",
-      "Judges' decision is final.",
-      "Report 15 minutes before the start time."
+      "Entry ticket is applicable.",
+      "Sit back, relax, and enjoy the narratives crafted by talented filmmakers.",
+      "Sparks imagination through every frame."
     ],
-    "prizePool": "TBA",
+    "prizePool": "N/A",
     "regType": "Standard",
-    "regFee": "₹30/Person",
+    "regFee": "Rs. 35/-",
     "teamSize": "Solo",
     "pocs": [
       {
-        "name": "Ashwin (day 1)",
-        "phone": "98844 11202"
+        "name": "Jayasuriya",
+        "phone": "8778994503"
       },
       {
-        "name": "Jayasuriya(day 2)",
-        "phone": "877 899 4503"
+        "name": "Sanjay Joshua",
+        "phone": "7305764336"
       },
       {
-        "name": "Shamritha (day 3)",
+        "name": "Shamritha",
         "phone": "98840 36973"
       }
     ]
   },
   {
     "id": 17,
-    "title": "Cinequest",
+    "title": "CineQuest",
     "category": "Shortfilm",
     "day": 2,
     "date": "April 10, 2026",
-    "time": "Full Day",
+    "time": "10:00 AM",
     "location": "CB521",
     "color": "#f8f8ff",
     "image": "https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=1000",
-    "description": "Focusing on Cinequest, this Shortfilm event brings together the best minds for Highways'26.",
+    "description": "A fast-paced cinematic challenge for movie buffs. Decode visual puzzles, identify soundtracks, and guess famous scenes from minimal clues.",
     "rules": [
-      "Mandatory registration via the Highways'26 app.",
-      "Please bring your college ID for entry.",
-      "Judges' decision is final.",
-      "Report 15 minutes before the start time."
+      "Round 1: Puzzle Quiz – Identify movies from mixed visual puzzles.",
+      "Round 2: BGM / Dialogue Guess – Recognize movie background music or dialogues.",
+      "Round 3: Konjam Nadinga Boss – Recreate movie scenes by acting them out."
     ],
     "prizePool": "TBA",
     "regType": "Free",
-    "teamSize": "Solo",
+    "teamSize": "Group",
     "pocs": [
       {
-        "name": "Cinequest Team",
-        "phone": "89253 10269"
+        "name": "Vijayasarathy B",
+        "phone": "8925310269"
+      },
+      {
+        "name": "Sanchitha",
+        "phone": "9787876126"
       }
     ]
   },
   {
     "id": 18,
-    "title": "Short Film contest",
+    "title": "Short Film Contest",
     "category": "Shortfilm",
     "day": 3,
     "date": "April 11, 2026",
-    "time": "02:00 PM",
+    "time": "1:00 PM",
     "location": "Library Seminar Hall",
     "color": "#ffb7c5",
     "image": "https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=1000",
-    "description": "Focusing on Short Film contest, this Shortfilm event brings together the best minds for Highways'26.",
+    "description": "Showcase your creativity and storytelling skills by creating a short film on an innovative theme. Let your unique vision come alive on screen.",
     "rules": [
-      "Mandatory registration via the Highways'26 app.",
-      "Please bring your college ID for entry.",
-      "Judges' decision is final.",
-      "Report 15 minutes before the start time."
+      "Submit short films on innovative themes.",
+      "Judged on creativity, storytelling, and unique vision.",
+      "Showcase your technical filmmaking skills."
     ],
-    "prizePool": "TBA",
+    "prizePool": "Rs. 10,000/-",
     "regType": "Premium",
-    "regFee": "₹200",
-    "teamSize": "Solo",
+    "regFee": "Rs. 150/-",
+    "teamSize": "Group",
     "pocs": [
       {
         "name": "Sai Krishna",
@@ -528,24 +540,24 @@ const allEvents: EventDetail[] = [
   },
   {
     "id": 19,
-    "title": "Turncoat (Mathi Yosi)",
+    "title": "Maathi Yosi",
     "category": "Tamil Mandram",
     "day": 1,
-    "date": "April 9, 2026",
-    "time": "Full Day",
-    "location": "CB504 & CB505",
+    "date": "April 09, 2026",
+    "time": "10:00 AM",
+    "location": "CB505",
     "color": "#ffb7c5",
     "image": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?q=80&w=1000",
-    "description": "Focusing on Mathi Yoshi, this Tamil Mandram event brings together the best minds for Highways'26.",
+    "description": "A fun and interactive event designed to test quick thinking and creativity. Participants must challenge their brains with irrelevant answers and rapid role-switching.",
     "rules": [
-      "Mandatory registration via the Highways'26 app.",
-      "Please bring your college ID for entry.",
-      "Judges' decision is final.",
-      "Report 15 minutes before the start time."
+      "Round 1: Irrelevant Answer Challenge – Participants must give unrelated answers to questions for 1 minute.",
+      "Round 2: Support and Oppose – One supports and one opposes a topic; roles switch instantly on command.",
+      "Team Format: 2 members.",
+      "Quick thinking and creative improvisation are essential."
     ],
-    "prizePool": "TBA",
+    "prizePool": "Rs. 1,500/-",
     "regType": "Free",
-    "teamSize": "Solo",
+    "teamSize": "Group",
     "pocs": [
       {
         "name": "Dharsan P",
@@ -560,19 +572,18 @@ const allEvents: EventDetail[] = [
     "day": 2,
     "date": "April 10, 2026",
     "time": "10:00 AM",
-    "location": "CB504 & CB505",
+    "location": "CB511",
     "color": "#f8f8ff",
     "image": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?q=80&w=1000",
-    "description": "Focusing on Thirai Suzhal, this Tamil Mandram event brings together the best minds for Highways'26.",
+    "description": "An entertaining cinema and literature event testing acting skills, teamwork, and quick thinking across television-style segments.",
     "rules": [
-      "Mandatory registration via the Highways'26 app.",
-      "Please bring your college ID for entry.",
-      "Judges' decision is final.",
-      "Report 15 minutes before the start time."
+      "Round 1: Dumb Charades – Act out Tamil literature or movie titles without speaking.",
+      "Round 2: Scene Recreation with Emotion Twist – Switch genres and styles instantly like a TV remote.",
+      "Team Format: 4 members.",
+      "Judged on creativity, acting accuracy, and reaction speed."
     ],
-    "prizePool": "₹1.5K",
-    "regType": "Standard",
-    "regFee": "₹50/Team",
+    "prizePool": "TBA",
+    "regType": "Free",
     "teamSize": "Group",
     "pocs": [
       {
@@ -583,24 +594,25 @@ const allEvents: EventDetail[] = [
   },
   {
     "id": 21,
-    "title": "Olunga Paadu illana sprey adichiduvan",
+    "title": "Olunga paadu illana spray adichiruven",
     "category": "Tamil Mandram",
     "day": 3,
     "date": "April 11, 2026",
-    "time": "Full Day",
-    "location": "CB504 & CB505",
+    "time": "10:00 AM",
+    "location": "CB505",
     "color": "#ffb7c5",
     "image": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?q=80&w=1000",
-    "description": "Focusing on Olunga Paadu illana sprey adichiduvan, this Tamil Mandram event brings together the best minds for Highways'26.",
+    "description": "A music-based event challenging song knowledge and recall. Failure to sing the correct lyrics results in the 'spray penalty'.",
     "rules": [
-      "Mandatory registration via the Highways'26 app.",
-      "Please bring your college ID for entry.",
-      "Judges' decision is final.",
-      "Report 15 minutes before the start time."
+      "Round 1: Identify one missing word from a song line.",
+      "Round 2: Identify two missing words from a song line.",
+      "Round 3: Sing a completely missing line from a song.",
+      "Team Format: 3 members. Each round must be played by a different member.",
+      "Incorrect answers result in the spray penalty."
     ],
     "prizePool": "TBA",
     "regType": "Free",
-    "teamSize": "Solo",
+    "teamSize": "Group",
     "pocs": [
       {
         "name": "Ramkishore",
@@ -610,24 +622,24 @@ const allEvents: EventDetail[] = [
   },
   {
     "id": 22,
-    "title": "EPL",
+    "title": "EPL - Entrepreneurship Pitching League",
     "category": "ECell",
     "day": 1,
-    "date": "April 9, 2026",
-    "time": "10:00 AM",
+    "date": "April 09, 2026",
+    "time": "9:00 AM",
     "location": "Biotech Hall",
     "color": "#ffb7c5",
     "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1000",
-    "description": "Focusing on EPL, this ECell event brings together the best minds for Highways'26.",
+    "description": "Where innovation and competition collide! Challenge your knowledge of the startup ecosystem, quick thinking, and persuasive pitching abilities across three engaging rounds.",
     "rules": [
-      "Mandatory registration via the Highways'26 app.",
-      "Please bring your college ID for entry.",
-      "Judges' decision is final.",
-      "Report 15 minutes before the start time."
+      "Round 1: Startup ecosystem knowledge test.",
+      "Round 2: Quick thinking and situational entrepreneurial response.",
+      "Round 3: Persuasive pitching challenge.",
+      "Judged on strategic thinking and presentation impact."
     ],
-    "prizePool": "₹4.5K",
+    "prizePool": "Rs. 4,500/-",
     "regType": "Premium",
-    "regFee": "₹150/Team",
+    "regFee": "Rs. 150/-",
     "teamSize": "Group",
     "pocs": [
       {
@@ -638,52 +650,54 @@ const allEvents: EventDetail[] = [
   },
   {
     "id": 23,
-    "title": "Disasterpeneur",
+    "title": "Disasterpreneur",
     "category": "ECell",
     "day": 2,
     "date": "April 10, 2026",
-    "time": "02:00 PM",
+    "time": "9:00 AM",
     "location": "CB302",
     "color": "#f8f8ff",
     "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1000",
-    "description": "Focusing on Disasterpeneur, this ECell event brings together the best minds for Highways'26.",
+    "description": "Transform an ordinary or useless object into a viral, high-demand brand. It tests marketing intelligence, creativity, storytelling, and stage presence.",
     "rules": [
-      "Mandatory registration via the Highways'26 app.",
-      "Please bring your college ID for entry.",
-      "Judges' decision is final.",
-      "Report 15 minutes before the start time."
+      "Round 1: Sell the Unsellable – Market a useless object as a ₹1 crore product in 60s.",
+      "Round 2: Brand Creation – Pitch a complete brand concept (Name, Tagline, Story, Ad).",
+      "Round 3: Go Viral – Create and perform a 30-second reel script live.",
+      "Winners decided via audience engagement and voting QR polls.",
+      "Team Format: 1-3 members."
     ],
-    "prizePool": "₹1K",
+    "prizePool": "Rs. 1000/-",
     "regType": "Standard",
-    "regFee": "₹75/Team",
+    "regFee": "TBA",
     "teamSize": "Group",
     "pocs": [
       {
-        "name": "Sudish",
-        "phone": "91501 95835"
+        "name": "Sudish M",
+        "phone": "9150195835"
       }
     ]
   },
   {
     "id": 24,
-    "title": "Startup War",
+    "title": "Startup War Room",
     "category": "ECell",
     "day": 3,
     "date": "April 11, 2026",
-    "time": "10:00 AM",
-    "location": "CB303",
+    "time": "9:00 AM",
+    "location": "CB507",
     "color": "#ffb7c5",
     "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1000",
-    "description": "Focusing on Start up war, this ECell event brings together the best minds for Highways'26.",
+    "description": "Live startup simulation where teams build, defend, pivot, and negotiate under pressure. Experience market disruptions and hostile VC negotiations.",
     "rules": [
-      "Mandatory registration via the Highways'26 app.",
-      "Please bring your college ID for entry.",
-      "Judges' decision is final.",
-      "Report 15 minutes before the start time."
+      "Round 1: Idea Sprint – Create a startup using sector/constraint cards.",
+      "Round 2: Market Attack – Respond to live business crises introduced by judges.",
+      "Round 3: Investor Negotiation – Negotiate valuation/equity with simulated hostile VCs.",
+      "Team Format: 2-4 members.",
+      "Judged on strategic thinking, crisis management, and negotiation skills."
     ],
-    "prizePool": "₹1.5K",
+    "prizePool": "Rs. 1,500/-",
     "regType": "Standard",
-    "regFee": "₹75/Team",
+    "regFee": "TBA",
     "teamSize": "Group",
     "pocs": [
       {
@@ -694,29 +708,29 @@ const allEvents: EventDetail[] = [
   },
   {
     "id": 25,
-    "title": "Themed Photography",
+    "title": "Shot on Highways",
     "category": "Photo Club",
     "day": 1,
-    "date": "April 9, 2026",
-    "time": "Virtual",
-    "location": "CB301",
+    "date": "April 09, 2026",
+    "time": "10:00 AM",
+    "location": "Whole Campus",
     "color": "#ffb7c5",
-    "image": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=1000",
-    "description": "Focusing on Shot on Highways, this Photo Club event brings together the best minds for Highways'26.",
+    "image": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1000",
+    "description": "A dynamic photography challenge where participants capture the vibrant energy and essence of the 'Highways' event through their lenses.",
     "rules": [
-      "Mandatory registration via the Highways'26 app.",
-      "Please bring your college ID for entry.",
-      "Judges' decision is final.",
-      "Report 15 minutes before the start time."
+      "Registration is mandatory via the Highways'26 app.",
+      "Entries must be captured during the event hours specifically.",
+      "Editing is limited to basic color correction only.",
+      "Photos must be submitted in the specified digital format.",
+      "Decision of the judging panel will be final and binding."
     ],
-    "prizePool": "₹1.5K",
-    "regType": "Standard",
-    "regFee": "₹100/Team",
-    "teamSize": "Group",
+    "prizePool": "TBA",
+    "regType": "Free",
+    "teamSize": "Solo",
     "pocs": [
       {
-        "name": "Shreya",
-        "phone": "9445599760"
+        "name": "Nithish",
+        "phone": "+91 63747 48259"
       }
     ]
   },
@@ -724,27 +738,27 @@ const allEvents: EventDetail[] = [
     "id": 26,
     "title": "Frame by words",
     "category": "Photo Club",
-    "day": 1,
-    "date": "April 9, 2026",
+    "day": 2,
+    "date": "April 10, 2026",
     "time": "10:00 AM",
-    "location": "CB303",
-    "color": "#ffb7c5",
-    "image": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=1000",
-    "description": "Focusing on Frame by words, this Photo Club event brings together the best minds for Highways'26.",
+    "location": "CB301",
+    "color": "#f8f8ff",
+    "image": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1000",
+    "description": "Test your photographic interpretation and storytelling. Participants are given a specific word or phrase and must capture an image that best represents it.",
     "rules": [
-      "Mandatory registration via the Highways'26 app.",
-      "Please bring your college ID for entry.",
-      "Judges' decision is final.",
-      "Report 15 minutes before the start time."
+      "A specific word will be revealed at the venue.",
+      "Participants have a fixed time to capture and submit one photo.",
+      "Creativity and relevance to the prompt are key judging criteria.",
+      "Only mobile photography or DSLR (without external lighting) allowed.",
+      "Judges' decision is final."
     ],
-    "prizePool": "₹1.5K",
-    "regType": "Standard",
-    "regFee": "₹50/Person",
+    "prizePool": "TBA",
+    "regType": "Free",
     "teamSize": "Solo",
     "pocs": [
       {
-        "name": "Raghav",
-        "phone": "63744 73882"
+        "name": "Deepakraja",
+        "phone": "+91 82485 53343"
       }
     ]
   },
@@ -753,26 +767,27 @@ const allEvents: EventDetail[] = [
     "title": "Otakumania",
     "category": "Science Club",
     "day": 1,
-    "date": "April 9, 2026",
+    "date": "April 09, 2026",
     "time": "10:00 AM",
-    "location": "CB 321, CB322, CB323 & CB324",
+    "location": "Block 3 (2nd Floor Fully)",
     "color": "#ffb7c5",
     "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1000",
-    "description": "Focusing on Otakumania, this Science Club event brings together the best minds for Highways'26.",
+    "description": "A dungeons and dragons based event where duos compete through a dungeon adventure filled with anime questions, card battles (HP/Pet/Power cards), and strategic gameplay.",
     "rules": [
-      "Mandatory registration via the Highways'26 app.",
-      "Please bring your college ID for entry.",
-      "Judges' decision is final.",
-      "Report 15 minutes before the start time."
+      "Buy 5 cards: Character, Attack, Defence, Pet, and Power cards.",
+      "Answering correctly grants movement across dungeon tiles/doors.",
+      "Team paths intersect at battle points. Each team has 200 HP.",
+      "Dungeon structure: Earth -> Mystic -> God's Dungeon (Final).",
+      "Treasure chests contain cards, level-ups, or teleport keys."
     ],
-    "prizePool": "₹1.5K",
+    "prizePool": "Rs. 1,500/-",
     "regType": "Standard",
-    "regFee": "₹100/Team",
+    "regFee": "TBA",
     "teamSize": "Group",
     "pocs": [
       {
         "name": "Nandhakumaran",
-        "phone": "93444 58074"
+        "phone": "9344458074"
       }
     ]
   },
@@ -783,23 +798,24 @@ const allEvents: EventDetail[] = [
     "day": 2,
     "date": "April 10, 2026",
     "time": "10:00 AM",
-    "location": "CB322 & CB323",
+    "location": "CB322",
     "color": "#f8f8ff",
     "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1000",
-    "description": "Focusing on Greenscreen, this Science Club event brings together the best minds for Highways'26.",
+    "description": "One member is blindfolded while a muted video plays behind them. Teammates must provide verbal clues (without naming characters/movies) to help them guess correctly.",
     "rules": [
-      "Mandatory registration via the Highways'26 app.",
-      "Please bring your college ID for entry.",
-      "Judges' decision is final.",
-      "Report 15 minutes before the start time."
+      "Muted video features popular movie/series dialogues.",
+      "Teammates provide clues; no direct names or titles allowed.",
+      "Judged on creative expression and deductive teamwork.",
+      "Vulgarity or inappropriate language leads to disqualification.",
+      "Team Format: 3 members."
     ],
     "prizePool": "TBA",
     "regType": "Free",
-    "teamSize": "Solo",
+    "teamSize": "Group",
     "pocs": [
       {
         "name": "Mohammed Faraaz",
-        "phone": "94459 33053"
+        "phone": "9445933053"
       }
     ]
   },
@@ -813,16 +829,17 @@ const allEvents: EventDetail[] = [
     "location": "CB313 & CB314",
     "color": "#ffb7c5",
     "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1000",
-    "description": "Focusing on Powerplay Arena, this Science Club event brings together the best minds for Highways'26.",
+    "description": "Multi-round team competition where groups begin with tokens and grow their count through mini-games, strategy cards, and tactical bidding twists.",
     "rules": [
-      "Mandatory registration via the Highways'26 app.",
-      "Please bring your college ID for entry.",
-      "Judges' decision is final.",
-      "Report 15 minutes before the start time."
+      "Challenges: Skill, speed, memory, puzzles, and strategy rounds.",
+      "Grow token counts; top teams advance to high-stakes final.",
+      "Bidding battles, auctions, and code-breaking twists included.",
+      "Highest token count at the end determines the winner.",
+      "Team Format: 3 members."
     ],
     "prizePool": "TBA",
     "regType": "Free",
-    "teamSize": "Solo",
+    "teamSize": "Group",
     "pocs": [
       {
         "name": "Neha Ramganesh",
@@ -834,27 +851,27 @@ const allEvents: EventDetail[] = [
     "id": 30,
     "title": "Tellus Abyss",
     "category": "Care",
-    "day": 1,
-    "date": "April 9, 2026",
-    "time": "10:00 AM",
-    "location": "CB525",
+    "day": 2,
+    "date": "April 10, 2026",
+    "time": "9:00 AM",
+    "location": "Biotech Seminar Hall",
     "color": "#ffb7c5",
     "image": "https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=1000",
-    "description": "Focusing on Tellus Abyss, this Care event brings together the best minds for Highways'26.",
+    "description": "Environmental gladiatorial debate where participants represent nature-based species and argue for survival before 'Tellus', the Goddess of Earth.",
     "rules": [
-      "Mandatory registration via the Highways'26 app.",
-      "Please bring your college ID for entry.",
-      "Judges' decision is final.",
-      "Report 15 minutes before the start time."
+      "Assigned nature-based characters must defend their ecological importance.",
+      "Persuade the judge why your species deserves to survive over others.",
+      "Round 1: Survival arguments; Round 2: Final defense.",
+      "Judged on Knowledge, creativity, argument strength, and presentation.",
+      "Team Format: Solo."
     ],
-    "prizePool": "TBA",
-    "regType": "Standard",
-    "regFee": "₹200",
+    "prizePool": "₹2,000/-",
+    "regType": "Free",
     "teamSize": "Solo",
     "pocs": [
       {
-        "name": "Care Team",
-        "phone": "Available at Helpdesk"
+        "name": "Swetha",
+        "phone": "7339335632"
       }
     ]
   },
@@ -862,54 +879,56 @@ const allEvents: EventDetail[] = [
     "id": 31,
     "title": "Token Takeover",
     "category": "Care",
-    "day": 2,
-    "date": "April 10, 2026",
-    "time": "10:00 AM",
+    "day": 3,
+    "date": "April 11, 2026",
+    "time": "9:00 AM",
     "location": "CB526, CB527 & CB528",
     "color": "#f8f8ff",
     "image": "https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=1000",
-    "description": "Focusing on Token Takeover, this Care event brings together the best minds for Highways'26.",
+    "description": "An interactive arena event where participants spend and earn tokens through challenge stations. Compete for the highest token count on the leaderboard.",
     "rules": [
-      "Mandatory registration via the Highways'26 app.",
-      "Please bring your college ID for entry.",
-      "Judges' decision is final.",
-      "Report 15 minutes before the start time."
+      "Use fixed initial tokens to attempt challenge stations.",
+      "Stations include skill-based tasks, puzzles, and luck-based games.",
+      "Successful completion rewards more tokens.",
+      "Stations can be attempted multiple times if tokens are available.",
+      "Live leaderboard tracks the highest scorers."
     ],
     "prizePool": "TBA",
     "regType": "Free",
-    "teamSize": "Solo",
+    "teamSize": "Solo/Group",
     "pocs": [
       {
-        "name": "Care Team",
-        "phone": "Available at Helpdesk"
+        "name": "Nityaa",
+        "phone": "93459 34690"
       }
     ]
   },
   {
     "id": 32,
-    "title": "Clash Troxphy",
+    "title": "Survival Showdown (BGMI)",
     "category": "Care",
-    "day": 3,
-    "date": "April 11, 2026",
-    "time": "10:00 AM",
-    "location": "CB526, CB527 & CB528",
+    "day": 1,
+    "date": "April 09, 2026",
+    "time": "9:00 AM",
+    "location": "CB526",
     "color": "#ffb7c5",
     "image": "https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=1000",
-    "description": "Focusing on Clash Troxphy, this Care event brings together the best minds for Highways'26.",
+    "description": "BGMI Battle Royale competition. Teams compete in custom room matches on Erangel to earn placement and elimination points.",
     "rules": [
-      "Mandatory registration via the Highways'26 app.",
-      "Please bring your college ID for entry.",
-      "Judges' decision is final.",
-      "Report 15 minutes before the start time."
+      "Qualifiers divide teams into custom room matches.",
+      "Point system based on placement and total eliminations/kills.",
+      "Grand Finals combine points from multiple matches to find the champion.",
+      "Mode: Squad (4 Players) on Erangel map.",
+      "Fair play: Hacks or exploits result in immediate disqualification."
     ],
-    "prizePool": "TBA",
+    "prizePool": "Rs. 4,000/-",
     "regType": "Premium",
-    "regFee": "₹200",
-    "teamSize": "Solo",
+    "regFee": "Rs. 100/-",
+    "teamSize": "Group",
     "pocs": [
       {
-        "name": "Care Team",
-        "phone": "Available at Helpdesk"
+        "name": "Hariram Bharathwaj",
+        "phone": "9840429372"
       }
     ]
   },
@@ -918,24 +937,26 @@ const allEvents: EventDetail[] = [
     "title": "Saregama",
     "category": "Rotaract",
     "day": 1,
-    "date": "April 9, 2026",
-    "time": "Full Day",
-    "location": "CB536",
+    "date": "April 09, 2026",
+    "time": "1:30 PM",
+    "location": "OAT",
     "color": "#ffb7c5",
     "image": "https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=1000",
-    "description": "Focusing on Saregama, this Rotaract event brings together the best minds for Highways'26.",
+    "description": "An interactive, competitive musical quiz that tests your knowledge of songs, lyrics, and artists through engaging rounds.",
     "rules": [
-      "Mandatory registration via the Highways'26 app.",
-      "Please bring your college ID for entry.",
-      "Judges' decision is final.",
-      "Report 15 minutes before the start time."
+      "Team Format: 2 members.",
+      "Identified songs from snippets, instruments, or emojis.",
+      "Complete the lyrics or guess the movie from a hummed tune.",
+      "Final round involves rapid questions on musical legends.",
+      "Obscene behavior leads to immediate disqualification."
     ],
-    "prizePool": "TBA",
-    "regType": "Free",
-    "teamSize": "Solo",
+    "prizePool": "Rs. 4,000/-",
+    "regType": "Standard",
+    "regFee": "Rs. 100/-",
+    "teamSize": "Group",
     "pocs": [
       {
-        "name": "Manoj",
+        "name": "Manoj M",
         "phone": "6380693806"
       }
     ]
@@ -946,103 +967,123 @@ const allEvents: EventDetail[] = [
     "category": "Rotaract",
     "day": 2,
     "date": "April 10, 2026",
-    "time": "Full Day",
-    "location": "Block 5 (3rd Floor) & (Ground Floor Area)",
+    "time": "10:00 AM",
+    "location": "Main Road Area",
     "color": "#f8f8ff",
     "image": "https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=1000",
-    "description": "Focusing on The Royal Gambit, this Rotaract event brings together the best minds for Highways'26.",
+    "description": "A grand live human chess tournament accompanied by a series of mini-games and challenges. Participants act as the pieces on a giant board in a strategic showdown.",
     "rules": [
-      "Mandatory registration via the Highways'26 app.",
-      "Please bring your college ID for entry.",
-      "Judges' decision is final.",
-      "Report 15 minutes before the start time."
+      "Standard chess rules apply with human movement.",
+      "Each 'capture' requires a mini-challenge win to confirm.",
+      "Limited time per move to maintain pace.",
+      "Teams can bring their own 'cheer' squads within limits.",
+      "Strategic thinking and physical coordination are key."
     ],
-    "prizePool": "TBA",
-    "regType": "Free",
-    "teamSize": "Solo",
+    "prizePool": "Rs. 4,500/-",
+    "regType": "Standard",
+    "regFee": "Rs. 150/-",
+    "teamSize": "Group",
     "pocs": [
       {
-        "name": "Manoj",
+        "name": "Manoj M",
         "phone": "6380693806"
       }
     ]
   },
   {
     "id": 35,
-    "title": "Overdrive",
+    "title": "Overdrive (Battle of Bands)",
     "category": "Music Club",
     "day": 1,
-    "date": "April 9, 2026",
-    "time": "Full Day",
+    "date": "April 09, 2026",
+    "time": "9:30 AM",
     "location": "MPH",
     "color": "#f8f8ff",
     "image": "https://images.unsplash.com/photo-1514525253361-bee8d48700df?q=80&w=1000",
-    "description": "Focusing on Overdrive, this Music Club event brings together the best minds for Highways'26.",
+    "description": "The stage is set, the amps are cranked, and the spotlight is waiting. This is more than a performance; it's a high-voltage war of melodies and metaphors. Bring your best originals or redefine the classics.",
     "rules": [
-      "Mandatory registration via the Highways'26 app.",
-      "Please bring your college ID for entry.",
-      "Judges' decision is final.",
-      "Report 15 minutes before the start time."
+      "Participants must present a valid college ID card for eligibility.",
+      "This is a single-round event; winners will be determined based on this performance.",
+      "Each band must consist of 4 to 8 members.",
+      "Total stage time is 15 minutes, including setup and sound check.",
+      "Bands must provide their own instruments, with the exception of the drum kit.",
+      "Performances may feature any genre, language, original compositions, or covers.",
+      "Obscene language and inappropriate stage conduct are strictly forbidden.",
+      "All decisions rendered by the judges and organizers are final and binding."
     ],
-    "prizePool": "₹10K",
+    "prizePool": "Rs. 10,000/-",
     "regType": "Premium",
-    "regFee": "₹1000/Team",
+    "regFee": "Rs. 800/-",
     "teamSize": "Group",
     "pocs": [
       {
-        "name": "Music Club Team",
-        "phone": "Available at Helpdesk"
+        "name": "Parkavi V",
+        "phone": "+919445717013"
+      },
+      {
+        "name": "Dhanesh",
+        "phone": "+91 63694 54641"
       }
     ]
   },
   {
     "id": 36,
-    "title": "Crescendo",
+    "title": "Crescendo (Solo Singing)",
     "category": "Music Club",
     "day": 2,
     "date": "April 10, 2026",
-    "time": "02:00 PM",
+    "time": "1:30 PM",
     "location": "Library Seminar Hall",
     "color": "#f8f8ff",
     "image": "https://images.unsplash.com/photo-1514525253361-bee8d48700df?q=80&w=1000",
-    "description": "Focusing on Crescendo, this Music Club event brings together the best minds for Highways'26.",
+    "description": "Stripped back and unplugged, this is where pure talent meets raw emotion. No backup dancers, no distractions—just one voice and one microphone.",
     "rules": [
-      "Mandatory registration via the Highways'26 app.",
-      "Please bring your college ID for entry.",
-      "Judges' decision is final.",
-      "Report 15 minutes before the start time."
+      "Participants must present a valid college ID card for eligibility.",
+      "This is a single-round event; winners will be determined based on this solo performance.",
+      "Total stage time is limited to 5 minutes, including setup and sound check.",
+      "Use of instruments and metronomes is strictly prohibited.",
+      "Karaoke, backing tracks or tanpura are permitted for accompaniment.",
+      "Performances may feature any genre or language, with a preference for original compositions.",
+      "Obscene language and inappropriate stage conduct are strictly forbidden.",
+      "All decisions rendered by the judges and organizers are final and binding."
     ],
-    "prizePool": "₹6K",
+    "prizePool": "Rs. 6,000/-",
     "regType": "Premium",
-    "regFee": "₹250/Person",
+    "regFee": "Rs. 200/-",
     "teamSize": "Solo",
     "pocs": [
       {
-        "name": "Music Club Team",
-        "phone": "Available at Helpdesk"
+        "name": "Kaustubh",
+        "phone": "+919380001223"
+      },
+      {
+        "name": "Sakthi Rasagnya",
+        "phone": "+91 90006 96900"
       }
     ]
   },
   {
     "id": 37,
-    "title": "Solo Dance",
+    "title": "Solography",
     "category": "Dance Club",
-    "day": 1,
-    "date": "April 9, 2026",
-    "time": "10:00 AM",
-    "location": "OAT",
+    "day": 2,
+    "date": "April 10, 2026",
+    "time": "9:00 AM",
+    "location": "MPH",
     "color": "#ff0000",
     "image": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=1000",
-    "description": "Focusing on Solography, this Dance Club event brings together the best minds for Highways'26.",
+    "description": "Individual dance competition where participants take complete ownership of the stage. Highlights creativity, technique, expression, and musicality.",
     "rules": [
-      "Mandatory registration via the Highways'26 app.",
-      "Please bring your college ID for entry.",
-      "Judges' decision is final.",
-      "Report 15 minutes before the start time."
+      "Time Limit: 90s (Min) to 2m 30s (Max).",
+      "All dance styles are allowed (Classical, Hip-hop, Contemporary, etc.).",
+      "Vulgarity in movements, gestures, or music is strictly prohibited.",
+      "Costumes must be decent; inappropriate attire leads to disqualification.",
+      "Audio tracks must be submitted in advance in MP3 format.",
+      "Judges' decision will be final."
     ],
-    "prizePool": "₹4K",
+    "prizePool": "Rs. 4,000/-",
     "regType": "Premium",
-    "regFee": "₹150/Person",
+    "regFee": "Rs. 150/-",
     "teamSize": "Solo",
     "pocs": [
       {
@@ -1053,24 +1094,26 @@ const allEvents: EventDetail[] = [
   },
   {
     "id": 38,
-    "title": "Adaptune",
+    "title": "Groove Chemistry",
     "category": "Dance Club",
-    "day": 1,
-    "date": "April 9, 2026",
-    "time": "02:00 PM",
-    "location": "OAT",
+    "day": 2,
+    "date": "April 10, 2026",
+    "time": "9:00 AM",
+    "location": "MPH",
     "color": "#ff0000",
     "image": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=1000",
-    "description": "Focusing on Groove Chemistry, this Dance Club event brings together the best minds for Highways'26.",
+    "description": "Two-round dance challenge testing recognition of iconic hooksteps and the ability to adapt instantly to changing music segments.",
     "rules": [
-      "Mandatory registration via the Highways'26 app.",
-      "Please bring your college ID for entry.",
-      "Judges' decision is final.",
-      "Report 15 minutes before the start time."
+      "Round 1: Hookstep Challenge – Perform signature moves for played songs.",
+      "Round 2: Adaptune – Instantly adjust style to music switching every few seconds.",
+      "Solo participation only. Time limit: 90s to 3m.",
+      "All dance styles allowed. Judged on adaptability and execution.",
+      "Vulgarity is strictly prohibited. Costumes must be decent.",
+      "Judges' decision is final."
     ],
-    "prizePool": "₹4K",
+    "prizePool": "Rs. 4,000/-",
     "regType": "Premium",
-    "regFee": "₹150/Person",
+    "regFee": "Rs. 150/-",
     "teamSize": "Solo",
     "pocs": [
       {
@@ -1081,24 +1124,27 @@ const allEvents: EventDetail[] = [
   },
   {
     "id": 39,
-    "title": "Group Dance",
+    "title": "Groovanza",
     "category": "Dance Club",
-    "day": 2,
-    "date": "April 10, 2026",
-    "time": "10:00 AM",
-    "location": "OAT",
+    "day": 1,
+    "date": "April 09, 2026",
+    "time": "1:00 PM",
+    "location": "MPH",
     "color": "#f8f8ff",
     "image": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=1000",
-    "description": "Focusing on Groovanza, this Dance Club event brings together the best minds for Highways'26.",
+    "description": "Group dance competition focusing on coordination, teamwork, and synchronized creative expression as one unified unit.",
     "rules": [
-      "Mandatory registration via the Highways'26 app.",
-      "Please bring your college ID for entry.",
-      "Judges' decision is final.",
-      "Report 15 minutes before the start time."
+      "Time Limit: 3m (Min) to 5m (Max).",
+      "Team Requirement: 5 to 25 participants.",
+      "All dance styles allowed (Classical, Hip-hop, Cinematic, etc.).",
+      "Vulgarity in movements or music is strictly prohibited.",
+      "Costumes must be decent; inappropriate attire leads to disqualification.",
+      "Audio tracks must be submitted in advance in MP3 format.",
+      "Judges' decision will be final and binding."
     ],
-    "prizePool": "₹12K",
+    "prizePool": "Rs. 12,000/-",
     "regType": "Premium",
-    "regFee": "₹1000/Team",
+    "regFee": "Rs. 1,000/-",
     "teamSize": "Group",
     "pocs": [
       {
@@ -1113,24 +1159,26 @@ const allEvents: EventDetail[] = [
   },
   {
     "id": 40,
-    "title": "Duet",
+    "title": "Pairfect",
     "category": "Dance Club",
-    "day": 2,
-    "date": "April 10, 2026",
-    "time": "02:00 PM",
+    "day": 1,
+    "date": "April 09, 2026",
+    "time": "1:00 PM",
     "location": "MPH",
     "color": "#f8f8ff",
     "image": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=1000",
-    "description": "Focusing on Pairfect, this Dance Club event brings together the best minds for Highways'26.",
+    "description": "Dance competition performed by pairs, focusing on chemistry, synchronization, and creative connection between partners.",
     "rules": [
-      "Mandatory registration via the Highways'26 app.",
-      "Please bring your college ID for entry.",
-      "Judges' decision is final.",
-      "Report 15 minutes before the start time."
+      "Time Limit: 2m (Min) to 4m (Max).",
+      "Team Requirement: Exactly two participants.",
+      "All dance styles allowed. Judged on synchronization and stage presence.",
+      "Vulgarity is strictly prohibited. Costumes must be decent.",
+      "Audio tracks must be submitted in advance in MP3 format.",
+      "Judges' decision will be final."
     ],
-    "prizePool": "₹6K",
+    "prizePool": "Rs. 6,000/-",
     "regType": "Premium",
-    "regFee": "₹400/Team",
+    "regFee": "Rs. 400/-",
     "teamSize": "Group",
     "pocs": [
       {
@@ -1142,10 +1190,66 @@ const allEvents: EventDetail[] = [
         "phone": "7395973335"
       }
     ]
+  },
+  {
+    "id": 41,
+    "title": "UNIVIA",
+    "category": "Youth Red Cross",
+    "day": 3,
+    "date": "April 11, 2026",
+    "time": "10:00 AM",
+    "location": "Campus Venue",
+    "color": "#ffb7c5",
+    "image": "https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=1000",
+    "description": "A three-round challenge mix of physical and mental agility by the Youth Red Cross.",
+    "rules": [
+      "Team Format: 4 members.",
+      "Round 1: UNO Frenzy - UNO game with special challenge cards.",
+      "Round 2: Drama & Deception - Mix of dumb charades and myth-busting.",
+      "Round 3: Challenge Chase - Relay-style task completion race."
+    ],
+    "prizePool": "TBA",
+    "regType": "Free",
+    "teamSize": "Group",
+    "pocs": [
+      {
+        "name": "YRC Team",
+        "phone": "Available at Helpdesk"
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "title": "Mr & Ms. Highways",
+    "category": "Speakers Forum",
+    "day": 3,
+    "date": "April 11, 2026",
+    "time": "10:00 AM",
+    "location": "OAT",
+    "color": "#ffb7c5",
+    "image": "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?q=80&w=1000",
+    "description": "The ultimate personality contest to find the faces of Highways'26 - celebrating charisma, talent, and intelligence.",
+    "rules": [
+      "Round 1: Introduction and Talent Round.",
+      "Round 2: Situation Handling / Q&A Round.",
+      "Judged on confidence, communication, and overall personality.",
+      "Final titles: Mr. Highways and Ms. Highways.",
+      "Solo participation only."
+    ],
+    "prizePool": "Rs. 10,000/-",
+    "regType": "Premium",
+    "regFee": "Rs. 200/-",
+    "teamSize": "Solo",
+    "pocs": [
+      {
+        "name": "Shawn Abraham",
+        "phone": "9345985157"
+      }
+    ]
   }
 ];
 
-const categoriesList = ["All","Curtain Call","Reading Club","EWB","ISTD","RRC","Speakers Forum","Shortfilm","Tamil Mandram","ECell","Photo Club","Science Club","Care","Rotaract","Music Club","Dance Club"];
+const categoriesList = ["All","Curtain Call","Reading Club","EWB","ISTD","RRC","Speakers Forum","Shortfilm","Tamil Mandram","ECell","Photo Club","Science Club","Care","Rotaract","Music Club","Dance Club","Youth Red Cross"];
 const dayThemes = [
     {
         id: 1,
@@ -1155,10 +1259,10 @@ const dayThemes = [
         kanji: "始",
         bgImage: "https://images.unsplash.com/photo-1522383225053-ed111181a951?q=80&w=2000&auto=format&fit=crop",
         tagline: "WHERE THE ROAD BEGINS",
-    style: "organic",
-    displayFont: '"Bebas Neue", "Impact", "Arial Narrow Bold", sans-serif',
-    bodyFont: '"Barlow Condensed", "Segoe UI", sans-serif',
-    buttonText: "#1c0f14"
+        style: "cybernetic",
+        displayFont: '"Orbitron", sans-serif',
+        bodyFont: '"Rajdhani", sans-serif',
+        buttonText: "#1c0f14"
     },
     {
         id: 2,
@@ -1168,10 +1272,10 @@ const dayThemes = [
         kanji: "速",
         bgImage: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2000&auto=format&fit=crop",
         tagline: "RIDING THE LIGHTNING",
-    style: "organic",
-    displayFont: '"Bebas Neue", "Impact", "Arial Narrow Bold", sans-serif',
-    bodyFont: '"Barlow Condensed", "Segoe UI", sans-serif',
-    buttonText: "#1c0f14"
+        style: "cybernetic",
+        displayFont: '"Orbitron", sans-serif',
+        bodyFont: '"Rajdhani", sans-serif',
+        buttonText: "#1c0f14"
     },
     {
         id: 3,
@@ -1181,10 +1285,10 @@ const dayThemes = [
         kanji: "終",
         bgImage: "https://images.unsplash.com/photo-1516280440623-df9cb83e4776?q=80&w=2000&auto=format&fit=crop",
         tagline: "BEYOND THE HORIZON",
-    style: "organic",
-    displayFont: '"Bebas Neue", "Impact", "Arial Narrow Bold", sans-serif',
-    bodyFont: '"Barlow Condensed", "Segoe UI", sans-serif',
-    buttonText: "#ffffff"
+        style: "cybernetic",
+        displayFont: '"Orbitron", sans-serif',
+        bodyFont: '"Rajdhani", sans-serif',
+        buttonText: "#ffffff"
     }
 ];
 
@@ -1414,7 +1518,7 @@ const BackgroundElements = ({ themeColor, activeKanji, dayId }: { themeColor: st
 };
 
 const Events = () => {
-    const isLocked = true;
+    const isLocked = false;
     const [filter, setFilter] = useState({ category: "All", day: 1 });
     const { scrollY } = useScroll();
     const yHero = useTransform(scrollY, [0, 500], [0, -120]);
@@ -1691,10 +1795,11 @@ const Events = () => {
                 .day-navigator::-webkit-scrollbar, .classification-carousel::-webkit-scrollbar { display: none; }
                 .day-navigator, .classification-carousel { -ms-overflow-style: none; scrollbar-width: none; }
 
-                /* Style-specific typography */
-              .style-organic h1 { font-weight: 400; letter-spacing: 12px; }
-              .style-cybernetic h1 { font-weight: 900; skew: -5deg; text-shadow: 0 0 20px ${activeTheme.color}44; }
-              .style-chaotic h1 { font-weight: 950; letter-spacing: -10px; filter: contrast(1.5); }
+                /* Global Cybernetic Typography */
+                .style-cybernetic h1 { font-family: "Orbitron", sans-serif !important; font-weight: 900 !important; text-shadow: 0 0 15px ${activeTheme.color}88, 0 0 30px ${activeTheme.color}44; letter-spacing: 2px !important; }
+                .style-cybernetic h2 { font-family: "Orbitron", sans-serif !important; letter-spacing: 1px; }
+                .style-cybernetic h3 { font-family: "Orbitron", sans-serif !important; letter-spacing: 1px; }
+                .style-cybernetic h4 { font-family: "Orbitron", sans-serif !important; letter-spacing: 1px; }
 
                 @media (max-width: 1400px) { .events-grid-system { grid-template-columns: repeat(3, 1fr) !important; } }
                 @media (max-width: 1024px) { .events-grid-system { grid-template-columns: repeat(2, 1fr) !important; gap: 2rem !important; } }

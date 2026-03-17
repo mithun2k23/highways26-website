@@ -288,11 +288,15 @@ body {
   background-color: var(--bg-main);
   color: var(--text-main);
   overflow-x: hidden;
-  font-family: 'Outfit', 'Noto Sans JP', 'Sawarabi Mincho', serif;
+  font-family: 'Rajdhani', 'Noto Sans JP', sans-serif;
   width: 100%;
   margin: 0;
   padding: 0;
   transition: background-color 2s ease, color 2s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Orbitron', sans-serif !important;
 }
 
 body.menu-open {
