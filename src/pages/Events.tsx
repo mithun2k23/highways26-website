@@ -1156,8 +1156,8 @@ const dayThemes = [
         bgImage: "https://images.unsplash.com/photo-1522383225053-ed111181a951?q=80&w=2000&auto=format&fit=crop",
         tagline: "WHERE THE ROAD BEGINS",
     style: "organic",
-    displayFont: '"Sawarabi Mincho", serif',
-    bodyFont: '"Nunito Sans", "Segoe UI", sans-serif',
+    displayFont: '"Bebas Neue", "Impact", "Arial Narrow Bold", sans-serif',
+    bodyFont: '"Barlow Condensed", "Segoe UI", sans-serif',
     buttonText: "#1c0f14"
     },
     {
@@ -1169,8 +1169,8 @@ const dayThemes = [
         bgImage: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2000&auto=format&fit=crop",
         tagline: "RIDING THE LIGHTNING",
     style: "organic",
-    displayFont: '"Orbitron", "Segoe UI", sans-serif',
-    bodyFont: '"Rajdhani", "Segoe UI", sans-serif',
+    displayFont: '"Bebas Neue", "Impact", "Arial Narrow Bold", sans-serif',
+    bodyFont: '"Barlow Condensed", "Segoe UI", sans-serif',
     buttonText: "#1c0f14"
     },
     {
@@ -1414,7 +1414,7 @@ const BackgroundElements = ({ themeColor, activeKanji, dayId }: { themeColor: st
 };
 
 const Events = () => {
-    const isLocked = false;
+    const isLocked = true;
     const [filter, setFilter] = useState({ category: "All", day: 1 });
     const { scrollY } = useScroll();
     const yHero = useTransform(scrollY, [0, 500], [0, -120]);

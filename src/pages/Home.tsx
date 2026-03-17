@@ -79,12 +79,12 @@ const Home = () => {
 
                     <div className="hero-info flex flex-col items-center">
 
-                        <div className="text-3xl md:text-7xl font-black uppercase tracking-wider text-white drop-shadow-[0_4px_8px_rgba(0,0,0,1)] my-12">
+                        <div className="text-6xl md:text-7xl font-black uppercase tracking-wider text-white drop-shadow-[0_4px_8px_rgba(0,0,0,1)] my-8 text-center px-4">
                             APRIL 09, 10, 11
                         </div>
 
-                        {/* Countdown - smaller */}
-                        <div className="premium-countdown md:flex-wrap justify-center gap-2 mb-2 scale-75 hidden md:flex">
+                        {/* Countdown - Adjusted for mobile */}
+                        <div className="premium-countdown flex flex-wrap justify-center gap-2 mb-2 scale-50 md:scale-75">
                             {[
                                 { value: timeLeft.days, label: 'DAYS' },
                                 { value: timeLeft.hours, label: 'HOURS' },
@@ -169,20 +169,44 @@ const Home = () => {
                                         cursor: 'pointer'
                                     }}
                                 >
-                                    <div className="mystery-circle" style={{
-                                        width: '150px',
-                                        height: '150px',
-                                        margin: '0 auto 20px',
-                                        background: 'rgba(255,255,255,0.05)',
-                                        borderRadius: '50%',
-                                        display: 'flex',
-                                        alignItems: 'center',
-                                        justifyContent: 'center',
-                                        fontSize: '4rem',
-                                        fontWeight: 900,
-                                        color: '#ff4d4d',
-                                        textShadow: '0 0 20px rgba(255, 77, 77, 0.4)'
-                                    }}>?</div>
+                                    <div className="mystery-container" style={{ position: 'relative', width: '200px', height: '200px', margin: '0 auto 20px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                        {/* Curved Square Box Highlight */}
+                                        <div style={{
+                                            position: 'absolute',
+                                            width: '180px',
+                                            height: '180px',
+                                            borderRadius: '40px',
+                                            background: 'linear-gradient(45deg, #ff4d4d22, #ffb7c522)',
+                                            border: '2px solid #ff4d4d',
+                                            boxShadow: '0 0 30px rgba(255, 77, 77, 0.2)',
+                                            transform: 'rotate(15deg)'
+                                        }} />
+                                        <div style={{
+                                            position: 'absolute',
+                                            width: '180px',
+                                            height: '180px',
+                                            borderRadius: '40px',
+                                            border: '1px solid rgba(255, 255, 255, 0.1)',
+                                            transform: 'rotate(-10deg)'
+                                        }} />
+                                        
+                                        <div className="mystery-circle" style={{
+                                            width: '150px',
+                                            height: '150px',
+                                            background: 'rgba(255,255,255,0.05)',
+                                            borderRadius: '50%',
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            justifyContent: 'center',
+                                            fontSize: '4rem',
+                                            fontWeight: 900,
+                                            color: '#ff4d4d',
+                                            textShadow: '0 0 20px rgba(255, 77, 77, 0.4)',
+                                            position: 'relative',
+                                            zIndex: 1,
+                                            backdropFilter: 'blur(5px)'
+                                        }}>?</div>
+                                    </div>
                                     <span style={{ color: '#ff4d4d', fontSize: '0.7rem', fontWeight: 900, letterSpacing: '4px' }}>{celeb.type}</span>
                                     <h3 style={{ fontSize: '1.5rem', fontWeight: 800, margin: '10px 0' }}>COMING SOON</h3>
                                     <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.9rem' }}>{celeb.hint}</p>
