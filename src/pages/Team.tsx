@@ -113,8 +113,7 @@ const Team = () => {
                                     />
                                 </div>
                                 <div style={{ position: 'relative', zIndex: 2 }}>
-                                    <span style={{ color: '#ff4d4d', fontSize: 'clamp(0.6rem, 2vw, 0.7rem)', fontWeight: 900, letterSpacing: '3px', textTransform: 'uppercase' }}>{member.spirit}</span>
-                                    <h3 style={{ fontSize: 'clamp(1.2rem, 4vw, 1.8rem)', fontWeight: 900, margin: '12px 0', letterSpacing: '-0.5px' }}>{member.name}</h3>
+                                    <h3 style={{ fontSize: 'clamp(1.2rem, 4vw, 1.8rem)', fontWeight: 900, margin: '8px 0', letterSpacing: '-0.5px' }}>{member.name}</h3>
                                     <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: 'clamp(0.8rem, 2vw, 0.9rem)', fontWeight: 600 }}>{member.role}</p>
                                 </div>
                             </motion.div>
