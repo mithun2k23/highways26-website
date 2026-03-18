@@ -23,12 +23,12 @@ export const teamData: TeamGroup[] = [
         "members": [
             { "name": "BHARGAVI T R", "role": "President", "spirit": "", "image": "/members/bharajvi.jpeg" },
             { "name": "MITHUN S", "role": "Vice President", "spirit": "", "image": "/members/mithun.jpg" },
-            { "name": "DHAYAKAR S", "role": "Culturals Secretary", "spirit": "", "image": "/members/dhayakar.jpg" },
-            { "name": "CHIDAMBARAM RM", "role": "General Secretary", "spirit": "", "image": "/members/chidambram.jpeg" },
+            { "name": "DHAYAKAR T", "role": "Cultural Secretary", "spirit": "", "image": "/members/dhayakar.jpg" },
+            { "name": "CHIDHAMBARAM P", "role": "General Secretary", "spirit": "", "image": "/members/chidambram.jpeg" },
             { "name": "DIVYASHREE M", "role": "Joint Secretary", "spirit": "", "image": "/members/divyashree.jpeg" },
             { "name": "KABILAN G", "role": "Sports Secretary", "spirit": "", "image": "/members/kabilan.jpeg" },
-            { "name": "ABINAYA S", "role": "Treasurer", "spirit": "", "image": "/members/abinaya.jpeg" },
-            { "name": "MURALI VINOD S", "role": "PG Representative", "spirit": "", "image": "/members/murali vinod.jpeg" }
+            { "name": "ABINAYA SEENIVASAN", "role": "Treasurer", "spirit": "", "image": "/members/abinaya.jpeg" },
+            { "name": "MURALI VINOD P", "role": "PG Representative", "spirit": "", "image": "/members/murali vinod.jpeg" }
         ]
     },
     {
@@ -158,7 +158,7 @@ export const teamData: TeamGroup[] = [
         "id": "vigilance",
         "name": "VIGILANCE",
         "members": [
-            { "name": "DHAYAKAR S", "role": "Lead", "spirit": "", "image": "/members/dhayakar.jpg" },
+            { "name": "DHAYAKAR T", "role": "Lead", "spirit": "", "image": "/members/dhayakar.jpg" },
             { "name": "Venkat Sri Charan U", "role": "Sub lead", "spirit": "", "image": "/members/IMG_20250904_182443 - VENKAT SRI CHARAN U ECE.jpg" },
             { "name": "A.Bharath Rajh", "role": "Member", "spirit": "", "image": "/members/Bharath Rajh_Member_Vigilance Wing - 011_A.BHARATH RAJH _MECH" },
             { "name": "Adhitya R", "role": "Member", "spirit": "", "image": "/members/Adhitya-Member_Vigilance  - ADHITYA R EEE.jpg" },

@@ -1,17 +1,10 @@
 import { motion } from 'framer-motion';
 
 const sponsorsData = [
-<<<<<<< HEAD
-    { name: "Greenstar", tier: "Special Sponsor", logo: "/assets/logos/green star.png", desc: "Official Special Sponsor." },
-    { name: "Gamistry", tier: "Events Sponsor", logo: "/assets/logos/gamistry.png", desc: "Powering the events." },
-    { name: "Think Music", tier: "Events & DJ Sponsor", logo: "/assets/logos/think music.jpg", desc: "Elevating the experience." },
-    { name: "Xmold Polymers", tier: "Events Sponsor", logo: "/assets/logos/xmold.png", desc: "Proud sponsor of Highways'26." }
-=======
     { name: "Greenstar", tier: "Special Sponsor", logo: "/assets/logos/green star.png", desc: "Official Special Sponsor.", url: "https://applicationsolutions.com.au/environmental-sustainable-design/green-star/" },
-    { name: "Gamistry", tier: "Event Sponsor", logo: "/assets/logos/gamistry.png", desc: "Powering the events.", url: "https://www.gameistry.in/" },
-    { name: "Think Music", tier: "Event Sponsor", logo: "/assets/logos/think music.jpg", desc: "Events & DJ Sponsor.", url: "https://www.thinkmusic.in/" },
-    { name: "Xmold Polymers", tier: "Sponsor", logo: "/assets/logos/xmold.png", desc: "Proud sponsor of Highways'26.", url: "https://xmoldpolymers.com/" }
->>>>>>> 903b7b8bde6cbcc75f27ce7d2ff7f301fa27b67b
+    { name: "Gamistry", tier: "Events Sponsor", logo: "/assets/logos/gamistry.png", desc: "Powering the events.", url: "https://www.gameistry.in/" },
+    { name: "Think Music", tier: "Events & DJ Sponsor", logo: "/assets/logos/think music.jpg", desc: "Events & DJ Sponsor.", url: "https://www.thinkmusic.in/" },
+    { name: "Xmold Polymers", tier: "Events Sponsor", logo: "/assets/logos/xmold.png", desc: "Proud sponsor of Highways'26.", url: "https://xmoldpolymers.com/" }
 ];
 
 const Sponsors = () => {
