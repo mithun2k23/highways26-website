@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion';
 
 const sponsorsData = [
-    { name: "Greenstar", tier: "Special Sponsor", logo: "/assets/logos/green star.png", desc: "Official Special Sponsor.", url: "https://greenstar.com" },
-    { name: "Gamistry", tier: "Events Sponsor", logo: "/assets/logos/gamistry.png", desc: "Powering the events.", url: "https://gamistry.com" },
-    { name: "Think Music", tier: "Events & DJ Sponsor", logo: "/assets/logos/think music.jpg", desc: "Elevating the experience.", url: "https://thinkmusic.in" },
-    { name: "Xmold Polymers", tier: "EventsSponsor", logo: "/assets/logos/xmold.png", desc: "Proud sponsor of Highways'26.", url: "https://xmoldpolymers.com" }
+    { name: "Greenstar", tier: "Special Sponsor", logo: "/assets/logos/green star.png", desc: "Official Special Sponsor." },
+    { name: "Gamistry", tier: "Events Sponsor", logo: "/assets/logos/gamistry.png", desc: "Powering the events." },
+    { name: "Think Music", tier: "Events & DJ Sponsor", logo: "/assets/logos/think music.jpg", desc: "Elevating the experience." },
+    { name: "Xmold Polymers", tier: "EventsSponsor", logo: "/assets/logos/xmold.png", desc: "Proud sponsor of Highways'26." }
 ];
 
 const Sponsors = () => {

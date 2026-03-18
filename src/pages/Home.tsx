@@ -1,4 +1,5 @@
 import { useEffect, lazy } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 import MainLayout from '@/components/layout/MainLayout';
@@ -9,7 +10,8 @@ import FAQ from '@/components/blocks/Faq';
 
 const Glimpses = lazy(() => import('@/components/blocks/Glimpses'));
 
-// const HighwaysLogo = "/assets/logos/highways-logo.png";
+const HighwaysLogo = "/assets/logos/highways-logo.png";
+
 const Home = () => {
 
     useEffect(() => {
