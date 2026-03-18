@@ -34,7 +34,6 @@ body,
 
 body {
   margin: 0;
-  font-family: 'Rajdhani', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background:
@@ -50,13 +49,10 @@ body {
   cursor: auto;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
 html::-webkit-scrollbar,
 body::-webkit-scrollbar,
 #root::-webkit-scrollbar {
   display: none;
 }
+
+/* visanth-ui */

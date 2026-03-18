@@ -4,7 +4,6 @@ import './App.css'
 
 // Components
 import LoadingScreen from './components/LoadingScreen'
-import CustomCursor from './components/CustomCursor'
 
 // Static Page Import (Critical for fast initial paint)
 import Home from './pages/Home'
@@ -75,7 +74,6 @@ function App() {
       <ScrollToTop />
       <div className="App">
         <LoadingScreen onFinish={handleLoadingFinish} />
-        <CustomCursor />
 
 
         <main className="main-content">
