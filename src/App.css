@@ -294,15 +294,10 @@ body {
   background-color: var(--bg-main);
   color: var(--text-main);
   overflow-x: hidden;
-  font-family: 'Rajdhani', 'Noto Sans JP', sans-serif;
   width: 100%;
   margin: 0;
   padding: 0;
   transition: background-color 2s ease, color 2s ease;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Orbitron', sans-serif !important;
 }
 
 body.menu-open {
@@ -872,7 +867,6 @@ body.menu-open {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 1px 1px 0px #2a0000;
-  font-family: 'Outfit', sans-serif;
 }
 
 .brand-year {
@@ -881,7 +875,6 @@ body.menu-open {
   color: #d4af37;
   letter-spacing: 1px;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
-  font-family: 'Outfit', sans-serif;
 }
 
 .footer-logo-svce {
@@ -900,7 +893,6 @@ body.menu-open {
   -webkit-text-fill-color: transparent;
   text-shadow: 1px 1px 0px #2a0000;
   margin-left: 15px;
-  font-family: 'Outfit', sans-serif;
 }
 
 .nav-links {
@@ -1089,7 +1081,6 @@ body.menu-open {
   text-align: center;
   font-weight: 950;
   text-transform: uppercase;
-  font-family: 'Outfit', sans-serif;
   letter-spacing: -2px;
   color: #ffde00;
   text-shadow:
@@ -1157,7 +1148,6 @@ body.menu-open {
 .countdown-number {
   font-size: 3.5rem;
   font-weight: 950;
-  font-family: 'Outfit', sans-serif;
   color: #fff;
   line-height: 1;
   text-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
@@ -1297,7 +1287,6 @@ body.menu-open {
   font-weight: 900;
   color: var(--secondary);
   text-shadow: 0 0 20px var(--accent-glow);
-  font-family: 'Outfit', sans-serif;
 }
 
 .countdown-item p {
@@ -1592,7 +1581,6 @@ body.menu-open {
 }
 
 .kanji-sub {
-  font-family: 'Noto Sans JP', sans-serif;
   color: var(--secondary);
   font-size: 1.2rem;
   opacity: 0.6;
@@ -2229,7 +2217,6 @@ body.menu-open {
 
 .map-container:hover {
   transform: translateY(-10px) scale(1.02);
-  border-color: var(--secondary);
   box-shadow: 0 35px 80px rgba(0, 0, 0, 0.9), 0 0 30px rgba(255, 183, 3, 0.3);
 }
 
@@ -3212,7 +3199,6 @@ footer::after,
 
 .timer-value {
   font-size: 5rem;
-  font-family: 'Outfit', sans-serif;
   font-weight: 900;
   color: #ff0000;
   line-height: 1;
@@ -3221,7 +3207,6 @@ footer::after,
 
 .timer-unit {
   font-size: 3rem;
-  font-family: 'Outfit', sans-serif;
   font-weight: 900;
   color: transparent;
   -webkit-text-stroke: 1.5px #ff0000;
@@ -3302,7 +3287,6 @@ footer::after,
   letter-spacing: 1px;
   color: white;
   margin-bottom: 1rem;
-  font-family: 'Outfit', sans-serif;
   text-transform: uppercase;
 }
 
@@ -3441,7 +3425,6 @@ footer::after,
   font-size: 1rem;
   font-weight: 800;
   color: white;
-  font-family: 'Outfit', sans-serif;
   letter-spacing: 1px;
 }
 
@@ -3512,7 +3495,6 @@ footer::after,
   font-weight: 800;
   color: white;
   margin-bottom: 0.8rem;
-  font-family: 'Outfit', sans-serif;
 }
 
 .event-loc {
