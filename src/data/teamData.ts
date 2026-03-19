@@ -70,7 +70,7 @@ export const teamData: TeamGroup[] = [
     },
     {
         "id": "events",
-        "name": "EVENT PLANNING",
+        "name": "EVENT PLANNING & COORDINATION",
         "members": [
             { "name": "ASHWIN R", "role": "Lead", "spirit": "", "image": "/members/Ashwin 1 - ASHWIN R ECE.webp" },
             { "name": "Gururaje M", "role": "Sub lead", "spirit": "", "image": "/members/Gururaje_ Sub lead_Event planning Wing - GURURAJE M CE.webp" },
@@ -136,7 +136,7 @@ export const teamData: TeamGroup[] = [
     },
     {
         "id": "sponsorship",
-        "name": "SPONSORS",
+        "name": "SPONSORSHIP",
         "members": [
             { "name": "KS Bharath", "role": "Lead", "spirit": "", "image": "/members/KS Bharath - Sponsorship Lead - 007 BHARATH KS MN.webp" },
             { "name": "A Mahathi Kavya", "role": "Member", "spirit": "", "image": "/members/IMG_8029 - A MAHATHI KAVYA ECE.webp" },
@@ -183,7 +183,7 @@ export const teamData: TeamGroup[] = [
     },
     {
         "id": "design",
-        "name": "VISUAL DESIGN",
+        "name": "DESIGNERS",
         "members": [
             { "name": "ASHISH S", "role": "Lead", "spirit": "", "image": "/members/IMG_9669 (1) - ASHISH S CSE.webp" },
             { "name": "DHANUSH K", "role": "Sub lead", "spirit": "", "image": "/members/IMG_20250930_155804 - 007 DHANUSH K ME.jpg" },
