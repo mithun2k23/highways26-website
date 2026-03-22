@@ -34,14 +34,14 @@ export const teamData: TeamGroup[] = [
                 "image": "/members/mithun.jpg"
             },
             {
-                "name": "CHIDAMBARAM P",
+                "name": "CHIDHAMBARAM P",
                 "role": "General Secretary",
                 "spirit": "",
                 "image": "/members/chidambram.jpeg"
             },
             {
                 "name": "DHAYAKAR T",
-                "role": "Culturals Secretary",
+                "role": "Cultural Secretary",
                 "spirit": "",
                 "image": "/members/dhayakar.jpg"
             },
@@ -58,7 +58,7 @@ export const teamData: TeamGroup[] = [
                 "image": "/members/kabilan.jpeg"
             },
             {
-                "name": "ABINAYA S",
+                "name": "ABINAYA SEENIVASAN",
                 "role": "Treasurer",
                 "spirit": "",
                 "image": "/members/abinaya.jpeg"
@@ -166,6 +166,12 @@ export const teamData: TeamGroup[] = [
         "name": "CORE OPERATIONS",
         "members": [
             {
+                "name": "Nithish D R",
+                "role": "Lead",
+                "spirit": "",
+                "image": "/members/Nithish - lead_operations - NITHISH D R EEE.jpg"
+            },
+            {
                 "name": "Ajay M",
                 "role": "Sub lead",
                 "spirit": "",
@@ -177,12 +183,6 @@ export const teamData: TeamGroup[] = [
                 "spirit": "",
                 "image": "/members/Dayaalan K T-Marketing_Member - DAYAALAN K T CSE.webp",
                 "imagePosition": "right top"
-            },
-            {
-                "name": "Nithish D R",
-                "role": "Lead",
-                "spirit": "",
-                "image": "/members/Nithish - lead_operations - NITHISH D R EEE.jpg"
             },
             {
                 "name": "Abdul Rahman N",
@@ -302,7 +302,7 @@ export const teamData: TeamGroup[] = [
     },
     {
         "id": "events",
-        "name": "EVENT PLANNING",
+        "name": "EVENT PLANNING & COORDINATION",
         "members": [
             {
                 "name": "ASHWIN R",
@@ -462,12 +462,6 @@ export const teamData: TeamGroup[] = [
         "name": "MARKETING & SALES",
         "members": [
             {
-                "name": "AKSHAY V",
-                "role": "Sub lead",
-                "spirit": "",
-                "image": "/members/AKSHAY_V_SUBLEAD_MARKETTING_TEAM - 005 AKSHAY V MEC.webp"
-            },
-            {
                 "name": "ARIVUNITHI R",
                 "role": "Lead",
                 "spirit": "",
@@ -478,6 +472,12 @@ export const teamData: TeamGroup[] = [
                 "role": "Lead",
                 "spirit": "",
                 "image": "/members/IMG-20260124-WA0027(2) - 009 DAKXIN SHASWATH HARAN Y MN.jpg"
+            },
+            {
+                "name": "AKSHAY V",
+                "role": "Sub lead",
+                "spirit": "",
+                "image": "/members/AKSHAY_V_SUBLEAD_MARKETTING_TEAM - 005 AKSHAY V MEC.webp"
             },
             {
                 "name": "NARAEN KARTICK A",
@@ -592,7 +592,7 @@ export const teamData: TeamGroup[] = [
     },
     {
         "id": "sponsorship",
-        "name": "SPONSORS",
+        "name": "SPONSORSHIP",
         "members": [
             {
                 "name": "KS Bharath",
@@ -815,7 +815,7 @@ export const teamData: TeamGroup[] = [
     },
     {
         "id": "design",
-        "name": "VISUAL DESIGN",
+        "name": "DESIGNERS",
         "members": [
             {
                 "name": "ASHISH S",
