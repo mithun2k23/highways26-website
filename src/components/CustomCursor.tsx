@@ -17,10 +17,8 @@ const CustomCursor = () => {
   const location = useLocation();
   const cursorRef = useRef<HTMLDivElement>(null);
   const auraRef = useRef<HTMLDivElement>(null);
-  const trailRef = useRef<HTMLDivElement>(null);
   const animationFrameRef = useRef<number | null>(null);
   const pointerRef = useRef({ x: window.innerWidth / 2, y: window.innerHeight / 2 });
-  const delayedRef = useRef({ x: window.innerWidth / 2, y: window.innerHeight / 2 });
   const auraRefPosition = useRef({ x: window.innerWidth / 2, y: window.innerHeight / 2 });
   const [isEnabled, setIsEnabled] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
@@ -66,17 +64,11 @@ const CustomCursor = () => {
     };
 
     const updatePositions = () => {
-      delayedRef.current.x += (pointerRef.current.x - delayedRef.current.x) * 0.24;
-      delayedRef.current.y += (pointerRef.current.y - delayedRef.current.y) * 0.24;
       auraRefPosition.current.x += (pointerRef.current.x - auraRefPosition.current.x) * 0.12;
       auraRefPosition.current.y += (pointerRef.current.y - auraRefPosition.current.y) * 0.12;
 
       if (cursorRef.current) {
         cursorRef.current.style.transform = `translate3d(${pointerRef.current.x}px, ${pointerRef.current.y}px, 0)`;
-      }
-
-      if (trailRef.current) {
-        trailRef.current.style.transform = `translate3d(${delayedRef.current.x}px, ${delayedRef.current.y}px, 0)`;
       }
 
       if (auraRef.current) {
@@ -130,14 +122,6 @@ const CustomCursor = () => {
 
   return (
     <>
-      <div
-        ref={auraRef}
-        className={`ninja-cursor-aura ${isVisible ? 'is-visible' : ''} ${isInteractive ? 'is-interactive' : ''}`}
-      />
-      <div
-        ref={trailRef}
-        className={`ninja-cursor-trail ${isVisible ? 'is-visible' : ''} ${isInteractive ? 'is-interactive' : ''}`}
-      />
       <div
         ref={cursorRef}
         className={`ninja-cursor ${isVisible ? 'is-visible' : ''} ${isInteractive ? 'is-interactive' : ''} ${isPressed ? 'is-pressed' : ''}`}

@@ -21,6 +21,7 @@ const About = lazy(() => import('./pages/About'))
 const Schedule = lazy(() => import('./pages/Schedule'))
 const DayEvents = lazy(() => import('./pages/DayEvents'))
 const Passes = lazy(() => import('./pages/Passes'))
+const EventDetails = lazy(() => import('./pages/EventDetails'))
 //hello world
 // Individual Page Loader for Suspense Fallback
 const PageLoader = () => (
@@ -62,7 +63,8 @@ function App() {
       () => import('./pages/About'),
       () => import('./pages/Schedule'),
       () => import('./pages/DayEvents'),
-      () => import('./pages/Passes')
+      () => import('./pages/Passes'),
+      () => import('./pages/EventDetails')
     ];
 
     // Start preloading immediately with very tight intervals
@@ -92,7 +94,8 @@ function App() {
               <Route path="/faq" element={<FAQ />} />
               <Route path="/about" element={<About />} />
               <Route path="/schedule" element={<Schedule />} />
-              <Route path="/events/:dayId" element={<DayEvents />} />
+              <Route path="/events/:eventSlug" element={<EventDetails />} />
+              <Route path="/day/:dayId" element={<DayEvents />} />
               <Route path="/passes" element={<Passes />} />
               <Route path="*" element={<Home />} />
             </Routes>
