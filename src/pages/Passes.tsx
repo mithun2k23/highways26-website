@@ -106,47 +106,43 @@ const Passes = () => {
                     maxWidth: '1200px',
                     margin: '0 auto'
                 }}>
-                    {/* EARLY BIRD - ACTIVE */}
+                    {/* EARLY BIRD - EXPIRED */}
                     <motion.div
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        whileHover={{ y: -15, scale: 1.03 }}
-                        onClick={() => window.open('https://forms.gle/aQ3LGRZMHq9waVvg8', '_blank')}
                         style={{
-                            background: 'rgba(255, 255, 255, 0.02)',
+                            background: 'rgba(255, 255, 255, 0.01)',
                             backdropFilter: 'blur(30px)',
-                            border: '1px solid rgba(239, 35, 60, 0.2)',
+                            border: '1px solid rgba(239, 35, 60, 0.1)',
                             borderRadius: '40px',
                             padding: '3rem 2rem',
                             textAlign: 'center',
-                            cursor: 'pointer',
                             position: 'relative',
-                            boxShadow: '0 50px 100px rgba(0,0,0,0.6)'
+                            overflow: 'hidden',
+                            boxShadow: '0 50px 100px rgba(0,0,0,0.4)',
+                            opacity: 0.8
                         }}
                     >
-                        {/* Decorative background glow */}
-                        <div style={{ position: 'absolute', top: '-20%', left: '-20%', width: '140%', height: '140%', background: 'radial-gradient(circle, rgba(239, 35, 60, 0.05) 0%, transparent 60%)', pointerEvents: 'none' }} />
+                        {/* THE X DESIGN */}
+                        <div style={{ position: 'absolute', inset: 0, zIndex: 10, pointerEvents: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                           <div style={{ position: 'absolute', width: '130%', height: '2px', background: 'rgba(239, 35, 60, 0.3)', transform: 'rotate(45deg)' }}></div>
+                           <div style={{ position: 'absolute', width: '130%', height: '2px', background: 'rgba(239, 35, 60, 0.3)', transform: 'rotate(-45deg)' }}></div>
+                           <div style={{ background: '#0a0a0a', padding: '10px 25px', borderRadius: '15px', border: '1px solid #ef233c', color: '#ef233c', fontWeight: 950, zIndex: 11, fontSize: '1rem', letterSpacing: '3px' }}>EXPIRED</div>
+                        </div>
 
-                        <div style={{ position: 'absolute', top: '24px', right: '24px', padding: '0.4rem 1rem', background: '#ef233c', color: 'white', fontWeight: 900, borderRadius: '100px', fontSize: '0.65rem', letterSpacing: '1px', boxShadow: '0 10px 20px rgba(239, 35, 60, 0.3)' }}>
-                            ACTIVE
-                        </div>
-                        <h3 style={{ fontSize: '2.5rem', fontWeight: 950, marginBottom: '0.8rem', color: '#fff', letterSpacing: '-1px', fontFamily: '"Orbitron", sans-serif' }}>EARLY BIRD</h3>
-                        <div style={{ background: 'rgba(239, 35, 60, 0.1)', color: '#ef233c', padding: '5px 15px', borderRadius: '50px', fontWeight: 800, fontSize: '0.8rem', marginBottom: '1.2rem', textTransform: 'uppercase', display: 'inline-block' }}>All-In-One Experience</div>
-                        <p style={{ color: 'rgba(255,255,255,0.7)', marginBottom: '2rem', lineHeight: 1.6, fontSize: '0.95rem' }}>
-                            Early bird discount<br/>
-                            Access to all Pro Shows<br/>
-                            Access to all free and standard events
-                        </p>
-                        <div style={{ fontSize: '4rem', fontWeight: 950, marginBottom: '2rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', textShadow: '0 0 30px rgba(239, 35, 60, 0.6)' }}>
-                            <span style={{ fontSize: '1.8rem', color: '#ef233c' }}>₹</span>899
-                        </div>
-                        <button 
-                            onClick={(e) => {
-                                e.stopPropagation();
-                                window.open('https://forms.gle/aQ3LGRZMHq9waVvg8', '_blank');
-                            }}
-                            style={{
+                        <div style={{ opacity: 0.15 }}>
+                            <h3 style={{ fontSize: '2.5rem', fontWeight: 950, marginBottom: '0.8rem', color: '#fff', letterSpacing: '-1px', fontFamily: '"Orbitron", sans-serif' }}>EARLY BIRD</h3>
+                            <div style={{ background: 'rgba(239, 35, 60, 0.1)', color: '#ef233c', padding: '5px 15px', borderRadius: '50px', fontWeight: 800, fontSize: '0.8rem', marginBottom: '1.2rem', textTransform: 'uppercase', display: 'inline-block' }}>All-In-One Experience</div>
+                            <p style={{ color: 'rgba(255,255,255,0.7)', marginBottom: '2rem', lineHeight: 1.6, fontSize: '0.95rem' }}>
+                                Early bird discount<br/>
+                                Access to all Pro Shows<br/>
+                                Access to all free and standard events
+                            </p>
+                            <div style={{ fontSize: '4rem', fontWeight: 950, marginBottom: '2rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
+                                <span style={{ fontSize: '1.8rem', color: '#ef233c' }}>₹</span>899
+                            </div>
+                            <button disabled style={{
                                 width: '100%',
                                 padding: '1.2rem',
                                 background: '#ef233c',
@@ -155,17 +151,14 @@ const Passes = () => {
                                 borderRadius: '24px',
                                 fontWeight: 950,
                                 letterSpacing: '2px',
-                                cursor: 'pointer',
+                                cursor: 'not-allowed',
                                 textTransform: 'uppercase',
-                                fontSize: '0.9rem',
-                                boxShadow: '0 10px 20px rgba(239, 35, 60, 0.4)',
-                                position: 'relative',
-                                zIndex: 1
-                            }}
-                        >GET PASS NOW</button>
+                                fontSize: '0.9rem'
+                            }}>EXPIRED</button>
+                        </div>
                     </motion.div>
 
-                    {/* NORMAL - LOCKED/X */}
+                    {/* NORMAL - COMING SOON/X */}
                     <motion.div
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -188,7 +181,7 @@ const Passes = () => {
                         <div style={{ position: 'absolute', inset: 0, zIndex: 10, pointerEvents: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                            <div style={{ position: 'absolute', width: '130%', height: '2px', background: 'rgba(239, 35, 60, 0.3)', transform: 'rotate(45deg)' }}></div>
                            <div style={{ position: 'absolute', width: '130%', height: '2px', background: 'rgba(239, 35, 60, 0.3)', transform: 'rotate(-45deg)' }}></div>
-                           <div style={{ background: '#0a0a0a', padding: '10px 25px', borderRadius: '15px', border: '1px solid #ef233c', color: '#ef233c', fontWeight: 950, zIndex: 11, fontSize: '1rem', letterSpacing: '3px' }}>LOCKED</div>
+                           <div style={{ background: '#0a0a0a', padding: '10px 25px', borderRadius: '15px', border: '1px solid #ef233c', color: '#ef233c', fontWeight: 950, zIndex: 11, fontSize: '1rem', letterSpacing: '3px' }}>COMING SOON</div>
                         </div>
 
                         <div style={{ filter: 'blur(8px)', opacity: 0.5 }}>
